@@ -1,0 +1,9 @@
+ pg_dump BetManager -s > sql/BetManagerSchema.sql //raw scheam only
+ pg_dump -Ft BetManager -s > sql/BetManagerSchema.tar //tar schema only
+
+
+ pg_restore -Ft database.tar # restore tarball
+
+
+//copy db
+createdb -O ayoung -T BetManager BetManagerBackup

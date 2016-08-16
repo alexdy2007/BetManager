@@ -1,0 +1,17 @@
+POSTGRES
+    Install postgres
+    Create DB called BetManager
+    Create a super user (CREATE ROLE <Name>) and alter permissions (ALTER ROLE <name> WITH <permission>)
+    in dbScripts change your details
+
+    Make life easier create .passpg.conf file in home directory using format
+        hostname:port:database:username:password
+        see https://www.postgresql.org/docs/9.3/static/libpq-pgpass.html
+
+
+
+from scratch
+
+(build sezilize files)
+node_modules/.bin/sequelize init
+

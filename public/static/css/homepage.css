@@ -1,0 +1,30 @@
+.paddingimages img{
+    z-index:100;
+    max-width:50%;
+    max-height:50%;
+}
+
+#addTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 80%;
+    -moz-box-shadow: inset -1px -1px 0 1px lightgray;
+    -webkit-box-shadow: inset -1px -1px 0 1px lightgray;
+    box-shadow: inset -1px -1px 0 1px lightgray;
+}
+
+#addTable td, #addTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.smallfont p{
+    font-size: 12px !important;
+}
+
+.grooved-border{
+    border-style: groove;
+}
+
+.twobuttons{
+    width:40%;
+}

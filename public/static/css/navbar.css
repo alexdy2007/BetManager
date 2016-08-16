@@ -1,0 +1,22 @@
+
+.navbar-custom {
+    background-color: #87d1fe;
+    border-color: #87d1fe;
+    color:white;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+
+.navbar div.navbar-header a {
+    color: white;
+}
+
+.navbar .images {
+    z-index:100;
+    margin:20%;
+    max-width:60%;
+    max-height:60%;
+}
+

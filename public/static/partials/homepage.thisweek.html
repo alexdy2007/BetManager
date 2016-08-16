@@ -1,0 +1,27 @@
+<div>
+    <div class="col-xs-12">
+        <div class="col-xs-4">
+            <h4>This Week</h4>
+        </div>
+        <div class="col-xs-2">
+            <div>  + £20.47</div>
+        </div>
+        <div class="col-xs-4">
+            <div>  + 3% Higher than last week </div>
+        </div>
+        <div class="col-xs-2 pull-right twobuttons">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default"><img class="paddingimages"src="static/images/info.png"></button>
+                <button ng-click="vm.hideTotalWinnings = !vm.hideTotalWinnings" type="button" class="btn btn-default"><img class="paddingimages"src="static/images/circledown.png"></button>
+            </div>
+        </div>
+    </div>
+    <div uib-collapse="vm.hideTotalWinnings">
+        <div class="well well-lg">
+            <div>PRETTY GRAPHICS</div>
+            <div>MORE GRAPHS</div>
+        </div>
+
+    </div>
+
+</div>
