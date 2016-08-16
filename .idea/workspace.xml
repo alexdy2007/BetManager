@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a95eb7e-b95c-496d-8d08-fe8df2647878" name="Default" comment="" />
+    <list default="true" id="1a95eb7e-b95c-496d-8d08-fe8df2647878" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema1.tar" afterPath="$PROJECT_DIR$/sql/BetManagerBackupSchema1.tar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/accounts.js" afterPath="$PROJECT_DIR$/routes/api/accounts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/connectToDB.js" afterPath="$PROJECT_DIR$/routes/api/connectToDB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/recreateDB.sh" afterPath="$PROJECT_DIR$/scripts/recreateDB.sh" />
+    </list>
     <ignored path="BetManager.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -122,25 +133,15 @@
       <file leaf-file-name="recreateDB.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/recreateDB.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+            <state relative-caret-position="409">
+              <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetManagerBackupSchema3.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/BetManagerBackupSchema3.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="209" column="30" selection-start-line="209" selection-start-column="30" selection-end-line="209" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BetManager.public.accounttypes" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
+      <file leaf-file-name="BetManager.public.account" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -154,64 +155,101 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accounts.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/api/accounts.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="316">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BackupSchema1.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/BackupSchema1.sql">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b7ae5209-f415-4a0a-b369-09c32c6f3c58/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BetManagerBackupSchema3.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/BetManagerBackupSchema3.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-135">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connectToDB.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/connectToDB.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+      <file leaf-file-name="BetManager.public.sport" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.sport">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BetManagerBackupSchema1.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/BetManagerBackupSchema1.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10671">
-              <caret line="723" column="0" selection-start-line="723" selection-start-column="0" selection-end-line="723" selection-end-column="0" />
-              <folding>
-                <marker date="1471359637237" expanded="true" signature="382:420" placeholder=" CREATE statement" />
-                <marker date="1471359637237" expanded="true" signature="421:444" placeholder=" SELECT statement (SCHEMA)" />
-              </folding>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetManagerTestBackupSchema1.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/BetManagerTestBackupSchema1.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="766" column="0" selection-start-line="766" selection-start-column="0" selection-end-line="766" selection-end-column="0" />
+      <file leaf-file-name="BetManager.public.users" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="createBackupOfDB.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/createBackupOfDB.sh">
+      <file leaf-file-name="BetManager.public.eventcase" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.eventcase">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BetManager.public.bettype" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bettype">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="npm-debug.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/npm-debug.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -229,6 +267,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -237,7 +278,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/templates/index.ejs" />
         <option value="$PROJECT_DIR$/views/partials/script_tags.html" />
         <option value="$PROJECT_DIR$/views/partials/css_links.html" />
         <option value="$PROJECT_DIR$/views/partials/navbar.html" />
@@ -285,9 +325,10 @@
         <option value="$PROJECT_DIR$/seeders/allSeeds.sql" />
         <option value="$PROJECT_DIR$/sql/BetManagerBackupSchema3.sql" />
         <option value="$PROJECT_DIR$/sql/BetManagerTestBackupSchema1.sql" />
-        <option value="$PROJECT_DIR$/scripts/recreateDB.sh" />
         <option value="$PROJECT_DIR$/routes/api/connectToDB.js" />
         <option value="$PROJECT_DIR$/routes/api/accounts.js" />
+        <option value="$PROJECT_DIR$/scripts/recreateDB.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -337,16 +378,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -444,6 +475,16 @@
       <pane id="Scratches">
         <subPane />
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane />
       </pane>
@@ -464,19 +505,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/node_modules" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/static/images" />
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/public/bower_components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/views/partials" />
       <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$/public/static/js/main" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/public/static/images" />
-      <recent name="$PROJECT_DIR$/views" />
-      <recent name="$PROJECT_DIR$/public/bower_components" />
-      <recent name="$PROJECT_DIR$/views/partials" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.bin/www">
@@ -949,22 +990,24 @@
       <workItem from="1471264272968" duration="13973000" />
       <workItem from="1471281726802" duration="2100000" />
       <workItem from="1471338516662" duration="17397000" />
-      <workItem from="1471358843261" duration="1884000" />
+      <workItem from="1471358843261" duration="4271000" />
+      <workItem from="1471363969466" duration="3029000" />
+      <workItem from="1471367069536" duration="732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98113000" />
+    <option name="totallyTimeSpent" value="104261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1995" y="82" width="1845" height="998" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972974" sideWeight="0.498103" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.498103" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972974" sideWeight="0.50189704" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -974,8 +1017,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27262872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27262872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29485095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.4894309" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -987,7 +1031,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.498103" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.4894309" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1012,250 +1055,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/index.js" />
-    <entry file="file://$PROJECT_DIR$/models/user.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/tableBetCaseCreation.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/tableBetCasePopulate.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/tableCreationLogin.js" />
-    <entry file="file://$PROJECT_DIR$/seeders/user.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sequelizerc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/allSeeds.sql/concat.js" />
-    <entry file="file://$PROJECT_DIR$/seeders/account.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/allSeeds.js" />
-    <entry file="file://$PROJECT_DIR$/seeders/gulpfile.js" />
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/accounttypes.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BetManager_public_accounttypes.sql" />
-    <entry file="file://$PROJECT_DIR$/sql/betmanagerschema1.sql" />
-    <entry file="file://$PROJECT_DIR$/sql/BetManagerSchema1.sql" />
-    <entry file="file://$PROJECT_DIR$/sql/BetManagerSchema.tar" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/87da920d-d06e-4dd3-8a9f-3a85b21f79e5/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/87da920d-d06e-4dd3-8a9f-3a85b21f79e5.SCHEMA:BetManagerBackup.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>87da920d-d06e-4dd3-8a9f-3a85b21f79e5.SCHEMA:BetManagerBackup.public</OriginalElement>
-          <nodes>
-            <node x="308.0" y="203.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.account</node>
-            <node x="455.0" y="394.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bookie</node>
-            <node x="395.8181818181818" y="0.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.users</node>
-            <node x="162.0" y="597.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.eventcase</node>
-            <node x="123.81818181818181" y="812.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bet</node>
-            <node x="162.0" y="382.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.betcase</node>
-            <node x="233.8181818181818" y="36.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.accounttypes</node>
-            <node x="141.5" y="227.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.sport</node>
-            <node x="0.0" y="633.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bettype</node>
-            <node x="384.25" y="585.0">87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bookieaccount</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.betcase" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.account">
-              <point x="50.5" y="-76.5" />
-              <point x="313.5" y="357.0" />
-              <point x="353.5" y="357.0" />
-              <point x="-45.5" y="64.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.account" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.users">
-              <point x="45.5" y="-64.5" />
-              <point x="444.5" y="178.0" />
-              <point x="496.8181818181818" y="178.0" />
-              <point x="0.0" y="76.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.account" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.accounttypes">
-              <point x="-45.5" y="-64.5" />
-              <point x="353.5" y="178.0" />
-              <point x="304.8181818181818" y="178.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bookieaccount" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bookie">
-              <point x="55.5" y="-88.5" />
-              <point x="550.75" y="560.0" />
-              <point x="546.0" y="560.0" />
-              <point x="0.0" y="64.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.eventcase" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.betcase">
-              <point x="0.0" y="-76.5" />
-              <point x="0.0" y="76.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.betcase" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.sport">
-              <point x="-50.5" y="-76.5" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bet" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bookieaccount">
-              <point x="94.0" y="-124.5" />
-              <point x="358.8181818181818" y="787.0" />
-              <point x="495.25" y="787.0" />
-              <point x="0.0" y="88.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bet" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.eventcase">
-              <point x="0.0" y="-124.5" />
-              <point x="264.8181818181818" y="787.0" />
-              <point x="263.0" y="787.0" />
-              <point x="0.0" y="76.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bet" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bettype">
-              <point x="-94.0" y="-124.5" />
-              <point x="170.8181818181818" y="787.0" />
-              <point x="71.0" y="787.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.bookieaccount" target="87da920d-d06e-4dd3-8a9f-3a85b21f79e5.TABLE:BetManagerBackup.public.account">
-              <point x="-55.5" y="-88.5" />
-              <point x="439.75" y="560.0" />
-              <point x="444.5" y="560.0" />
-              <point x="45.5" y="64.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5208140610545791" x="7.0" y="451.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/BetManagerSchema.sql" />
-    <entry file="file://$PROJECT_DIR$/sql/-hBackupSchema1.sql" />
-    <entry file="file://$PROJECT_DIR$/scripts/database">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b7ae5209-f415-4a0a-b369-09c32c6f3c58/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/sport.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BetManager.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/dbConfig.json" />
-    <entry file="file://$PROJECT_DIR$/config/config.json" />
-    <entry file="file://$PROJECT_DIR$/routes/dbscripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/authertication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/databaseConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1268,102 +1068,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/allSeeds.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public</OriginalElement>
-          <nodes>
-            <node x="251.11363636363637" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users</node>
-            <node x="211.36363636363637" y="812.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
-            <node x="166.50000000000003" y="203.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account</node>
-            <node x="242.75000000000003" y="585.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount</node>
-            <node x="20.5" y="597.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase</node>
-            <node x="313.5" y="394.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie</node>
-            <node x="0.0" y="227.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport</node>
-            <node x="20.5" y="382.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
-            <node x="89.11363636363637" y="36.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes</node>
-            <node x="484.75000000000006" y="633.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype">
-              <point x="94.0" y="-124.5" />
-              <point x="446.3636363636364" y="787.0" />
-              <point x="555.75" y="787.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes">
-              <point x="-45.5" y="-64.5" />
-              <point x="212.00000000000003" y="178.0" />
-              <point x="160.11363636363637" y="178.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
-              <point x="-50.5" y="-76.5" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase">
-              <point x="0.0" y="-76.5" />
-              <point x="0.0" y="76.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie">
-              <point x="55.5" y="-88.5" />
-              <point x="409.25" y="560.0" />
-              <point x="404.5" y="560.0" />
-              <point x="0.0" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users">
-              <point x="45.5" y="-64.5" />
-              <point x="303.0" y="178.0" />
-              <point x="352.1136363636364" y="178.0" />
-              <point x="0.0" y="76.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase">
-              <point x="-94.0" y="-124.5" />
-              <point x="258.3636363636364" y="787.0" />
-              <point x="121.5" y="787.0" />
-              <point x="0.0" y="76.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
-              <point x="50.5" y="-76.5" />
-              <point x="172.0" y="357.0" />
-              <point x="212.00000000000003" y="357.0" />
-              <point x="-45.5" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount">
-              <point x="0.0" y="-124.5" />
-              <point x="352.3636363636364" y="787.0" />
-              <point x="353.75" y="787.0" />
-              <point x="0.0" y="88.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
-              <point x="-55.5" y="-88.5" />
-              <point x="298.25" y="560.0" />
-              <point x="303.0" y="560.0" />
-              <point x="45.5" y="64.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5208140610545791" x="8.20870337477794" y="450.8170515097691" />
-          <SelectedNodes>
-            <node>b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1376,61 +1081,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/abc.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/BetManagerBackupSchema2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2509">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/BetManagerBackupSchema1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10671">
-          <caret line="723" column="0" selection-start-line="723" selection-start-column="0" selection-end-line="723" selection-end-column="0" />
-          <folding>
-            <marker date="1471359637237" expanded="true" signature="382:420" placeholder=" CREATE statement" />
-            <marker date="1471359637237" expanded="true" signature="421:444" placeholder=" SELECT statement (SCHEMA)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/BackupSchema1.sql">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/BetManagerTestBackupSchema1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="766" column="0" selection-start-line="766" selection-start-column="0" selection-end-line="766" selection-end-column="0" />
-          <folding />
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/createBackupOfDB.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/recreateDB.sh">
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        <state relative-caret-position="705">
+          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -1448,26 +1180,571 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public</OriginalElement>
+          <nodes>
+            <node x="365.6363636363637" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users</node>
+            <node x="133.38636363636368" y="812.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
+            <node x="404.2500000000001" y="597.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase</node>
+            <node x="162.00000000000003" y="585.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount</node>
+            <node x="278.25" y="203.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account</node>
+            <node x="131.25000000000003" y="394.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie</node>
+            <node x="404.25" y="382.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
+            <node x="484.75" y="227.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport</node>
+            <node x="203.63636363636368" y="36.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes</node>
+            <node x="0.0" y="633.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype">
+              <point x="-94.0" y="-124.5" />
+              <point x="180.38636363636368" y="787.0" />
+              <point x="71.0" y="787.0" />
+              <point x="0.0" y="40.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes">
+              <point x="-45.5" y="-64.5" />
+              <point x="323.75" y="178.0" />
+              <point x="274.6363636363637" y="178.0" />
+              <point x="0.0" y="40.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
+              <point x="50.49999999999994" y="-76.5" />
+              <point x="0.0" y="40.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase">
+              <point x="-5.6843418860808015E-14" y="-76.5" />
+              <point x="0.0" y="76.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie">
+              <point x="-55.5" y="-88.5" />
+              <point x="217.50000000000003" y="560.0" />
+              <point x="222.25000000000003" y="560.0" />
+              <point x="0.0" y="64.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase">
+              <point x="94.0" y="-124.5" />
+              <point x="368.3863636363637" y="787.0" />
+              <point x="505.2500000000001" y="787.0" />
+              <point x="0.0" y="76.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users">
+              <point x="45.5" y="-64.5" />
+              <point x="414.75" y="178.0" />
+              <point x="466.6363636363637" y="178.0" />
+              <point x="0.0" y="76.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
+              <point x="-50.50000000000006" y="-76.5" />
+              <point x="454.75" y="357.0" />
+              <point x="414.75" y="357.0" />
+              <point x="45.5" y="64.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount">
+              <point x="0.0" y="-124.5" />
+              <point x="274.3863636363637" y="787.0" />
+              <point x="273.0" y="787.0" />
+              <point x="0.0" y="88.5" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
+              <point x="55.5" y="-88.5" />
+              <point x="328.5" y="560.0" />
+              <point x="323.75000000000006" y="560.0" />
+              <point x="-45.5" y="64.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5208140610545791" x="8.0" y="451.0" />
+          <SelectedNodes>
+            <node>b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/database">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/87da920d-d06e-4dd3-8a9f-3a85b21f79e5/BetManagerBackup.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/createBackupOfDB.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/npm-debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b7ae5209-f415-4a0a-b369-09c32c6f3c58/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sql/BetManagerBackupSchema3.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="209" column="30" selection-start-line="209" selection-start-column="30" selection-end-line="209" selection-end-column="30" />
+        <state relative-caret-position="-135">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/connectToDB.js">
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.sport">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.eventcase">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bettype">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/recreateDB.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+        <state relative-caret-position="409">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/accounts.js">
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="316">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>

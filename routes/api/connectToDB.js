@@ -25,7 +25,6 @@ function connectionToDB(sql){
         try {
             pool.connect(function (err, client, done) {
                 query = client.query(sql);
-                console.log("QUERYED CLIENT : " + query);
                 // Stream results back one row at a time
                 query.on('row', function (row) {
                     results.push(row);
