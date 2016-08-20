@@ -385,10 +385,8 @@ ALTER SEQUENCE sport_id_seq OWNED BY sport.id;
 
 CREATE TABLE users (
     id integer NOT NULL,
-    first_name character varying(50) NOT NULL,
-    last_name character varying(50) NOT NULL,
-    username character varying(60) NOT NULL,
-    password character varying(60) NOT NULL
+    password character varying(60) NOT NULL,
+    email character varying(60) NOT NULL
 );
 
 

@@ -6,8 +6,9 @@
 
     angular.module("betManager", ["ui.router",
         "ui.bootstrap",
-        "betManager.main.controllers",
-        "betManager.main.services"]).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        'ngCookies',
+        "betManager.main",
+        "betManager.authentication"]).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
             $locationProvider.html5Mode({
                 enabled: true
@@ -15,7 +16,7 @@
 
             $locationProvider.hashPrefix('!');
     
-            $urlRouterProvider.otherwise('/homepage');
+            $urlRouterProvider.otherwise('/login');
             $stateProvider
                 .state('homepage', {
                     url: '/homepage',
@@ -26,8 +27,6 @@
                     views: {
 
                         '':{templateUrl: '/static/partials/homepage.html'},
-
-                        
                         "totalWinnings@homepage": {
                             templateUrl: '/static/partials/homepage.totalwinnings.html',
                             controller: 'TotalWinningsCtrl',
@@ -39,6 +38,12 @@
                             controllerAs: 'vm'
                         }
                     }
+                })
+                .state('login', {
+                    url: '/login',
+                    templateUrl: '/static/partials/login.html',
+                    controller:'LoginController',
+                    controllerAs:'vm'
                 })
         }).run(run);
 

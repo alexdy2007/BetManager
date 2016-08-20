@@ -1,0 +1,13 @@
+Create Login System and auth
+
+Populate DB if data
+Create reliable test framework
+ADD bet screen
+Stats screen
+log book screen
+
+
+
+api's
+get horserace data - given time and place
+get football info - given date

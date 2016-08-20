@@ -9,14 +9,10 @@
         .module('betManager.authentication',[
             'betManager.authentication.controllers',
             'betManager.authentication.services',
-            'betManager.authentication.directives'
         ]);
 
     angular
         .module('betManager.authentication.controllers', []);
-
-    angular
-        .module('betManager.authentication.directives', []);
 
     angular
         .module('betManager.authentication.services', []);
