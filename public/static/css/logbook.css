@@ -1,0 +1,58 @@
+.box h3{
+    text-align:center;
+    position:relative;
+    top:80px;
+}
+.overviewBox {
+    width:70%;
+    height:15%;
+    background:#fff;
+    margin:30px auto;
+}
+
+.addCaseBoxTop {
+    width:70%;
+    height:7.5%;
+    background:#fff;
+    margin-top:30px;
+}
+
+.addCaseBoxBottom{
+    width:70%;
+    height:7.5%;
+    background:#fff;
+}
+
+.sportBox{
+    width:70%;
+    height:20%;
+    background:#fff;
+    margin-top: 30px;
+}
+
+.openBetsBox{
+    width:70%;
+    height:20%;
+    background:#fff;
+}
+
+
+.openCurrentBetsBox{
+    width:70%;
+    height:auto;
+    background:#fff;
+    border-top-color: #87d1fe;
+    border-top-width:thick ;
+}
+
+
+
+
+/*==================================================
+ * Effect 8
+ * ===============================================*/
+.effect8{
+    box-shadow: 0 5px 3px -3px #777;
+    border-style: solid;
+    border-width:thin;
+}

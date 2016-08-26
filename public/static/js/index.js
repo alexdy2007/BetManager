@@ -47,8 +47,14 @@
                     templateUrl: '/static/partials/login.html',
                     controller:'LoginController',
                     controllerAs:'vm'
+                })
+                .state('logbook', {
+                    url: '/logbook',
+                    templateUrl: '/static/partials/logbook.html',
+                    controller:'logBookCtrl',
+                    controllerAs:'vm'
                 });
-        
+            
 
     }).run(run);
 

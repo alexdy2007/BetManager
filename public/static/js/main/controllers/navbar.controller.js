@@ -20,6 +20,7 @@
         
         $scope.getUserName = getUserName;
         $scope.getCurrentState = getCurrentState;
+        $scope.logout = logout;
         
         function getCurrentState(){
             return $state.current.name;
@@ -27,6 +28,11 @@
         
         function getUserName(){
             return helperService.getUserName();
+        }
+
+        function logout(){
+            $cookies.remove("randomString");
+            $state.go('login');
         }
     }
 })();
