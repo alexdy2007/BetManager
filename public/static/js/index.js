@@ -57,7 +57,7 @@
     
     function run($http, $state, $rootScope, $q, AuthService) {
 
-
+        var deferred = $q.defer();
 
         function waitForAuth(event, next){
 
@@ -74,10 +74,10 @@
                 console.log("Failed auth " + data);
                 event.preventDefault();
                 $state.go('login');
-                defered.reject();
+                deferred.reject();
             }
 
-            var deferred = $q.defer();
+
             AuthService.isAuthenticated().then(successfulAuth, failAuth);
             return deferred.promise
         }

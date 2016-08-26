@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" ng-controller="navbarCtrl">
     <div class="container-fluid navbar-custom">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -7,16 +7,29 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">BetManager</a>
+            <a class="navbar-brand" href="#">BetManager {{getUserName()}}</a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="white-font" ui-sref="homepage">Home</a></li>
-                <li><a class="white-font"href="#">LogBook</a></li>
-                <li><a class="white-font" href="#">My Account</a></li>
-                <li><img class="images" src="static/images/helpnav.png"></li>
-                <li><img class="images" src="static/images/navcog.png"></li>
-            </ul>
+
+        <div ng-show="getCurrentState() == 'login'">
+            <div class="collapse navbar-collapse" id="loginNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="white-font" ui-sref="login">Login</a></li>
+                    <li><a class="white-font"href="#">Register</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div ng-show="getCurrentState() != 'login'">
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="white-font" ui-sref="homepage">Home</a></li>
+                    <li><a class="white-font"href="#">LogBook</a></li>
+                    <li><a class="white-font" href="#">My Account</a></li>
+                    <li><img class="images" src="static/images/helpnav.png"></li>
+                    <li><img class="images" src="static/images/navcog.png"></li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

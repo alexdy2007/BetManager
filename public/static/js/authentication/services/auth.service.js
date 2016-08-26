@@ -12,7 +12,7 @@
         .config(AuthConfig);
 
 
-    AuthService.$inject = ['$cookies', '$http', '$state', 'ngToast'];
+    AuthService.$inject = ['$cookies', '$http', '$state', '$q', 'ngToast'];
     // AuthInterceptFactory.$inject = ['$rootScope', '$q'];
     // AuthConfig.$inject = ['$httpProvider'];
     /**
@@ -20,7 +20,7 @@
      * @returns {Factory}
      */
 
-    function AuthService($cookies, $http, $state, ngToast) {
+    function AuthService($cookies, $http, $state, $q, ngToast) {
         /**
          * @name Authentication
          * @desc The Factory to be returned
