@@ -39,7 +39,7 @@ function connectionToDB(sql){
             })
         } catch (err) {
             done();
-            reject(err, null)
+            reject({'data':null,'error':err})
         }
     });
 

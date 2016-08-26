@@ -24,6 +24,7 @@
     "angular-touch": "^1.5.8",
     "angular-animate": "^1.5.8",
     "angular-bootstrap": "^2.0.1",
-    "angular-cookies": "^1.5.8"
+    "angular-cookies": "^1.5.8",
+    "ngToast": "ngtoast#^2.0.0"
   }
 }

@@ -414,6 +414,40 @@ ALTER SEQUENCE user_id_seq OWNED BY users.id;
 
 
 --
+-- Name: usersettings; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE usersettings (
+    snrcolumn boolean DEFAULT true NOT NULL,
+    id integer NOT NULL,
+    userid integer
+);
+
+
+ALTER TABLE usersettings OWNER TO ayoung;
+
+--
+-- Name: usersettings_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
+--
+
+CREATE SEQUENCE usersettings_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE usersettings_id_seq OWNER TO ayoung;
+
+--
+-- Name: usersettings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
+--
+
+ALTER SEQUENCE usersettings_id_seq OWNED BY usersettings.id;
+
+
+--
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
 --
 
@@ -474,6 +508,13 @@ ALTER TABLE ONLY sport ALTER COLUMN id SET DEFAULT nextval('sport_id_seq'::regcl
 --
 
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('user_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY usersettings ALTER COLUMN id SET DEFAULT nextval('usersettings_id_seq'::regclass);
 
 
 --
@@ -554,6 +595,14 @@ ALTER TABLE ONLY sport
 
 ALTER TABLE ONLY users
     ADD CONSTRAINT user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: usersettings_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY usersettings
+    ADD CONSTRAINT usersettings_pkey PRIMARY KEY (id);
 
 
 --
@@ -666,6 +715,13 @@ CREATE UNIQUE INDEX sport_sport_type_uindex ON sport USING btree (sporttype);
 --
 
 CREATE UNIQUE INDEX user_id_uindex ON users USING btree (id);
+
+
+--
+-- Name: usersettings_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE UNIQUE INDEX usersettings_id_uindex ON usersettings USING btree (id);
 
 
 --

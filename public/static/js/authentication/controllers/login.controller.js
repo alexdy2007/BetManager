@@ -15,16 +15,15 @@
         .module('betManager.authentication.controllers')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$scope','$location', 'Authentication'];
+    LoginController.$inject = ['$scope', '$state', 'AuthService'];
 
     /**
      * @namespace LoginController
      */
-    function LoginController($scope, $location, Authentication) {
+    function LoginController($scope, $state, AuthService) {
         var vm = this;
 
         vm.login = login;
-
         /**
          * @name login
          * @desc Log the user in
@@ -32,8 +31,14 @@
          */
 
         function login() {
-            Authentication.login(vm.email, vm.password);
+            AuthService.login(vm.email, vm.password);
         }
+
+        // function checkAuthorised(){
+        //     if(AuthService.isAuthenticated()){
+        //         $state.go('homepage')
+        //     };
+        // }
 
 
 

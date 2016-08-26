@@ -28,3 +28,7 @@
 .twobuttons{
     width:40%;
 }
+
+ul.ng-toast__list{
+    list-style-type: none;
+}

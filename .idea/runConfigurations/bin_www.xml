@@ -3,7 +3,8 @@
     <envs>
       <env name="DEBUG" value="BetManager:*" />
     </envs>
-    <browser url="http://localhost:3000/" />
+    <browser start="true" with-js-debugger="true" url="http://localhost:3000/" />
+    <profiling allow-runtime-heap-snapshot="true" do-profile="true" />
     <method />
   </configuration>
 </component>

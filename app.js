@@ -1,5 +1,6 @@
 var express = require('express');
-var app = express();
+
+
 var passport = require('passport');
 var flash    = require('connect-flash');
 
@@ -9,21 +10,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var session      = require('express-session');
 
 var routes = require('./routes/index');
 
 //API ROUTES
 var accountsRouter = require('./routes/api/accounts');
-var loginRouter = require('./routes/api/login');
-
-
-
-
-var dbScripts = require('./routes/dbscripts');
+var loginRouter = require('./routes/api/auth')(passport);
 var session = require('express-session');
 
 
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,6 +31,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+
+
+require('./config/passport')(passport);
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -56,10 +55,9 @@ app.use('/api', accountsRouter);
 
 app.use(session({
     name: 'betManager',
-    secret: 'keyboard cat',
+    secret: 'keyboardcat',
     resave: false,
     saveUninitialized: true,
-    cookie: {secure: true}
 }));
 
 // catch 404 and forward to error handler

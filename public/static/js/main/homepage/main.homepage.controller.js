@@ -9,12 +9,16 @@
         .module('betManager.main.controllers')
         .controller('HomePageCtrl', HomePageCtrl);
 
-    HomePageCtrl.$inject = ['$scope', '$state'];
+    HomePageCtrl.$inject = ['$scope'];
+
+
 
     /**
-     * @namespace LoginController
+     * @namespace HomePageController
      */
-    function HomePageCtrl($scope, $state) {
+    function HomePageCtrl($scope) {
+        
+
         var vm = this;
         vm.hello = "hello"
 
