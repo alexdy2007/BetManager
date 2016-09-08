@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="728752107">
+  <component name="DataSourceManagerImpl" format="xml" hash="2948024190">
     <data-source source="LOCAL" name="PostgreSQL - BetManager@localhost" uuid="b7ae5209-f415-4a0a-b369-09c32c6f3c58">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -12,6 +12,12 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/BetManagerBackup</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - BetManagerTest@localhost" uuid="0f50ffa9-d730-4cd7-aab2-ba92feb1de3f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/BetManagerTest</jdbc-url>
     </data-source>
   </component>
 </project>

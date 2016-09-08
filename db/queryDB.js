@@ -7,7 +7,7 @@ var config = require('../config/databaseConfig.js')[env];
 var pg = require('pg');
 var Promise = require('promise');
 
-var config = {
+var customConfig = {
     user: 'ayoung', //env var: PGUSER
     database: config.database.db,
     password: 'Popcorn10',
@@ -19,7 +19,7 @@ var config = {
 exports.queryDB = Promise.nodeify(connectionToDB);
 
 function connectionToDB(sql){
-    var pool = new pg.Pool(config);
+    var pool = new pg.Pool(customConfig);
     return new Promise(function(resolve, reject){
         var results = [];
         try {
@@ -28,7 +28,6 @@ function connectionToDB(sql){
                 // Stream results back one row at a time
                 query.on('row', function (row) {
                     if(row != "" | row != " ") {
-
                         results.push(row);
                     }
                 });
@@ -41,7 +40,7 @@ function connectionToDB(sql){
                 });
             })
         } catch (err) {
-            console.log("HERE SQL ERROR" + err);
+            console.log("SQL ERROR" + err);
             done();
             reject({'data':null,'error':err})
         }

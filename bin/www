@@ -5,14 +5,17 @@
  */
 
 var app = require('../app');
+var env = process.env.NODE_ENV||"development";
 var debug = require('debug')('BetManager:server');
 var http = require('http');
+var config = require('../config/databaseConfig')[env];
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(config.server.port || '3000');
+
 app.set('port', port);
 
 /**

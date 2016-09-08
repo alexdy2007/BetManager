@@ -5,7 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-// uncomment after placing your favicon in /public
+
 
 
 var express = require('express');
@@ -15,7 +15,7 @@ var passport = require('passport');
 
 var app = express();
 
-app.use(logger('dev'));
+
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -44,6 +44,7 @@ var routes = require('./routes/index');
 var accountsRouter = require('./routes/api/accounts');
 var loginRouter = require('./routes/api/auth')(passport);
 var betRouter = require('./routes/api/bets');
+var bookieRouter = require('./routes/api/bookie');
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -60,12 +61,14 @@ app.use('/homepage', routes);
 app.use('/auth', loginRouter);
 
 //API ROUTES
-app.use('/api', [accountsRouter, betRouter]);
+app.use('/api', [accountsRouter, betRouter, bookieRouter]);
 
 
 
 
-
+if(app.get('env') != 'test') {
+    app.use(logger('dev'));
+}
 
 
 // catch 404 and forward to error handler

@@ -13,5 +13,9 @@
       <schema-pattern>BetManagerBackup.pg_catalog BetManagerBackup.public</schema-pattern>
       <default-schemas>BetManagerBackup.public</default-schemas>
     </data-source>
+    <data-source name="PostgreSQL - BetManagerTest@localhost" uuid="0f50ffa9-d730-4cd7-aab2-ba92feb1de3f">
+      <secret-storage>master_key</secret-storage>
+      <user-name>ayoung</user-name>
+    </data-source>
   </component>
 </project>

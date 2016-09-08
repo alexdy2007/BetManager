@@ -25,7 +25,6 @@ module.exports = function (passport) {
 
     // used to deserialize the user
     passport.deserializeUser(function (id, done) {
-        console.log("DESERIALIZE " + id);
         conn.queryDB("select * from users where id = " + id).then(function (data) {
             console.log(data.results[0]);
             if(data.err){

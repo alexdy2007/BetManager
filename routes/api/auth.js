@@ -8,9 +8,7 @@ var hashing = require('../../authentication/passwordChecks');
 const util = require('util');
 
 module.exports = function(passport) {
-
-    console.log("HERE IN LOGIN");
-
+    
     loginRouter.post('/login',
         passport.authenticate('local-login'),
         function(req, res, next) {

@@ -19,7 +19,7 @@ var config = {
             port: '3000'
         }
     },
-    Test: {
+    test: {
         //url to be used in link generation
         url: 'localhost:4000',
         database: {
@@ -30,7 +30,7 @@ var config = {
         //server details
         server: {
             host:   '127.0.0.1',
-            port:   '3000'
+            port:   '4000'
         }
     }
 };

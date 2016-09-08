@@ -10,7 +10,8 @@ gulp.task('concatSeeds',['deleteSeeds'] ,function() {
                 'accounttypes.sql',
                 'sport.sql',
                 'account.sql',
-                'bookie.sql'
+                'bookie.sql',
+                'bettype.sql'
             ]))
             .pipe(gp_concat('allSeeds.sql', {newLine: '\n'}))
             .pipe(gulp.dest('./seeders/'));

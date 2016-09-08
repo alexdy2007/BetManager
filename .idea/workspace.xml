@@ -2,60 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a95eb7e-b95c-496d-8d08-fe8df2647878" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/Cancel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/closedoor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/editbet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/pencilEdit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/authentication/cookieStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/accounts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/addaccount.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/addbetmodal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/controllers/addBet.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/accounts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/addaccount.modal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/addbet.modal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/bets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seeders/bookie.sql" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/static/js/navbar/navbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sql/BackupSchema1.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema1.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema1.tar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema3.tar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sql/BackupSchema1.tar" afterPath="$PROJECT_DIR$/public/static/css/addbetmodal.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sql/BackupSchema3.sql" afterPath="$PROJECT_DIR$/public/static/css/addaccount.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sql/BackupSchema3.tar" afterPath="$PROJECT_DIR$/public/static/css/accounts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/betcase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/bookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/generics.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/testSetupScript.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seeders/bettype.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/account_api_tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/betcase_api_tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/bookie_api_tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/testServer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/dbscripts.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/images/circledown.png" afterPath="$PROJECT_DIR$/public/static/images/circledown.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/images/info.png" afterPath="$PROJECT_DIR$/public/static/images/info.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.tar" afterPath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.tar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/authentication/passwordChecks.js" afterPath="$PROJECT_DIR$/authentication/passwordChecks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/databaseConfig.js" afterPath="$PROJECT_DIR$/config/databaseConfig.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/passport.js" afterPath="$PROJECT_DIR$/config/passport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/queryDB.js" afterPath="$PROJECT_DIR$/db/queryDB.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/css/logbook.css" afterPath="$PROJECT_DIR$/public/static/css/logbook.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/css/navbar.css" afterPath="$PROJECT_DIR$/public/static/css/navbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/authentication/authentication.js" afterPath="$PROJECT_DIR$/public/static/js/authentication/authentication.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/authentication/controllers/login.controller.js" afterPath="$PROJECT_DIR$/public/static/js/authentication/controllers/login.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/authentication/services/auth.service.js" afterPath="$PROJECT_DIR$/public/static/js/authentication/services/auth.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/index.js" afterPath="$PROJECT_DIR$/public/static/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/main/controllers/navbar.controller.js" afterPath="$PROJECT_DIR$/public/static/js/main/controllers/navbar.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/partials/logbook.html" afterPath="$PROJECT_DIR$/public/static/partials/logbook.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/accounts.js" afterPath="$PROJECT_DIR$/routes/api/accounts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/auth.js" afterPath="$PROJECT_DIR$/routes/api/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/users.js" afterPath="$PROJECT_DIR$/routes/api/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/recreateDB.sh" afterPath="$PROJECT_DIR$/scripts/recreateDB.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/allSeeds.sql" afterPath="$PROJECT_DIR$/seeders/allSeeds.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema3.sql" afterPath="$PROJECT_DIR$/sql/BetManagerBackupSchema3.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/links/css_links.html" afterPath="$PROJECT_DIR$/views/links/css_links.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/links/navbar.html" afterPath="$PROJECT_DIR$/views/links/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/links/script_tags.html" afterPath="$PROJECT_DIR$/views/links/script_tags.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/createBackupOfDB.sh" afterPath="$PROJECT_DIR$/scripts/createBackupOfDB.sh" />
     </list>
     <ignored path="BetManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,11 +61,7 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - BetManagerBackup@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="public" />
+        <option name="myItemId" value="PostgreSQL - BetManagerTest@localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -103,8 +71,36 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - BetManagerBackup@localhost" />
+        <option name="myItemId" value="PostgreSQL - BetManagerTest@localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - BetManagerTest@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="account" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
     </PATH>
     <PATH>
@@ -157,7 +153,7 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="sessionstore" />
+        <option name="myItemId" value="bet" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -178,87 +174,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BetManager.public.bookie" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+      <file leaf-file-name="DATABASE/b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public" pinned="false" current-in-tab="true">
+        <entry file="uml://DATABASE/b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bookie.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seeders/bookie.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allSeeds.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seeders/allSeeds.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recreateDB.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/recreateDB.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BetManager.public.accounttypes" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BetManager.public.account" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <ID>DATABASE</ID>
+              <OriginalElement>b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public</OriginalElement>
+              <nodes>
+                <node x="646.75" y="549.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult</node>
+                <node x="384.0" y="513.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount</node>
+                <node x="162.0" y="525.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase</node>
+                <node x="263.1041666666667" y="155.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account</node>
+                <node x="454.75" y="334.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie</node>
+                <node x="199.0" y="12.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes</node>
+                <node x="19.43699089602302" y="722.0493531384762">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype</node>
+                <node x="853.75" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sessionstore</node>
+                <node x="361.0" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users</node>
+                <node x="223.55342597029232" y="716.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
+                <node x="656.75" y="358.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport</node>
+                <node x="169.2232870148539" y="333.99999999999994">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
+                <node x="0.0" y="1034.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.usersettings</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.7202761000862812" x="542.7508385241975" y="621.5894825107811" />
+              <SelectedNodes>
+                <node>b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -278,14 +273,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetManager.public.bettype" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bettype">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="bettype.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seeders/bettype.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
-          <provider editor-type-id="text-editor">
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sport.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seeders/sport.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookie.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seeders/bookie.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="betcase.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/betcase.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -293,17 +323,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetManager.public.betcase" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.betcase">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="betcase_api_tests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/betcase_api_tests.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+              <folding>
+                <element signature="e#42#83#0" expanded="false" />
+                <element signature="e#84#125#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookie_api_tests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/bookie_api_tests.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="3" />
+              <folding>
+                <element signature="e#42#83#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -313,9 +363,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="SQL Script" />
       </list>
     </option>
@@ -331,31 +381,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/api/login.js" />
-        <option value="$PROJECT_DIR$/public/static/css/homepage.css" />
-        <option value="$PROJECT_DIR$/public/static/js/main/homepage/main.homepage.controller.js" />
-        <option value="internal/linkedlist.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/services/helper.service.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js" />
-        <option value="$PROJECT_DIR$/routes/api/users.js" />
-        <option value="dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.betcase" />
-        <option value="$PROJECT_DIR$/routes/api/bets.js" />
-        <option value="$PROJECT_DIR$/config/databaseConfig.js" />
-        <option value="$PROJECT_DIR$/authentication/passwordChecks.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/public/bower_components/angular/angular.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b7ae5209-f415-4a0a-b369-09c32c6f3c58/console.sql" />
-        <option value="internal/process/next_tick.js" />
-        <option value="$PROJECT_DIR$/db/queryDB.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/controllers/account.controller.js" />
-        <option value="$PROJECT_DIR$/authentication/cookieStore.js" />
-        <option value="$PROJECT_DIR$/config/passport.js" />
-        <option value="localhost:3000/static/js/index.js" />
-        <option value="$PROJECT_DIR$/routes/api/auth.js" />
-        <option value="$PROJECT_DIR$/public/static/css/accounts.css" />
-        <option value="$PROJECT_DIR$/public/static/partials/addaccount.modal.html" />
-        <option value="$PROJECT_DIR$/public/static/js/authentication/controllers/login.controller.js" />
         <option value="$PROJECT_DIR$/public/static/js/authentication/authentication.js" />
         <option value="$PROJECT_DIR$/public/static/js/authentication/services/auth.service.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
@@ -378,10 +403,35 @@
         <option value="$PROJECT_DIR$/public/static/partials/accounts.html" />
         <option value="$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js" />
         <option value="$PROJECT_DIR$/seeders/bookieAccount.sql" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/seeders/allSeeds.sql" />
         <option value="$PROJECT_DIR$/seeders/bookie.sql" />
         <option value="$PROJECT_DIR$/scripts/recreateDB.sh" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/scripts/createBackupOfDB.sh" />
+        <option value="$PROJECT_DIR$/scripts/testSetupScript.sh" />
+        <option value="$PROJECT_DIR$/config/databaseConfig.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/test/test_start_server.js" />
+        <option value="$PROJECT_DIR$/test/testServer.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0f50ffa9-d730-4cd7-aab2-ba92feb1de3f/console.sql" />
+        <option value="$PROJECT_DIR$/test/user.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/config/passport.js" />
+        <option value="$PROJECT_DIR$/routes/api/auth.js" />
+        <option value="$PROJECT_DIR$/test/api_tests/account_api_tests.js" />
+        <option value="$PROJECT_DIR$/test/index.html" />
+        <option value="$PROJECT_DIR$/test/api_tests/bookie_api_tests.js" />
+        <option value="$PROJECT_DIR$/routes/api/generics.js" />
+        <option value="$PROJECT_DIR$/test/account_api_tests.js" />
+        <option value="$PROJECT_DIR$/test/bookie_api_tests.js" />
+        <option value="$PROJECT_DIR$/db/queryDB.js" />
+        <option value="$PROJECT_DIR$/routes/api/bookie.js" />
+        <option value="$PROJECT_DIR$/routes/api/accounts.js" />
+        <option value="$PROJECT_DIR$/routes/api/betcase.js" />
+        <option value="$PROJECT_DIR$/test/betcase_api_tests.js" />
+        <option value="$PROJECT_DIR$/seeders/bettype.sql" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -540,39 +590,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="links" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,6 +619,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -646,20 +696,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="authentication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -684,11 +720,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/test/api_tests" />
       <recent name="$PROJECT_DIR$/public/static/partials" />
       <recent name="$PROJECT_DIR$/public/static/js/main/homepage" />
       <recent name="$PROJECT_DIR$/public/static/js/main/accounts" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/authentication" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/static/images" />
@@ -698,11 +734,14 @@
       <recent name="$PROJECT_DIR$/public/bower_components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.bin/www">
+  <component name="RunManager" selected="Node.js.user.js">
     <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="false" name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/routes/index.ejs" working-dir="$PROJECT_DIR$/routes">
+      <method />
+    </configuration>
+    <configuration default="false" name="user.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/test/account_api_tests.js" working-dir="$PROJECT_DIR$/test">
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1139,16 +1178,18 @@
     <configuration default="false" name="bin/www JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000/">
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.bin/www JavaScript" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.bin/www" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.index.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.user.js" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.index.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.user.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.index.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
       </list>
     </recent_temporary>
   </component>
@@ -1212,16 +1253,16 @@
       <workItem from="1472751174126" duration="2734000" />
       <workItem from="1473179658129" duration="687000" />
       <workItem from="1473261409626" duration="16103000" />
-      <workItem from="1473321946445" duration="2197000" />
+      <workItem from="1473321946445" duration="25369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246312000" />
+    <option name="totallyTimeSpent" value="269484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1229,29 +1270,29 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.49593496" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32858595" sideWeight="0.5342318" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32858595" sideWeight="0.53638816" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.48733154" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.4851752" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20215634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16334231" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29326147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.46361187" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39674467" sideWeight="0.39460915" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39674467" sideWeight="0.3929919" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="V8 CPU Profiling" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46795523" sideWeight="0.45714286" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.48733154" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.4657682" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1275,12 +1316,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>46</line>
+          <line>44</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>45</line>
+          <line>43</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -1290,32 +1331,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/passport.js</url>
-          <line>54</line>
+          <line>53</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>50</line>
+          <line>48</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>48</line>
+          <line>46</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/passport.js</url>
-          <line>128</line>
+          <line>127</line>
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/passport.js</url>
-          <line>135</line>
+          <line>134</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/passport.js</url>
-          <line>94</line>
+          <line>93</line>
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -1325,48 +1366,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/passport.js</url>
-          <line>108</line>
+          <line>107</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/passport.js</url>
-          <line>33</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>30</line>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>31</line>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
           <line>32</line>
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>36</line>
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>35</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>34</line>
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>38</line>
-          <option name="timeStamp" value="138" />
+          <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/authentication/cookieStore.js</url>
@@ -1379,17 +1385,13 @@
           <option name="timeStamp" value="141" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>18</line>
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api/auth.js</url>
-          <line>17</line>
-          <option name="timeStamp" value="151" />
+          <url>file://$PROJECT_DIR$/test/account_api_tests.js</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="156" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="154" />
+      <option name="time" value="158" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1398,266 +1400,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/queryDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="http://localhost:3000/static/js/index.js">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/cookieStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/accounts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/services/helper.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/authentication/controllers/login.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/authentication/services/auth.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/authentication/authentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/controllers/logbook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/navbar/navbar.js" />
-    <entry file="file://$PROJECT_DIR$/public/static/css/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/links/css_links.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/accounts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/homepage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/addbetmodal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/logbook.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/logbook.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/controllers/addBet.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/addaccount.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/provider.modals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/links/script_tags.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/addaccount.modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/accounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/addbet.modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="52" column="59" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/links/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1682,112 +1424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public</OriginalElement>
-          <nodes>
-            <node x="0.0" y="549.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult</node>
-            <node x="444.75" y="525.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase</node>
-            <node x="363.6458333333333" y="155.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account</node>
-            <node x="202.75" y="513.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount</node>
-            <node x="172.0" y="334.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie</node>
-            <node x="295.74999999999994" y="12.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes</node>
-            <node x="666.75" y="561.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype</node>
-            <node x="853.75" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sessionstore</node>
-            <node x="457.74999999999994" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users</node>
-            <node x="288.75" y="740.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
-            <node x="10.0" y="358.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport</node>
-            <node x="454.75" y="334.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
-            <node x="0.0" y="1034.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.usersettings</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype">
-              <point x="105.75" y="-124.5" />
-              <point x="535.5" y="720.0" />
-              <point x="737.75" y="720.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes">
-              <point x="-45.50000000000006" y="-64.5" />
-              <point x="409.14583333333326" y="130.0" />
-              <point x="366.74999999999994" y="130.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
-              <point x="0.0" y="-52.5" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase">
-              <point x="0.0" y="-76.5" />
-              <point x="0.0" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie">
-              <point x="-55.5" y="-88.5" />
-              <point x="258.25" y="488.0" />
-              <point x="263.0" y="488.0" />
-              <point x="0.0" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult">
-              <point x="-105.75" y="-124.5" />
-              <point x="324.0" y="720.0" />
-              <point x="81.0" y="720.0" />
-              <point x="0.0" y="52.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
-              <point x="0.0" y="-64.5" />
-              <point x="545.75" y="309.0" />
-              <point x="500.1458333333333" y="309.0" />
-              <point x="45.5" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users">
-              <point x="45.49999999999994" y="-64.5" />
-              <point x="500.14583333333326" y="130.0" />
-              <point x="538.75" y="130.0" />
-              <point x="0.0" y="52.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase">
-              <point x="35.25" y="-124.5" />
-              <point x="465.0" y="710.0" />
-              <point x="545.75" y="710.0" />
-              <point x="0.0" y="76.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount">
-              <point x="-35.25" y="-124.5" />
-              <point x="394.5" y="710.0" />
-              <point x="313.75" y="710.0" />
-              <point x="0.0" y="88.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
-              <point x="55.5" y="-88.5" />
-              <point x="369.25" y="488.0" />
-              <point x="364.5" y="488.0" />
-              <point x="364.5" y="309.0" />
-              <point x="409.1458333333333" y="309.0" />
-              <point x="-45.5" y="64.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5202761000862812" x="-151.83665008291882" y="451.2935323383085" />
-          <SelectedNodes>
-            <node>b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/sport.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seeders/user.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1796,67 +1432,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookieaccount">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.accounttypes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1882,6 +1458,315 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/seeders/allSeeds.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookieaccount">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/recreateDB.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/database">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/mocha.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/createBackupOfDB.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/testSetupScript.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="137" column="2" selection-start-line="137" selection-start-column="2" selection-end-line="137" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0f50ffa9-d730-4cd7-aab2-ba92feb1de3f/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/0f50ffa9-d730-4cd7-aab2-ba92feb1de3f/BetManagerTest.public.account">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/dbscripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetManager.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/mocha.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.account">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/databaseConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="93" column="52" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/0f50ffa9-d730-4cd7-aab2-ba92feb1de3f/BetManagerTest.public.bookie">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/bets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/account_api_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <marker date="1473352011827" expanded="true" signature="1869:2792" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/generics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/queryDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/bookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/accounts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.betcase">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1895,27 +1780,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/allSeeds.sql">
+    <entry file="file://$PROJECT_DIR$/routes/api/betcase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/bookie_api_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="3" />
+          <folding>
+            <element signature="e#42#83#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/betcase_api_tests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="e#42#83#0" expanded="false" />
+            <element signature="e#84#125#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seeders/bookie.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/recreateDB.sh">
+    <entry file="file://$PROJECT_DIR$/seeders/sport.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seeders/bettype.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public</OriginalElement>
+          <nodes>
+            <node x="646.75" y="549.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult</node>
+            <node x="384.0" y="513.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount</node>
+            <node x="162.0" y="525.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase</node>
+            <node x="263.1041666666667" y="155.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account</node>
+            <node x="454.75" y="334.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie</node>
+            <node x="199.0" y="12.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes</node>
+            <node x="19.43699089602302" y="722.0493531384762">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype</node>
+            <node x="853.75" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sessionstore</node>
+            <node x="361.0" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users</node>
+            <node x="223.55342597029232" y="716.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
+            <node x="656.75" y="358.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport</node>
+            <node x="169.2232870148539" y="333.99999999999994">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
+            <node x="0.0" y="1034.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.usersettings</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bettype">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.pickresult">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.eventcase">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookieaccount" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7202761000862812" x="542.7508385241975" y="621.5894825107811" />
+          <SelectedNodes>
+            <node>b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
