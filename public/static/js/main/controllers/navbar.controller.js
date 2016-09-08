@@ -10,18 +10,22 @@
         .module('betManager.main.controllers')
         .controller('navbarCtrl', navbarCtrl);
 
-    navbarCtrl.$inject = ['$scope', '$cookies', '$state', 'helperService'];
+    navbarCtrl.$inject = ['$scope', '$cookies', '$state', '$uibModal', 'helperService', 'authService'];
 
     /**
      * @namespace ThisWeekCtrl
      */
-    function navbarCtrl($scope, $cookies, $state, helperService) {
+    function navbarCtrl($scope, $cookies, $state, $uibModal, helperService, authService) {
         var vm = this;
         
         $scope.getUserName = getUserName;
         $scope.getCurrentState = getCurrentState;
         $scope.logout = logout;
-        
+        $scope.openAddBet = openAddBet;
+        $scope.openComponentModal;
+        $scope.userData = ["abc", "def"];
+
+
         function getCurrentState(){
             return $state.current.name;
         }
@@ -30,9 +34,27 @@
             return helperService.getUserName();
         }
 
-        function logout(){
-            $cookies.remove("randomString");
-            $state.go('login');
+        function logout() {
+            authService.logOut().then(function() {
+                $state.go('login');
+            });
         }
+
+        function openAddBet(size){
+            var modalInstance = $uibModal.open({
+                animation: true,
+                ariaLabelledBy: 'Add Bet',
+                ariaDescribedBy: 'add Bet',
+                templateUrl: '/static/partials/addbet.modal.html',
+                controller: 'addBetCtrl',
+                controllerAs: 'vm',
+                resolve: {
+                    userData: function () {
+                        return $scope.userData;
+                    }
+                }
+            });
+        }
+
     }
 })();

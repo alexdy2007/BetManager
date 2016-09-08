@@ -4,14 +4,13 @@
 var express = require('express');
 var path = require("path");
 var passport = require("passport")
-    ,LocalStrategy = require('passport-local').Strategy;
+    , LocalStrategy = require('passport-local').Strategy
+    , RememberMeStrategy = require('passport-remember-me').Strategy;
 var conn = require('./../db/queryDB');
-
-var LocalStrategy   = require('passport-local').Strategy;
-
+var cookieStore = require('./../authentication/cookieStore')
 
 // expose this function to our app using module.exports
-module.exports = function(passport) {
+module.exports = function (passport) {
 
     // =========================================================================
     // passport session setup ==================================================
@@ -20,16 +19,19 @@ module.exports = function(passport) {
     // passport needs ability to serialize and unserialize users out of session
 
     // used to serialize the user for the session
-    console.log("inside passport.js module" + passport);
-
-    passport.serializeUser(function(user, done) {
+    passport.serializeUser(function (user, done) {
         done(null, user.id);
     });
 
     // used to deserialize the user
-    passport.deserializeUser(function(id, done) {
-        connection.query("select * from users where id = "+id,function(err,rows){
-            done(err, rows[0]);
+    passport.deserializeUser(function (id, done) {
+        console.log("DESERIALIZE " + id);
+        conn.queryDB("select * from users where id = " + id).then(function (data) {
+            console.log(data.results[0]);
+            if(data.err){
+                return done(err);
+            }
+            return done(null, data.results[0]);
         });
     });
 
@@ -42,15 +44,15 @@ module.exports = function(passport) {
 
     passport.use('local-signup', new LocalStrategy({
             // by default, local strategy uses username and password, we will override with email
-            usernameField : 'email',
-            passwordField : 'password',
-            passReqToCallback : true // allows us to pass back the entire request to the callback
+            usernameField: 'email',
+            passwordField: 'password',
+            passReqToCallback: true // allows us to pass back the entire request to the callback
         },
-        function(req, username, password, done) {
+        function (req, username, password, done) {
 
             // find a user whose email is the same as the forms email
             // we are checking to see if the user trying to login already exists
-            conn.query("select * from users where email = '"+email+"'").then(function(data){
+            conn.query("select * from users where email = '" + email + "'").then(function (data) {
                 if (data.err)
                     return done(data.err);
                 if (rows.length) {
@@ -61,12 +63,12 @@ module.exports = function(passport) {
                     // create the user
                     var userSqlObject = new Object();
 
-                    userSqlObject.email    = email;
+                    userSqlObject.email = email;
                     userSqlObject.password = password; // use the generateHash function in our user model
 
-                    var insertQuery = "INSERT INTO users ( email, password ) values (" + email + ',' + password +') RETURN *';
+                    var insertQuery = "INSERT INTO users ( email, password ) values (" + email + ',' + password + ') RETURN *';
                     console.log(insertQuery);
-                    conn.queryDB(insertQuery).then(function(data2){
+                    conn.queryDB(insertQuery).then(function (data2) {
                         userSqlObject.id = data2.results.id;
                         return done(null, userSqlObject);
                     });
@@ -74,8 +76,7 @@ module.exports = function(passport) {
             });
         }));
 
-    
-    /////////CARRY ON GOT TO HERE 19th;
+
     // =========================================================================
     // LOCAL LOGIN =============================================================
     // =========================================================================
@@ -84,17 +85,17 @@ module.exports = function(passport) {
 
     passport.use('local-login', new LocalStrategy({
             // by default, local strategy uses username and password, we will override with email
-            usernameField : 'email',
-            passwordField : 'password',
-            passReqToCallback : true // allows us to pass back the entire request to the callback
+            usernameField: 'email',
+            passwordField: 'password',
+            passReqToCallback: true,
+            session:true// allows us to pass back the entire request to the callback
         },
-        function(req, email, password, done) { // callback with email and password from our form
-            conn.queryDB("SELECT * FROM users WHERE email='" + email + "'").then(function(data){
+        function (req, email, password, done) {
+
+            conn.queryDB("SELECT * FROM users WHERE email='" + email + "'").then(function (data) {
                 if (data.error) {
-                    console.log("ERRRORR");
                     return done(data.error);
                 }
-
                 if (!data.results.length) {
                     return done(null, false); // req.flash is the way to set flashdata using connect-flash
                 }
@@ -103,13 +104,42 @@ module.exports = function(passport) {
                 if (!( data.results[0].password == password)) {
                     return done(null, false); // create the loginMessage and save it to session as flashdata
                 }
+                console.log("AUTH local login" + data.results[0].password);
                 // all is well, return successful user;
                 return done(null, data.results[0]);
 
             });
 
 
-
         }));
+
+    passport.use(new RememberMeStrategy(
+
+        function (token, done) {
+            console.log("token?" + token);
+            cookieStore.getToken(token, function (err, user) {
+                if (err) {
+                    return done(err);
+                }
+                if (!user) {
+                    return done(null, false);
+                }
+                var sql_find_user = "SELECT * FROM users WHERE id=" + user[0].id;
+                conn.queryDB(sql_find_user).then(function(data){
+                    return done(null, data.results[0]);
+                });
+            });
+        },
+        function (user, done) {
+            var Token = cookieStore.generateCookie();
+            cookieStore.saveToken(user, Token, function(err, token){
+                if(err){
+                    done(null, false)
+                }
+                return done(null, token.cookiehash);
+            })
+
+        })
+    );
 
 };

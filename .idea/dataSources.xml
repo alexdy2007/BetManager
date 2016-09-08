@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1287399445">
+  <component name="DataSourceManagerImpl" format="xml" hash="728752107">
     <data-source source="LOCAL" name="PostgreSQL - BetManager@localhost" uuid="b7ae5209-f415-4a0a-b369-09c32c6f3c58">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

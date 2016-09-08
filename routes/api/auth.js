@@ -3,6 +3,7 @@
  */
 var express = require('express');
 var loginRouter = express.Router();
+var cookieStore = require('../../authentication/cookieStore');
 var hashing = require('../../authentication/passwordChecks');
 const util = require('util');
 
@@ -12,25 +13,45 @@ module.exports = function(passport) {
 
     loginRouter.post('/login',
         passport.authenticate('local-login'),
-        function(req, res) {
-            console.log(req.user.email);
-            var cookieHash = hashing.encrypt(req.user.email);
-            console.log(cookieHash);
-            return res.status(200).send({"success":true, "randomString": req.user.email + '-' + cookieHash});
-        }
-    );
+        function(req, res, next) {
+            var token = cookieStore.generateCookie();
+            var cookie = cookieStore.saveToken(req.user.id, token, function (err, response) {
+                if (err) {
+                    console.log("unable to save cookie");
+                    return res.status(500).json({success: false, data: reason, msg: "unable to save session cookie"});
+                }
+                res.cookie('remember_me', token, {path: '/', id: req.user.id, httpOnly: true, maxAge: 604800000}); // 7 days
+                return res.status(200).send({"success":true, msg:"log on success"});
+            });
+
+    });
 
 
     loginRouter.post('/auth', function(req, res) {
-        if(req.body.randomString !== undefined) {
-            var hashUser = req.body.randomString;
-            console.log("hashuser : " + hashUser.split('-')[1] + ":" +  hashUser.split('-')[0]);
-            if (hashing.verify(hashUser.split('-')[1], hashUser.split('-')[0])) {
-                return res.status(200).send({success: true, msg: 'Authentication passed'});
-            };
-        }
-        return res.status(403).send({success: false, msg: 'Authentication failed. User not found.'});
+        console.log("auth hit");
+        var token = req.cookies.remember_me;
+        console.log("TOKEN : "  + token);
+        cookieStore.getToken(token, function(err, response){
+            console.log(err);
+            if(err){
+                return res.status(403).json({ success: false, data: err, msg:"unable to find session cookie"});
+            }
+            return res.status(200).json({"success":true , "msg":"login successful"})
+        });
 
+
+    });
+
+    loginRouter.post('/logout', function(req, res) {
+        var token = req.cookies.remember_me;
+        cookieStore.removeToken(token, function(err, response){
+            if(err){
+                res.status(403).json({ success: false, data: response, msg:"unable to logout"});
+            }
+            return done(response)
+        });
+        res.logout();
+        return res.status(200).json({"success":true , "msg":"logout successful"})
 
     });
 

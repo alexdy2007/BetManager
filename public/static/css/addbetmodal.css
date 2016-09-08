@@ -1,0 +1,23 @@
+.addBetsModal {
+    width:90%;
+    height:5%;
+    background:#fff;
+    margin-bottom:15px;
+}
+
+.modal .modal-dialog {
+    width: 80%;
+}
+
+div#modal-button-container{
+    margin: 30px auto;
+}
+
+div#add-bet-headers{
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#addBetInput .input-group{
+    margin-top: 10%;
+}

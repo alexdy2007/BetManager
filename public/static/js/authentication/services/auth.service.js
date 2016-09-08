@@ -7,27 +7,26 @@
 
     angular
         .module('betManager.authentication.services')
-        .service('AuthService', AuthService)
-        .factory('AuthInterceptFactory', AuthInterceptFactory)
-        .config(AuthConfig);
+        .service('authService', authService)
+        .factory('authInterceptFactory', authInterceptFactory)
+        .config(authConfig);
 
 
-    AuthService.$inject = ['$cookies', '$http', '$state', '$q', 'ngToast'];
-    // AuthInterceptFactory.$inject = ['$rootScope', '$q'];
-    // AuthConfig.$inject = ['$httpProvider'];
+    authService.$inject = ['$cookies', '$http', '$state', '$q', 'ngToast'];
+    // authInterceptFactory.$inject = ['$rootScope', '$q'];
+    // authConfig.$inject = ['$httpProvider'];
     /**
      * @namespace Authentication
      * @returns {Factory}
      */
 
-    function AuthService($cookies, $http, $state, $q, ngToast) {
+    function authService($cookies, $http, $state, $q, ngToast) {
         /**
          * @name Authentication
          * @desc The Factory to be returned
          */
         var Authentication = {
             login: login,
-            setAuthenticatedAccount: setAuthenticatedAccount,
             isAuthenticated: isAuthenticated,
             logOut: logOut
         };
@@ -57,7 +56,6 @@
          * @desc Set the authenticated account and redirect to index
          */
         function loginSuccessFn(data) {
-            Authentication.setAuthenticatedAccount(data.data);
             $state.go("homepage");
         }
 
@@ -73,43 +71,45 @@
             console.error('failure to login, Person needs to remember username and password!');
             console.error(data)
         }
-
-
-        function setAuthenticatedAccount(response) {
-            $cookies.putObject("randomString", response.randomString);
-        }
+        
 
         function isAuthenticated() {
 
             function sucessfulAuth(data) {
-                return true;
+                return data;
             }
 
             function failureAuth(data){
-                $cookies.remove('randomString');
                 return $q.reject(false);
             };
-
-
-            var randomString = $cookies.get('randomString');
-            if (randomString === undefined) {
-                randomString = "a-NonExistant";
-            }
-            return $http.post('auth/auth', {
-                'randomString': randomString
-            }).then(sucessfulAuth, failureAuth)
+            
+            return $http.post('auth/auth', {}).then(sucessfulAuth, failureAuth)
 
 
         };
 
 
         function logOut() {
-            $cookies.remove('randomString');
+            
+            function failureLogout(){
+                $cookies.remove('remember_me');
+                console.error("failed to log out server side");
+                return
+            }
+            
+            function sucessfulLogout(){
+                $cookies.remove('remember_me');
+                return
+            }
+
+            console.log("logout");
+            return $http.post('auth/logout', {}).then(sucessfulLogout, failureLogout)
         }
 
     }
 
-    function AuthInterceptFactory($injector, $q) {
+    authInterceptFactory.$inject = ["$injector", "$q"];
+    function authInterceptFactory($injector, $q) {
         return {
             responseError: function (response) {
                 if (response.status == 401 | response.status == 403){
@@ -120,8 +120,9 @@
         };
     }
 
-    function AuthConfig($httpProvider) {
-        $httpProvider.interceptors.push('AuthInterceptFactory');
+    authConfig.$inject = ['$httpProvider'];
+    function authConfig($httpProvider) {
+        $httpProvider.interceptors.push('authInterceptFactory');
     };
 
 })();

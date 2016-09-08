@@ -4,7 +4,7 @@
       <env name="DEBUG" value="BetManager:*" />
     </envs>
     <browser start="true" with-js-debugger="true" url="http://localhost:3000/" />
-    <profiling allow-runtime-heap-snapshot="true" do-profile="true" />
+    <profiling allow-runtime-heap-snapshot="true" runtime-heap-snapshots-port="43505" />
     <method />
   </configuration>
 </component>

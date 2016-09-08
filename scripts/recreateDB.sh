@@ -10,13 +10,13 @@ where:
 #
 db=$1
 echo ${db}
-#
-echo Creating backup sql and tar schema for ${db}
-rm ../sql/${db}BackupSchema3.sql
-rm ../sql/${db}BackupSchema3.tar
 
-pg_dump ${db} -s > ../sql/${db}BackupSchema3.sql
-pg_dump -Ft ${db} -s > ../sql/${db}BackupSchema3.tar
+echo Creating backup sql and tar schema for ${db}
+rm ../sql/${db}BackupSchema4.sql
+rm ../sql/${db}BackupSchema4.tar
+
+pg_dump ${db} -s > ../sql/${db}BackupSchema4.sql
+pg_dump -Ft ${db} -s > ../sql/${db}BackupSchema4.tar
 
 sleep 1
 
@@ -37,15 +37,15 @@ createdb ${db}
 sleep 1
 
 echo Restoring ${db}
-if [ ! -f ../sql/${db}BackupSchema3.tar ]; then
-    echo "../sql/${db}BackupSchema3.tar not found! waiting till created"
+if [ ! -f ../sql/${db}BackupSchema4.tar ]; then
+    echo "../sql/${db}BackupSchema4.tar not found! waiting till created"
     sleep 4
 fi
-if [ ! -f ../sql/${db}BackupSchema3.tar ]; then
-    echo "../sql/${db}BackupSchema3.tar not found! ending"
+if [ ! -f ../sql/${db}BackupSchema4.tar ]; then
+    echo "../sql/${db}BackupSchema4.tar not found! ending"
 fi
 
-pg_restore -Ft ../sql/${db}BackupSchema3.tar -U ayoung -d ${db}
+pg_restore -Ft ../sql/${db}BackupSchema4.tar -U ayoung -d ${db}
 echo Finished restoring ${db}
 
 echo PopulatingDB ${db}

@@ -110,11 +110,11 @@ CREATE TABLE bet (
     stake money DEFAULT 0 NOT NULL,
     odds double precision NOT NULL,
     snr boolean DEFAULT false NOT NULL,
-    result smallint,
-    resulttype character varying(30),
+    pickresultid integer NOT NULL,
     eventcaseid integer NOT NULL,
     bookieaccountid integer,
-    bettype integer
+    bettype integer,
+    commission numeric
 );
 
 
@@ -155,7 +155,6 @@ ALTER SEQUENCE bet_id_seq OWNED BY bet.id;
 CREATE TABLE betcase (
     id integer NOT NULL,
     status smallint DEFAULT 0,
-    profit numeric(10,2),
     accountid integer NOT NULL,
     sportid integer
 );
@@ -340,6 +339,82 @@ ALTER SEQUENCE eventcase_id_seq OWNED BY eventcase.id;
 
 
 --
+-- Name: pickresult; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE pickresult (
+    id integer NOT NULL,
+    sportid integer NOT NULL,
+    bettypename integer NOT NULL
+);
+
+
+ALTER TABLE pickresult OWNER TO ayoung;
+
+--
+-- Name: TABLE pickresult; Type: COMMENT; Schema: public; Owner: ayoung
+--
+
+COMMENT ON TABLE pickresult IS 'Availible options for sport result';
+
+
+--
+-- Name: pickresult_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
+--
+
+CREATE SEQUENCE pickresult_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE pickresult_id_seq OWNER TO ayoung;
+
+--
+-- Name: pickresult_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
+--
+
+ALTER SEQUENCE pickresult_id_seq OWNED BY pickresult.id;
+
+
+--
+-- Name: sessionstore; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE sessionstore (
+    id integer NOT NULL,
+    userid integer,
+    cookiehash character varying(400),
+    date_created date DEFAULT now() NOT NULL
+);
+
+
+ALTER TABLE sessionstore OWNER TO ayoung;
+
+--
+-- Name: sessionstore_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
+--
+
+CREATE SEQUENCE sessionstore_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE sessionstore_id_seq OWNER TO ayoung;
+
+--
+-- Name: sessionstore_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
+--
+
+ALTER SEQUENCE sessionstore_id_seq OWNED BY sessionstore.id;
+
+
+--
 -- Name: sport; Type: TABLE; Schema: public; Owner: ayoung
 --
 
@@ -500,6 +575,20 @@ ALTER TABLE ONLY eventcase ALTER COLUMN id SET DEFAULT nextval('eventcase_id_seq
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
 --
 
+ALTER TABLE ONLY pickresult ALTER COLUMN id SET DEFAULT nextval('pickresult_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY sessionstore ALTER COLUMN id SET DEFAULT nextval('sessionstore_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
 ALTER TABLE ONLY sport ALTER COLUMN id SET DEFAULT nextval('sport_id_seq'::regclass);
 
 
@@ -579,6 +668,22 @@ ALTER TABLE ONLY bookieaccount
 
 ALTER TABLE ONLY eventcase
     ADD CONSTRAINT eventcase_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: pickresult_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY pickresult
+    ADD CONSTRAINT pickresult_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: sessionstore_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY sessionstore
+    ADD CONSTRAINT sessionstore_pkey PRIMARY KEY (id);
 
 
 --
@@ -690,10 +795,38 @@ CREATE INDEX fki_bet_bookieaccount_id_fk ON bet USING btree (bookieaccountid);
 
 
 --
+-- Name: fki_bet_pickresult_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_bet_pickresult_id_fk ON bet USING btree (pickresultid);
+
+
+--
 -- Name: fki_betcase_account_id_fk; Type: INDEX; Schema: public; Owner: ayoung
 --
 
 CREATE INDEX fki_betcase_account_id_fk ON betcase USING btree (accountid);
+
+
+--
+-- Name: fki_pickresult_sport_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_pickresult_sport_id_fk ON pickresult USING btree (sportid);
+
+
+--
+-- Name: pickResult_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE UNIQUE INDEX "pickResult_id_uindex" ON pickresult USING btree (id);
+
+
+--
+-- Name: sessionStore_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE UNIQUE INDEX "sessionStore_id_uindex" ON sessionstore USING btree (id);
 
 
 --
@@ -765,6 +898,14 @@ ALTER TABLE ONLY bet
 
 
 --
+-- Name: bet_pickresult_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY bet
+    ADD CONSTRAINT bet_pickresult_id_fk FOREIGN KEY (pickresultid) REFERENCES pickresult(id);
+
+
+--
 -- Name: betcase_account_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
 --
 
@@ -802,6 +943,14 @@ ALTER TABLE ONLY bookieaccount
 
 ALTER TABLE ONLY eventcase
     ADD CONSTRAINT eventcase_betcase_id_fk FOREIGN KEY (betcaseid) REFERENCES betcase(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pickresult_sport_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY pickresult
+    ADD CONSTRAINT pickresult_sport_id_fk FOREIGN KEY (sportid) REFERENCES sport(id) ON UPDATE SET NULL ON DELETE SET NULL;
 
 
 --

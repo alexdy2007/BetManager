@@ -1,0 +1,35 @@
+.activeAccountsBox{
+    background:#fff;
+}
+
+.tableStatus {
+    accountColour: 3px;
+}
+
+.accountOverviewBox {
+    height:10%;
+    background:#fff;
+
+}
+
+.addNewAccountBoxTop {
+    width:100%;
+    height:5%;
+    background:#fff;
+    margin-top:30px;
+}
+
+.addNewAccountBoxBottom{
+    width:100%;
+    height:5%;
+    background:#fff;
+}
+
+div#AccountBanner{
+    margin-bottom: 40px;
+}
+
+#accounts img{
+    width:40px;
+    height: 40px;
+}

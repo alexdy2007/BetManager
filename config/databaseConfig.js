@@ -22,7 +22,6 @@ var config = {
     Test: {
         //url to be used in link generation
         url: 'localhost:4000',
-        //mongodb connection settings
         database: {
             host: '127.0.0.1',
             port: '5432',

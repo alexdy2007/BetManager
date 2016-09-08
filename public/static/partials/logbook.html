@@ -1,107 +1,156 @@
-<div class="col-md-1">
+<div id="logBook" class="container-fluid">
+    <div class="col-md-1">
 
-</div>
-<div class="col-sm-12 col-md-10">
-    <div class="col-sm-2">
-        <div class="col-sm-12 addCaseBoxTop effect8">
-            New Case
-        </div>
-        <div class="col-sm-12 addCaseBoxBottom effect8">
-            Edit mode
-        </div>
     </div>
-    <div class="col-sm-10 overviewBox effect8">
-        <div class="col-sm-3">
-            <B> ALL BETS</B>
-        </div>
-        <div class="col-sm-3">
-            3 Open
-        </div>
-        <div class="col-sm-3">
-            1 Closed
-        </div>
-        <div class="col-sm-3">
-            0 ready for review
-        </div>
-    </div>
-
-    <div id="sports" class="col-xs-12 sportBox effect8">
-        <div class="col-xs-3">
-            Sports
-        </div>
-        <div class="col-xs-2">
-            + 354.343 Overall winnings
-        </div>
-        <div class="col-xs-2">
-            50% win ratio
+    <div class="col-md-10">
+        <div class="row">
+            <div id="betSummaries" class="row overviewBox effect8">
+                <div class="col-sm-3">
+                    <B> ALL BETS</B>
+                </div>
+                <div class="col-sm-3">
+                    3 Open
+                </div>
+                <div class="col-sm-3">
+                    1 Closed
+                </div>
+                <div class="col-sm-3">
+                    0 ready for review
+                </div>
+            </div>
         </div>
 
-        <div class="col-xs-2">
-            87.23 average win
+
+        <div id="sports" class="row sportBox effect8">
+            <div class="col-xs-3">
+                Sports
+            </div>
+            <div class="col-xs-2">
+                + 354.343 Overall winnings
+            </div>
+            <div class="col-xs-2">
+                50% win ratio
+            </div>
+
+            <div class="col-xs-2">
+                87.23 average win
+            </div>
+
+            <div class="col-xs-2">
+                1 ready for review
+            </div>
         </div>
 
-        <div class="col-xs-2">
-            1 ready for review
-        </div>
-    </div>
+        <div id="Open" class="row openBetsBox effect8">
+            <div class="col-xs-3">
+                Open
+            </div>
+            <div class="col-xs-2">
+                3 open
+            </div>
+            <div class="col-xs-2">
+                1 Ready to review
+            </div>
 
-    <div id="Open" class="col-xs-12 openBetsBox effect8">
-        <div class="col-xs-3">
-            Open
-        </div>
-        <div class="col-xs-2">
-            3 open
-        </div>
-        <div class="col-xs-2">
-            1 Ready to review
-        </div>
+            <div class="col-xs-2">
 
-        <div class="col-xs-2">
+            </div>
 
+            <div class="col-xs-2">
+                <img src="static/images/info.png" alt="btn" class="img-rounded">
+                <img src="static/images/circledown.png" alt="btn" class="img-rounded">
+            </div>
         </div>
-
-        <div class="col-xs-2">
-            btn
-            btn
-        </div>
-    </div>
-    <div ng-show="vm.showOpenBets">
-        <div class="col-xs-12 openCurrentBetsBox effect8">
-            BETTS DSFJEPITJE OIDJFOIDJFOIDS DDFFDSSDF
-        </div>
-    </div>
-
-</div>
-
-<div class="col-md-1">
-    <table>
-        <thead>
-            <th>Case Id</th>
-            <th>Sport</th>
-            <th>Event</th>
-            <th>Pick</th>
-            <th>Stake</th>
-            <th>Odds</th>
-            <th>SNR</th>
-            <th>Back/lay</th>
-            <th>Account</th>
-            <th>Commission</th>
-            <th>Bet Type</th>
-            <th>Outcome</th>
-            <th>Winnings</th>
-            <th>Case Profit</th>
-        </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>Sport</td>
-            <table>
-
+        <div ng-show="vm.showOpenBets" class="row currentBetsBox effect8">
+            <table class="minimal-style">
+                <thead>
+                <th>Case Id</th>
+                <th class="tableStatus"></th>
+                <th>Event</th>
+                <th>Time</th>
+                <th>Stake</th>
+                <th>Odds</th>
+                <th>Account</th>
+                <th>Bet Type</th>
+                <th>Winnings</th>
+                <th>Case Profit</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td class="toLose"></td>
+                    <td>football / man utd vs man city / win man u</td>
+                    <td> 15/09/2016 11:50</td>
+                    <td>£100</td>
+                    <td>34.3</td>
+                    <td>TBS</td>
+                    <td>Free Bet (SNR)</td>
+                    <td>+£100 (56%)</td>
+                    <td rowspan="2"> +£11</td>
+                </tr>
+                <tr>
+                    <td class="toWin"></td>
+                    <td>football / man utd vs man city / win man u</td>
+                    <td> 15/09/2016 11:50</td>
+                    <td>£100</td>
+                    <td>10.3</td>
+                    <td>Paddy</td>
+                    <td>Free Bet (SNR)</td>
+                    <td>-£89 (-26%)</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">2</td>
+                    <td class="toWin"></td>
+                    <td>football / westham vs brighton / win westham</td>
+                    <td> 16/09/2016 17:50</td>
+                    <td>£80</td>
+                    <td>34.3</td>
+                    <td>LLYODS</td>
+                    <td>Free Bet (SNR)</td>
+                    <td>+£20 (10%)</td>
+                    <td rowspan="3"> +£30</td>
+                </tr>
+                <tr>
+                    <td class="toLose"></td>
+                    <td>football / westham vs brighton / win westham</td>
+                    <td> 16/09/2016 17:50</td>
+                    <td>£60</td>
+                    <td>10.3</td>
+                    <td>William bill</td>
+                    <td>Free Bet (SNR)</td>
+                    <td>-£10 (26%)</td>
+                </tr>
+                <tr>
+                    <td class="toLose"></td>
+                    <td>football / westham vs brighton / win westham</td>
+                    <td>16/09/2016 17:50</td>
+                    <td>£150</td>
+                    <td>2</td>
+                    <td>William bill</td>
+                    <td>Free Bet (SNR)</td>
+                    <td>+£20 (26%)</td>
+                </tr>
+                </tbody>
             </table>
-        </tr>
-        </tbody>
+        </div>
+        <div id="Close" class="row openBetsBox effect8">
+            <div class="col-xs-3">
+                Close
+            </div>
+            <div class="col-xs-2">
+                1 Closed
+            </div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-2">
+                <img src="static/images/info.png" alt="btn" class="img-rounded">
+                <img src="static/images/circledown.png" alt="btn" class="img-rounded">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-1">
 
 
-    </table>
-
+    </div>
 </div>

@@ -18,10 +18,12 @@
     "morgan": "~1.7.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
+    "passport-remember-me": "0.0.1",
     "password-hash": "^1.2.2",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
     "promise": "^7.1.1",
+    "rand-token": "^0.2.1",
     "serve-favicon": "~2.3.0",
     "string-format": "^0.5.0"
   },

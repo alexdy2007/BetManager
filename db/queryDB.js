@@ -27,7 +27,10 @@ function connectionToDB(sql){
                 query = client.query(sql);
                 // Stream results back one row at a time
                 query.on('row', function (row) {
-                    results.push(row);
+                    if(row != "" | row != " ") {
+
+                        results.push(row);
+                    }
                 });
                 query.on('end', function () {
                     done();
@@ -38,6 +41,7 @@ function connectionToDB(sql){
                 });
             })
         } catch (err) {
+            console.log("HERE SQL ERROR" + err);
             done();
             reject({'data':null,'error':err})
         }

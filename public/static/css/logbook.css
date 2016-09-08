@@ -4,45 +4,61 @@
     top:80px;
 }
 .overviewBox {
-    width:70%;
-    height:15%;
+    height:10%;
     background:#fff;
     margin:30px auto;
+    margin-bottom: 1px;
 }
 
 .addCaseBoxTop {
-    width:70%;
-    height:7.5%;
+    height:5%;
     background:#fff;
     margin-top:30px;
 }
 
 .addCaseBoxBottom{
-    width:70%;
-    height:7.5%;
+    height:5%;
     background:#fff;
 }
 
 .sportBox{
-    width:70%;
-    height:20%;
+    height:10%;
     background:#fff;
     margin-top: 30px;
 }
 
 .openBetsBox{
-    width:70%;
-    height:20%;
+    height:10%;
+    background:#fff;
+}
+
+.addBetsBox{
+    background:#fff;
+}
+
+.addSaveBox{
+    background:#fff;
+}
+
+.editBetCaseIcons{
+    background:#fff;
+    border-style: solid;
+    border-right:1px;
+    border-width:thin;
+    border-color:lightgray;
+}
+
+.currentBetsBox{
     background:#fff;
 }
 
 
 .openCurrentBetsBox{
-    width:70%;
     height:auto;
     background:#fff;
     border-top-color: #87d1fe;
     border-top-width:thick ;
+    border-color:lightgray;
 }
 
 
@@ -55,4 +71,39 @@
     box-shadow: 0 5px 3px -3px #777;
     border-style: solid;
     border-width:thin;
+    border-color:lightgray;
 }
+
+#addBetCase div.input-group{
+    width:80%;
+}
+
+#addBetCase input{
+    border-color:lightgray;
+    border-width: 0px;
+    border-bottom-width: 1px
+}
+
+#logBook img{
+    width:40px;
+    height: 40px;
+}
+
+.tableStatus
+{
+    width: 3px;
+}
+
+.toWin{
+    background-color: lightgreen;
+}
+
+.toLose{
+    background-color: lightcoral;
+}
+
+/*MINIMAL STYLE*/
+table.minimal-style { background: #FFFFFF; border-collapse: collapse; font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif; font-size: 12px; text-align: left; width:100%; min-width: 480px; margin-bottom:25px; }
+table.minimal-style th { border-bottom: 2px solid #444; color: #666666; font-size: 14px; font-weight: normal; padding: 10px; }
+table.minimal-style td { border-bottom: 1px solid #CCCCCC; color: #999; padding: 8px 10px; }
+table.minimal-style tbody tr:hover td {color:#444;}

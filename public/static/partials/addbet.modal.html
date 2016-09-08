@@ -1,0 +1,72 @@
+<div class="container">
+    <div id="addBetCase" class="row">
+        <div id="add-bet-headers" class="row">
+            <div class="col-sm-5"> CaseID:1234</div>
+            <div class="col-sm-7">
+                <div>Sports  Raceing Casino</div>
+
+            </div>
+        </div>
+        <div id="addBetInput">
+            <div id="EventAdd" class="col-sm-3">
+                <div class="row">The Event</div>
+                <div class="row input-group">
+                    <input placeholder="e.g Football"/>
+                </div>
+                <div class="row input-group">
+                    <input type="text" placeholder="HomeTeam"/>
+                </div>
+                <div class="row input-group">
+                    <input type="text" placeholder="AwayTeam"/>
+                </div>
+                <div class="row input-group">
+                    <input type="datetime" placeholder="Date"/>
+                </div>
+            </div>
+            <div id="Bet" class="col-sm-3">
+                <div>The Bet</div>
+                <div class="input-group">
+                    <input type="text" placeholder="Pick"/>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Stake"/>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Odds"/>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Type"/>
+                </div>
+            </div>
+            <div id="BookieAccount" class="col-sm-3">
+                <div class="">Account</div>
+                <div class="input-group">
+                    <input type="text" placeholder="Account Name"/>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="% Commission on win"/>
+                </div>
+            </div>
+            <div id="Result" class="col-sm-3">
+                <div>Result(optional)</div>
+                <div class="input-group">
+                    <input type="text" placeholder="Outcome"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-button-container" class="row">
+        <div class="col-md-3">
+            <button class="btn btn-primary">Save and Close</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary" ng-click="vm.cancel()">Save & Start New Bet</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary" ng-click="vm.cancel()">Save and Start New Case</button>
+        </div>
+        <div>
+            <button class="btn btn-primary" ng-click="vm.cancel()">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,7 @@
     angular
         .module('betManager.authentication',[
             'betManager.authentication.controllers',
-            'betManager.authentication.services',
+            'betManager.authentication.services'
         ]);
 
     angular
