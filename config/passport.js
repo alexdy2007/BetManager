@@ -25,7 +25,9 @@ module.exports = function (passport) {
 
     // used to deserialize the user
     passport.deserializeUser(function (id, done) {
-        conn.queryDB("select * from users where id = " + id).then(function (data) {
+        conn.queryDB("select users.id as id, users.email, account.id as accountid from users\
+        LEFT JOIN account\
+        ON users.id=account.userid").then(function (data) {
             console.log(data.results[0]);
             if(data.err){
                 return done(err);

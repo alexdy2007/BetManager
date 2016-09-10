@@ -6,21 +6,11 @@ var express = require('express');
 var betRouter = express.Router();
 var conn = require('./../../db/queryDB');
 var format = require('string-format');
-
+var generics = require('./generics');
 
 /* GET home page. */
-betRouter.route('/bet/:betid')
-    .get(function(req, res) {
-        console.log(req.user);
-        var id = req.params.betid;
-        var sql = "SELECT * FROM bet WHERE id=" + id;
-        conn.queryDB(sql)
-            .then(function(results){
-                return res.json(results);
-            }).catch(function(reason){
-            return res.status(500).json({ success: false, data: reason});
-        });
-    })
+betRouter.route('/bet/:id')
+    .get(generics.getOne("abstract_bet"))
     .put(function(req, res) {
         return res.status(500).json({success: false, data: "NOT YET IMPLEMENTED"});
     });

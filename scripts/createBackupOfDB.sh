@@ -16,9 +16,8 @@ if psql -lqt | cut -d \| -f 1 | grep -qw  ${name}; then
     sleep 1
 else
     echo ${name} not found
-    return
 fi
 
-createdb -O ayoung -T BetManager ${name}
-pg_dump BetManager -s > ../sql/${name}.sql
-pg_dump -Ft BetManager -s > ../sql/${name}.tar
+pg_dump BetManager -s > ../sql/backups/${name}.sql
+pg_dump -Ft BetManager -s > ../sql/backups/${name}.tar
+echo backup ${name} with name created

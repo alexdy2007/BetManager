@@ -22,13 +22,9 @@ sessionCookieService.getToken = function(token, fn){
     console.log("sql for auth " + sql);
     conn.queryDB(sql)
         .then(function(data){
-            console.log(data.results);
-            console.log(data.results.length != 0);
             if(data.results.length != 0) {
-                console.log("results" + data.results);
                 return fn(null, data.results);
             }else{
-                console.log("ERROR");
                 return fn("No token", null);
             }
         }).catch(function(reason){

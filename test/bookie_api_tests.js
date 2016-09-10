@@ -53,6 +53,20 @@ describe('Bookie', function() {
         });
     });
 
+    describe('get individual bookie from api', function() {
+        it('1 book returned', function() {
+            return chai.request(app)
+                .get('/api/bookie/1')
+                .then(function(res){
+                    commonAssertions(res);
+                    assert.lengthOf(res.body, 1, "1 bookie returned");
+                })
+                .catch(function(err){
+                    throw err;
+                })
+        });
+    });
+
     describe('insert new bookie account from api', function() {
         it('adds a new bookie account', function() {
             return chai.request(app)

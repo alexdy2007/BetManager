@@ -5,19 +5,14 @@ var express = require('express');
 var userRouter = express.Router();
 var conn = require('./../../db/queryDB');
 var format = require('string-format');
+var generics = require('./generics');
+
+
 
 
 /* GET home page. */
 userRouter.route('/users')
-    .get(function(req, res) {
-        var sql = "SELECT * FROM user";
-        conn.queryDB(sql)
-            .then(function(results){
-                return res.json(results);
-            }).catch(function(reason){
-            return res.status(500).json({ success: false, data: reason});
-        });
-    })
+    .get(generics.getAll('users'))
     .post(function(req, res) {
         var data = {text: req.body.text, complete: false};
         var 

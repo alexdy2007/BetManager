@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "supervisor ./bin/www",
-    "test": "bash ./scripts/testSetupScript.sh && ./node_modules/.bin/mocha --reporter spec"
+    "test": "bash ./scripts/testSetupScript.sh && ./node_modules/.bin/mocha --reporter spec && export NODE_ENV=development"
   },
   "dependencies": {
     "body-parser": "~1.15.1",

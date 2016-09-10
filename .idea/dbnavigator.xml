@@ -41,6 +41,7 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/seeders/allSeeds.sql" connection-id="3c723406-802f-4a8d-a7fa-8c7fdef07967" current-schema="public" />
+    <mapping file-url="file://$PROJECT_DIR$/seeders/bookieaccount.sql" connection-id="3c723406-802f-4a8d-a7fa-8c7fdef07967" current-schema="public" />
     <mapping file-url="file://$PROJECT_DIR$/seeders/user.sql" connection-id="3c723406-802f-4a8d-a7fa-8c7fdef07967" current-schema="information_schema" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">

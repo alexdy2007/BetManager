@@ -18,8 +18,10 @@ var customConfig = {
 
 exports.queryDB = Promise.nodeify(connectionToDB);
 
+const pool = new pg.Pool(customConfig);
+
 function connectionToDB(sql){
-    var pool = new pg.Pool(customConfig);
+
     return new Promise(function(resolve, reject){
         var results = [];
         try {
