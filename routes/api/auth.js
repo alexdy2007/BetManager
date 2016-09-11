@@ -42,11 +42,8 @@ module.exports = function(passport) {
 
 
     loginRouter.post('/auth', function(req, res) {
-        console.log("auth hit");
         var token = req.cookies.remember_me;
-        console.log("TOKEN : "  + token);
         cookieStore.getToken(token, function(err, response){
-            console.log(err);
             if(err){
                 return res.status(403).json({ success: false, data: err, msg:"unable to find session cookie"});
             }

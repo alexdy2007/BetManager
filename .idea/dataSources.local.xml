@@ -7,12 +7,6 @@
       <schema-pattern>BetManager.pg_catalog BetManager.public</schema-pattern>
       <default-schemas>BetManager.public</default-schemas>
     </data-source>
-    <data-source name="PostgreSQL - BetManagerBackup@localhost" uuid="87da920d-d06e-4dd3-8a9f-3a85b21f79e5">
-      <secret-storage>master_key</secret-storage>
-      <user-name>ayoung</user-name>
-      <schema-pattern>BetManagerBackup.pg_catalog BetManagerBackup.public</schema-pattern>
-      <default-schemas>BetManagerBackup.public</default-schemas>
-    </data-source>
     <data-source name="PostgreSQL - BetManagerTest@localhost" uuid="0f50ffa9-d730-4cd7-aab2-ba92feb1de3f">
       <secret-storage>master_key</secret-storage>
       <user-name>ayoung</user-name>

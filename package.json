@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "supervisor ./bin/www",
-    "test": "bash ./scripts/testSetupScript.sh && ./node_modules/.bin/mocha --reporter spec && export NODE_ENV=development"
+    "test": "bash ./scripts/testSetupScript.sh && ./node_modules/.bin/mocha --recursive --reporter spec && export NODE_ENV=development"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -35,6 +35,8 @@
     "gulp": "^3.9.1",
     "gulp-order": "^1.1.1",
     "merge-stream": "^1.0.0",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "supertest": "^2.0.0",
+    "supertest-as-promised": "^4.0.0"
   }
 }

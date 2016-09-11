@@ -22,12 +22,15 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes>
       <connection connection-id="3c723406-802f-4a8d-a7fa-8c7fdef07967">
-        <schema name="information_schema" object-types="table, view" />
-        <schema name="pg_catalog" object-types="table, view" />
-        <schema name="public" object-types="table, view" />
+        <schema name="information_schema" object-types="function, sequence, table, view" />
+        <schema name="pg_catalog" object-types="column, function, table, view" />
+        <schema name="pg_temp_1" object-types="function, sequence, table, view" />
+        <schema name="pg_toast" object-types="function, sequence, table, view" />
+        <schema name="pg_toast_temp_1" object-types="function, sequence, table, view" />
+        <schema name="public" object-types="function, sequence, table, view" />
       </connection>
     </loaded-nodes>
   </component>

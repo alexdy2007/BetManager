@@ -33,8 +33,6 @@ GENERICS.delete = function(tableName) {
 
 GENERICS.getOne = function(tableName){
     return function(req, res) {
-        console.log("res");
-        console.log(res.user);
         var id = req.params.id;
         var sql = format("SELECT * FROM {} WHERE id = {}", tableName, id);
         conn.queryDB(sql)

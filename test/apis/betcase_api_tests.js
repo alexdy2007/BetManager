@@ -11,7 +11,6 @@
 process.env.NODE_ENV = 'test';
 
 if (!global.Promise) {
-    console.log("here");
     global.Promise = require('promise');
 }
 
@@ -26,14 +25,14 @@ var expect = require('chai').expect;
 chai.use(chaiHttp);
 
 
-describe('BetCase', function() {
+describe('Betcase api test', function() {
 
     var server;
     var app;
     var fixture = {};
 
     beforeEach(function () {
-        var appAndServer = require('./testServer');
+        var appAndServer = require('./../testServer');
         server = appAndServer.server;
         app = appAndServer.app;
     });

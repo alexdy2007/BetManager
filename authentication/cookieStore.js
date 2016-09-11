@@ -12,7 +12,7 @@ sessionCookieService.saveToken = function(id, token, fn){
         .then(function(results){
             return fn(null, results);
         }).catch(function(reason){
-            console.log(reason);
+            console.error(reason);
             return fn(reason, null)
         });
 };

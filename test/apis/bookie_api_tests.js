@@ -8,7 +8,6 @@
 process.env.NODE_ENV = 'test';
 
 if (!global.Promise) {
-    console.log("here");
     global.Promise = require('promise');
 }
 
@@ -30,7 +29,7 @@ describe('Bookie', function() {
     var fixture = {};
 
     beforeEach(function () {
-        var appAndServer = require('./testServer');
+        var appAndServer = require('./../testServer');
         server = appAndServer.server;
         app = appAndServer.app;
     });

@@ -55,41 +55,41 @@ CREATE FUNCTION fb_absolute_profit_calc() RETURNS trigger
     AS $$
 
 DECLARE
-	free_stake_to_return numeric(10,2);
 	free_bet boolean;
+	free_stake_returned numeric;
 BEGIN
 
 	--IF SNR free_stake_to_return = stake
 	IF NEW.bettypeid = 3 THEN
 	    free_bet := false;
-	    free_stake_to_return:= NEW.stake;
+	    free_stake_returned := 0;
         ELSIF NEW.bettypeid = 4 THEN
 	    free_bet := true;
-	    free_stake_to_return:= 0;
+	    free_stake_returned := NEW.stake;
 	ELSE
 	    free_bet := false;
-	    free_stake_to_return:= 0;  
+	    free_stake_returned := 0;
 	END IF;
     
         --IF SUSPENDED
-        IF NEW.resulttype = 4 THEN
-            NEW.profit:=0;
+        IF NEW.resulttypeid = 4 THEN
+            NEW.profit:=666;
             RETURN NEW;
         END IF;
 	
 	--IF STILL NOT FULFILLED (NOT FILLED IN)
-        IF NEW.betfulfillment=NULL THEN
-            NEW.profit:=NULL;
+        IF NEW.betfulfillment is NULL THEN
+            NEW.profit:=9999;
 	--IF BET IS FULFILLED (WON)
         ELSIF NEW.betfulfillment THEN
-	    NEW.profit:= ((NEW.stake * NEW.odds) * (1-NEW.commission)) - free_stake_to_return;
+	    NEW.profit:= ((NEW.stake::numeric * NEW.odds::numeric) * (1-NEW.commission)) + free_stake_returned;
 	--IF BET IS NOT FULFILLED(LOST)
         ELSE
 	    -- IF LOST |FREE BET PROFIT 0 ELSE -STAKE
 	    IF free_bet THEN
                 NEW.profit:= 0;
 	    ELSE
-	        NEW.profit:= -NEW.stake;
+	        NEW.profit:= -NEW.stake::numeric;
 	    END IF;
 	END IF;
 	RETURN NEW;
@@ -111,7 +111,7 @@ CREATE TABLE abstract_bet (
     stake money DEFAULT 0 NOT NULL,
     odds double precision NOT NULL,
     bookieaccountid integer NOT NULL,
-    commission numeric NOT NULL,
+    commission numeric(12,4) NOT NULL,
     laybet boolean DEFAULT false NOT NULL,
     datetime timestamp without time zone NOT NULL,
     betcaseid integer NOT NULL,
@@ -119,7 +119,7 @@ CREATE TABLE abstract_bet (
     sportid integer,
     bettypeid integer DEFAULT 1 NOT NULL,
     betfulfillment boolean,
-    profit numeric(10,2)
+    profit numeric(12,4)
 );
 
 
@@ -1147,6 +1147,20 @@ CREATE UNIQUE INDEX user_id_uindex ON users USING btree (id);
 --
 
 CREATE UNIQUE INDEX usersettings_id_uindex ON user_settings USING btree (id);
+
+
+--
+-- Name: fb_absolute_profit_trigger; Type: TRIGGER; Schema: public; Owner: ayoung
+--
+
+CREATE TRIGGER fb_absolute_profit_trigger BEFORE INSERT OR UPDATE ON fb_absolute FOR EACH ROW EXECUTE PROCEDURE fb_absolute_profit_calc();
+
+
+--
+-- Name: TRIGGER fb_absolute_profit_trigger ON fb_absolute; Type: COMMENT; Schema: public; Owner: ayoung
+--
+
+COMMENT ON TRIGGER fb_absolute_profit_trigger ON fb_absolute IS 'Triggers on update or create to calc profit';
 
 
 --

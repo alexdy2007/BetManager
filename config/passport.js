@@ -7,7 +7,8 @@ var passport = require("passport")
     , LocalStrategy = require('passport-local').Strategy
     , RememberMeStrategy = require('passport-remember-me').Strategy;
 var conn = require('./../db/queryDB');
-var cookieStore = require('./../authentication/cookieStore')
+var cookieStore = require('./../authentication/cookieStore');
+var format = require('string-format');
 
 // expose this function to our app using module.exports
 module.exports = function (passport) {
@@ -25,10 +26,10 @@ module.exports = function (passport) {
 
     // used to deserialize the user
     passport.deserializeUser(function (id, done) {
-        conn.queryDB("select users.id as id, users.email, account.id as accountid from users\
+        conn.queryDB(format("select users.id as id, users.email, account.id as accountid from users\
         LEFT JOIN account\
-        ON users.id=account.userid").then(function (data) {
-            console.log(data.results[0]);
+        ON users.id=account.userid\
+        WHERE users.id={}",id)).then(function (data) {
             if(data.err){
                 return done(err);
             }
@@ -68,7 +69,6 @@ module.exports = function (passport) {
                     userSqlObject.password = password; // use the generateHash function in our user model
 
                     var insertQuery = "INSERT INTO users ( email, password ) values (" + email + ',' + password + ') RETURN *';
-                    console.log(insertQuery);
                     conn.queryDB(insertQuery).then(function (data2) {
                         userSqlObject.id = data2.results.id;
                         return done(null, userSqlObject);
@@ -105,7 +105,6 @@ module.exports = function (passport) {
                 if (!( data.results[0].password == password)) {
                     return done(null, false); // create the loginMessage and save it to session as flashdata
                 }
-                console.log("AUTH local login" + data.results[0].password);
                 // all is well, return successful user;
                 return done(null, data.results[0]);
 
@@ -117,7 +116,6 @@ module.exports = function (passport) {
     passport.use(new RememberMeStrategy(
 
         function (token, done) {
-            console.log("token?" + token);
             cookieStore.getToken(token, function (err, user) {
                 if (err) {
                     return done(err);
