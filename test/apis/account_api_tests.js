@@ -19,7 +19,7 @@ var expect = require('chai').expect;
 chai.use(chaiHttp);
 
 
-describe('User', function() {
+describe('User api tests', function() {
 
     var server;
     var app;

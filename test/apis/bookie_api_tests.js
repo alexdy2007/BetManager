@@ -22,7 +22,7 @@ var expect = require('chai').expect;
 chai.use(chaiHttp);
 
 
-describe('Bookie', function() {
+describe('Bookie api tests', function() {
 
     var server;
     var app;

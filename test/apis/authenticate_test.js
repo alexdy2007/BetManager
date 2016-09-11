@@ -7,7 +7,7 @@ var expect = require('chai').expect;
 var agent44 = require('./../helpers/auth_agent');
 
 
-describe('Can Login test', function() {
+describe('Authentication api tests', function() {
 
     var server;
     var app;

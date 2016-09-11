@@ -5,35 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a95eb7e-b95c-496d-8d08-fe8df2647878" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sqlForBets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/apis/authenticate_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/apis/bet-tests/fb_absolute_api_tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/apis/bet-tests/mock.bets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/helpers/auth_agent.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/account_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/account_api_tests.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/betcase_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/betcase_api_tests.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/bookie_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/bookie_api_tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.tar" afterPath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.tar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/backups/BetManagerTest.tar" afterPath="$PROJECT_DIR$/sql/backups/BetManagerTest.tar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/authentication/cookieStore.js" afterPath="$PROJECT_DIR$/authentication/cookieStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/passport.js" afterPath="$PROJECT_DIR$/config/passport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/auth.js" afterPath="$PROJECT_DIR$/routes/api/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/bets.js" afterPath="$PROJECT_DIR$/routes/api/bets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/generics.js" afterPath="$PROJECT_DIR$/routes/api/generics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/allSeeds.sql" afterPath="$PROJECT_DIR$/seeders/allSeeds.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/betcase.sql" afterPath="$PROJECT_DIR$/seeders/betcase.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/fb_absolute.sql" afterPath="$PROJECT_DIR$/seeders/fb_absolute.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/user.sql" afterPath="$PROJECT_DIR$/seeders/user.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.sql" afterPath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/backups/BetManagerTest.sql" afterPath="$PROJECT_DIR$/sql/backups/BetManagerTest.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.html" afterPath="$PROJECT_DIR$/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/apis/account_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/account_api_tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/apis/authenticate_test.js" afterPath="$PROJECT_DIR$/test/apis/authenticate_test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/apis/bookie_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/bookie_api_tests.js" />
     </list>
     <ignored path="BetManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -157,30 +131,8 @@
       <file leaf-file-name="fb_absolute_api_tests.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/apis/bet-tests/fb_absolute_api_tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
+            <state relative-caret-position="1852">
               <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/passport.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authenticate_test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/apis/authenticate_test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -191,7 +143,7 @@
       <file leaf-file-name="betcase_api_tests.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/apis/betcase_api_tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
+            <state relative-caret-position="824">
               <caret line="66" column="52" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -200,11 +152,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="bookie_api_tests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/apis/bookie_api_tests.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+              <folding>
+                <element signature="e#42#83#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authenticate_test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/apis/authenticate_test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#41#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="account_api_tests.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/apis/account_api_tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+            <state relative-caret-position="315">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -236,8 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/recreateDB.sh" />
-        <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/config/databaseConfig.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/test/test_start_server.js" />
@@ -276,7 +250,6 @@
         <option value="$PROJECT_DIR$/routes/api/auth.js" />
         <option value="$PROJECT_DIR$/test/betcase_api_tests.js" />
         <option value="$PROJECT_DIR$/test/bet-tests/fb_absolute_api_tests.js" />
-        <option value="$PROJECT_DIR$/test/apis/authenticate_test.js" />
         <option value="$PROJECT_DIR$/test/helpers/auth_agent.js" />
         <option value="$PROJECT_DIR$/authentication/cookieStore.js" />
         <option value="$PROJECT_DIR$/test/apis/betcase_api_tests.js" />
@@ -287,6 +260,9 @@
         <option value="$PROJECT_DIR$/db/sqlForBets.js" />
         <option value="$PROJECT_DIR$/routes/api/bets.js" />
         <option value="$PROJECT_DIR$/test/apis/bet-tests/fb_absolute_api_tests.js" />
+        <option value="$PROJECT_DIR$/test/apis/bookie_api_tests.js" />
+        <option value="$PROJECT_DIR$/test/apis/authenticate_test.js" />
+        <option value="$PROJECT_DIR$/test/apis/account_api_tests.js" />
       </list>
     </option>
   </component>
@@ -1236,12 +1212,12 @@
       <workItem from="1473321946445" duration="45388000" />
       <workItem from="1473503559084" duration="6796000" />
       <workItem from="1473514606740" duration="14020000" />
-      <workItem from="1473603936145" duration="25385000" />
+      <workItem from="1473603936145" duration="25709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335704000" />
+    <option name="totallyTimeSpent" value="336028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
@@ -1651,16 +1627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/apis/bookie_api_tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#42#83#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seeders/fb_absolute.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1705,26 +1671,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/apis/authenticate_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/apis/betcase_api_tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="66" column="52" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1790,17 +1736,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/apis/betcase_api_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="824">
+          <caret line="66" column="52" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/apis/bookie_api_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="e#42#83#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/apis/authenticate_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/apis/account_api_tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        <state relative-caret-position="315">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/apis/bet-tests/fb_absolute_api_tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
+        <state relative-caret-position="1852">
           <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
