@@ -15,7 +15,7 @@ betRouter.route('/bet/:id')
         return res.status(500).json({success: false, data: "NOT YET IMPLEMENTED"});
     });
 
-betRouter.route('/bet/newcase')
+betRouter.route('/bet')
     .post(function(req,res){
         var data = req.data;
         var sql = format("INSERT INTO accounts(accountid, sportid, status) values({}, {}, {}) RETURN *", data.accountid, data.sportid, data.status);

@@ -19,7 +19,6 @@ sessionCookieService.saveToken = function(id, token, fn){
 
 sessionCookieService.getToken = function(token, fn){
     var sql = format("SELECT * FROM sessionstore WHERE cookiehash='{}'", token);
-    console.log("sql for auth " + sql);
     conn.queryDB(sql)
         .then(function(data){
             if(data.results.length != 0) {
@@ -28,7 +27,6 @@ sessionCookieService.getToken = function(token, fn){
                 return fn("No token", null);
             }
         }).catch(function(reason){
-        console.log("error");
         return fn(reason, null);
     });
 };
