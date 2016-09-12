@@ -55,7 +55,7 @@ describe('User api tests', function() {
                 .post('/api/accounts/')
                 .send({expirydate:"2018-05-01", userid:2, accounttypeid:1})
                 .then(function(res){
-                    commonAssertions(res);
+                    expect(res).to.have.status(201);
                     assert.lengthOf(res.body, 1, "expect returned response of 1");
                     assert.equal(res.body[0].userid, 2, "expect return data of what has just been sent");
                     fixture.addedAccountId = res.body[0].id;

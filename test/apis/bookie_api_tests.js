@@ -72,7 +72,7 @@ describe('Bookie api tests', function() {
                 .post('/api/bookie/')
                 .send({name:"testBookie", "website":"www.testwebsite.com", defaultcommission:"0.04"})
                 .then(function(res){
-                    commonAssertions(res);
+                    expect(res).to.have.status(201);
                     assert.lengthOf(res.body, 1, "expect return of added bookie");
                     assert.equal(res.body[0].defaultcommission, '0.04', "check default commission is correct");
                     assert.equal(res.body[0].website, "www.testwebsite.com", "check website is correct");

@@ -14,15 +14,38 @@ betRouter.route('/bet/:id')
     .get(generics.getOne("abstract_bet"))
     .put(function(req, res) {
         return res.status(500).json({success: false, data: "NOT YET IMPLEMENTED"});
+    })
+    .delete(function(req, res){
+        var betid = req.params.id;
+        
+        //CHECK BET BELONGS TO ACCOUNT
+        var check_bet_owner_sql = format("SELECT betcase.accountid, fb_absolute.id From fb_absolute, betcase WHERE fb_absolute.id={} AND betcaseid=betcase.id",betid);
+        conn.queryDB(check_bet_owner_sql)
+        .then(function(data){
+            if(!data.results.accountid != req.user.accountid){
+                return res.status(422).json({ success: false, data: "Bet does not belong to user logged in"});
+            }
+            //DELETE BET
+            var delete_bet_sql = format("DELETE FROM fb_absolute WHERE id={} RETURNING *",betid);
+            conn.queryDB(delete_bet_sql)
+                .then(function(data){
+                    return res.status(200).json(data);
+                }).catch(function(reason){
+                return res.status(500).json({ success: false, data: reason});
+            });
+            
+        }).catch(function(reason){
+            return res.status(500).json({ success: false, data: reason});
+        });
     });
 
 betRouter.route('/bet')
     .get(function(req, res){
-        var bettype = req.query.bettype;
-        if(checkValidBetMarket(bettype)){
+        var betmarket = req.query.betmarket;
+        if(checkValidBetMarket(betmarket)){
             return res.status(422).json({ success: false, data: format("bet type {} does not exist or in accepted bet type criteria",bettype)});
         }
-        var sql = bet_sql[bettype].getAll(req.user);
+        var sql = bet_sql[betmarket].getAll(req.user);
         conn.queryDB(sql)
             .then(function(results){
                 return res.json(results);
@@ -60,8 +83,6 @@ betRouter.route('/bet')
                     }
                 })
                 .catch(function(reason){
-                    console.log("HERE")
-                    console.log(reason);
                     return res.status(500).json({ success: false, data: reason});
                 });
         }

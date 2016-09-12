@@ -35,7 +35,7 @@ describe('fb_absolute api check', function() {
         it('has 2 bets in total', function() {
             return agent44.authenticate(app, users.user1).then(function(agent){
                   return agent
-                    .get('/api/bet?bettype=fb_absolute')
+                    .get('/api/bet?betmarket=fb_absolute')
                     .expect(200)
                     .then(function(res){
                         commonAssertions(res);
@@ -53,7 +53,7 @@ describe('fb_absolute api check', function() {
         it('has 1 bets in total', function() {
             return agent44.authenticate(app, users.user2).then(function(agent){
                 return agent
-                    .get('/api/bet?bettype=fb_absolute')
+                    .get('/api/bet?betmarket=fb_absolute')
                     .expect(200)
                     .then(function(res){
                         commonAssertions(res);
@@ -112,11 +112,10 @@ describe('fb_absolute api check', function() {
         it('removes bet for fb_absolut table', function() {
             return agent44.authenticate(app, users.user1).then(function(agent){
                 return agent
-                    .post('/api/bet?betmarket=fb_absolute')
-                    .send(mockbets.fb_absolute.bet1)
+                    .delete('/api/bet/' + fixtures.betadded1.id)
                     .expect(200)
                     .then(function(res){
-                        throw new Error("HAVE NOT IMPLEMENTED")
+                        assert.equal(res.body.results[0].id, fixtures.betadded1.id , "check bet id matches one deleted");
                     }).catch(function(err){
                         throw err;
                     });
@@ -124,6 +123,20 @@ describe('fb_absolute api check', function() {
                 throw err
             });
         });
+
+        it('checks deleted bet does not exist' ,function(){
+            return agent44.authenticate(app, users.user1).then(function(agent){
+                return agent
+                    .get('/api/bet/' + fixtures.betadded1.id)
+                    .expect(204)
+                    .then(function(res){
+                        assert.lengthOf(Object.keys(res.body), 0, "check recently deleted bet does not exist");
+                    }).catch(function(err){
+                        throw err;
+                    });
+            })
+
+        })
     });
 
     describe('Edit bet in fb_absolute', function() {

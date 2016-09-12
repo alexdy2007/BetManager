@@ -36,8 +36,11 @@ GENERICS.getOne = function(tableName){
         var id = req.params.id;
         var sql = format("SELECT * FROM {} WHERE id = {}", tableName, id);
         conn.queryDB(sql)
-            .then(function (results) {
-                return res.json(results.results);
+            .then(function (data) {
+                if(data.results.length == 0){
+                    res.status(204).json();
+                }
+                return res.json(data.results);
             }).catch(function (reason) {
             return res.status(500).json({success: false, data: reason});
         })
@@ -56,7 +59,7 @@ GENERICS.create = function(tableName, sql){
         sql = "INSERT INTO " + tableName + "(" + columnNames.toString() + ") values(" + columnValues.toString() + ") RETURNING *";
         conn.queryDB(sql)
             .then(function (results) {
-                return res.json(results.results);
+                return res.status(201).json(results.results);
             }).catch(function (reason) {
             return res.status(500).json({success: false, data: reason});
         });
