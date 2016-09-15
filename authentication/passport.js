@@ -7,7 +7,7 @@ var passport = require("passport")
     , LocalStrategy = require('passport-local').Strategy
     , RememberMeStrategy = require('passport-remember-me').Strategy;
 var conn = require('./../db/queryDB');
-var cookieStore = require('./../authentication/cookieStore');
+var cookieStore = require('./cookieStore');
 var format = require('string-format');
 
 // expose this function to our app using module.exports
@@ -112,33 +112,5 @@ module.exports = function (passport) {
 
 
         }));
-
-    passport.use(new RememberMeStrategy(
-
-        function (token, done) {
-            cookieStore.getToken(token, function (err, user) {
-                if (err) {
-                    return done(err);
-                }
-                if (!user) {
-                    return done(null, false);
-                }
-                var sql_find_user = "SELECT * FROM users WHERE id=" + user[0].id;
-                conn.queryDB(sql_find_user).then(function(data){
-                    return done(null, data.results[0]);
-                });
-            });
-        },
-        function (user, done) {
-            var Token = cookieStore.generateCookie();
-            cookieStore.saveToken(user, Token, function(err, token){
-                if(err){
-                    done(null, false)
-                }
-                return done(null, token.cookiehash);
-            })
-
-        })
-    );
 
 };
