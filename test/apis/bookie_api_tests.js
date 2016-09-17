@@ -51,7 +51,7 @@ describe('Bookie api tests', function() {
                     .get('/api/bookie/')
                     .then(function (res) {
                         commonAssertions(res);
-                        assert.lengthOf(res.body.data, 6, "6 bookies expected");
+                        assert.lengthOf(res.body.data, 45, "45 bookies expected");
                     })
                     .catch(function (err) {
                         throw err;
@@ -138,7 +138,7 @@ describe('Bookie api tests', function() {
                     .get('/api/bookie/')
                     .then(function (res) {
                         expect(res).to.have.status(200);
-                        assert.lengthOf(res.body.data, 6);
+                        assert.lengthOf(res.body.data, 45);
                     })
                     .catch(function (err) {
                         throw err

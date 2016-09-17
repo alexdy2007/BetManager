@@ -130,7 +130,6 @@ GENERICS.admin.delete = function (tableName, authorisedCheck) {
 };
 
 function genericCreate(req, res, tableName){
-    console.log(req.isAuthenticated());
     if (tableName != "account" && !req.isAuthenticated()) {
         return res.status(403).json({success: false, data: "not Authorised"});
     }

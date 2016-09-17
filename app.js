@@ -46,6 +46,7 @@ var loginRouter = require('./routes/api/auth')(passport);
 var betRouter = require('./routes/api/bets');
 var bookieRouter = require('./routes/api/bookie');
 var betCaseRouter = require('./routes/api/betcase');
+var bookieAccountOverviewRouter = require('./routes/api/bookie_account_overview');
 var bookieAccountRouter = require('./routes/api/bookieaccount');
 
 
@@ -64,7 +65,7 @@ app.use('/homepage', routes);
 app.use('/auth', loginRouter);
 
 //API ROUTES
-app.use('/api', [accountsRouter, betRouter, bookieRouter, betCaseRouter, bookieAccountRouter]);
+app.use('/api', [accountsRouter, betRouter, bookieRouter, betCaseRouter, bookieAccountRouter, bookieAccountOverviewRouter]);
 
 
 

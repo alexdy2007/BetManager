@@ -27,6 +27,7 @@
     "angular-cookies": "^1.5.8",
     "ngToast": "ngtoast#^2.0.0",
     "angular-resource": "^1.5.8",
-    "angular-material": "^1.1.1"
+    "angular-material": "^1.1.1",
+    "angular-smart-table": "^2.1.8"
   }
 }

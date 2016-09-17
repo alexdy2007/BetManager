@@ -24,8 +24,15 @@
         var vm = this;
         vm.name = "Accounts";
         vm.userData = ["abc", "def"];
+        vm.getAccountData = getAccountData;
         vm.openAddAccount = openAddAccount;
 
+        
+        function getAccountData(){
+            bookieaccountoverview
+        }
+        
+        
         function openAddAccount() {
             var modalInstance = $uibModal.open({
                 animation: true,

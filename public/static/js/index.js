@@ -14,6 +14,7 @@
         'ngResource',
         'ngMaterial',
         'ngMessages',
+        'smart-table',
         "betManager.main",
         "betManager.authentication"])
         .config(config)
