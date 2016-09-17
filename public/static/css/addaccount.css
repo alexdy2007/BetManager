@@ -1,0 +1,26 @@
+div.addAccountContainer{
+    margin-top:2%;
+}
+
+.md-virtual-repeat-container.md-autocomplete-suggestions-container{
+    z-index: 99999 !important;
+}
+
+form md-autocomplete md-autocomplete-wrap input {
+    order: 0 !important;
+}
+
+#addAccount input{
+    height: 40px !important;
+}
+
+#addAccount md-switch div.md-container {
+    order:4;
+    margin-left: 30px;
+
+}
+
+label#statuslabel{
+    margin-bottom: 30px;
+    font-size: 11px;
+}

@@ -15,24 +15,20 @@
         .module('betManager.authentication.controllers')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$scope', '$state', 'authService'];
+    LoginController.$inject = ['$scope', '$state', 'authService', '$cookies'];
 
     /**
      * @namespace LoginController
      */
-    function LoginController($scope, $state, authService) {
+    function LoginController($scope, $state, authService, $cookies) {
         var vm = this;
-
+        
         vm.login = login;
-        /**
-         * @name login
-         * @desc Log the user in
-         * @memberOf cvprofile.authentication.controllers.LoginController
-         */
 
         function login() {
             authService.login(vm.email, vm.password);
         }
+        
 
         // function checkAuthorised(){
         //     if(authService.isAuthenticated()){

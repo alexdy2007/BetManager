@@ -21,3 +21,7 @@ div#add-bet-headers{
 #addBetInput .input-group{
     margin-top: 10%;
 }
+
+#addBetCase div.input-group{
+    width:80%;
+}

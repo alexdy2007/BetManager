@@ -1,9 +1,6 @@
 /**
  * Created by ayoung on 26/08/16.
  */
-/**
- * Created by ayoung on 20/08/16.
- */
 
 (function () {
     'use strict';

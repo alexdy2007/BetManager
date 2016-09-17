@@ -367,7 +367,6 @@ COMMENT ON TABLE bookie_account IS 'user set bookie accounts';
 
 CREATE TABLE bookie_account_overview (
     bookie_account_id integer,
-    accountid integer,
     bookie_name character varying(60),
     bookie_color character(7),
     commission numeric,
@@ -1179,7 +1178,6 @@ CREATE UNIQUE INDEX usersettings_id_uindex ON user_settings USING btree (id);
 
 CREATE RULE "_RETURN" AS
     ON SELECT TO bookie_account_overview DO INSTEAD  SELECT bookie_account.id AS bookie_account_id,
-    bookie_account.accountid,
     bookie.name AS bookie_name,
     bookie.color AS bookie_color,
     bookie_account.commission,
@@ -1203,7 +1201,7 @@ CREATE RULE "_RETURN" AS
    FROM bookie_account,
     abstract_bet,
     bookie
-  WHERE ((abstract_bet.bookieaccountid = bookie_account.id) AND (bookie_account.bookieid = bookie.id))
+  WHERE ((bookie_account.accountid = 1) AND (abstract_bet.bookieaccountid = bookie_account.id) AND (bookie_account.bookieid = bookie.id))
   GROUP BY bookie_account.id, bookie.name, bookie.color;
 
 

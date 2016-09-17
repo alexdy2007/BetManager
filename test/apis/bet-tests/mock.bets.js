@@ -20,20 +20,35 @@ var MOCKBETS = {
             resulttypeid:1,
             bettypeid:1
         },
-        bet2:{
-            bookieaccountid:2,
-            betcaseid: 3,
+        bet1Update:{
+            betcaseid: 1,
+            stake: 200,
+            odds: 4.00,
+            sportid:1,
+            commission:0.02,
+            laybet:false,
+            datetime:"2016-12-20 12:30:00",
+            hometeam:'Leeds Utd',
+            awayteam:'Brighton Town',
+            hometeamselected: false,
+            resulttypeid:1,
+            betfulfillment:true,
+            bettypeid:1
+        },
+        bet2: {
+            bookieaccountid: 2,
+            betcaseid: undefined,
             stake: 500,
             odds: 1.00,
-            sportid:1,
-            commission:0.01,
+            sportid: 1,
+            commission: 0.01,
             laybet: false,
-            datetime:"2016-12-10 18:30:00",
-            hometeam:'Wolves',
-            awayteam:'Norwich',
+            datetime: "2016-12-10 18:30:00",
+            hometeam: 'Wolves',
+            awayteam: 'Norwich',
             hometeamselected: false,
-            resulttypeid:3,
-            bettypeid:3
+            resulttypeid: 3,
+            bettypeid: 3
         }
     }
 }

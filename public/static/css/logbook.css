@@ -74,16 +74,6 @@
     border-color:lightgray;
 }
 
-#addBetCase div.input-group{
-    width:80%;
-}
-
-#addBetCase input{
-    border-color:lightgray;
-    border-width: 0px;
-    border-bottom-width: 1px
-}
-
 #logBook img{
     width:40px;
     height: 40px;

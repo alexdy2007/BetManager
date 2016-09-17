@@ -73,13 +73,13 @@ BEGIN
     
         --IF SUSPENDED
         IF NEW.resulttypeid = 4 THEN
-            NEW.profit:=666;
+            NEW.profit:=0;
             RETURN NEW;
         END IF;
 	
 	--IF STILL NOT FULFILLED (NOT FILLED IN)
         IF NEW.betfulfillment is NULL THEN
-            NEW.profit:=9999;
+            NEW.profit:=0;
 	--IF BET IS FULFILLED (WON)
         ELSIF NEW.betfulfillment THEN
 	    NEW.profit:= ((NEW.stake::numeric * NEW.odds::numeric) * (1-NEW.commission)) + free_stake_returned;
@@ -287,7 +287,7 @@ ALTER SEQUENCE bet_type_id_seq OWNED BY bet_type.id;
 
 CREATE TABLE betcase (
     id integer NOT NULL,
-    status character varying(10),
+    statusactive boolean DEFAULT true,
     accountid integer NOT NULL,
     sportid integer
 );
@@ -331,7 +331,8 @@ CREATE TABLE bookie (
     id integer NOT NULL,
     name character varying(60) NOT NULL,
     website character varying(50),
-    defaultcommission numeric DEFAULT 0 NOT NULL
+    defaultcommission numeric DEFAULT 0 NOT NULL,
+    color character(7) DEFAULT '#000000'::bpchar
 );
 
 
@@ -344,10 +345,10 @@ ALTER TABLE bookie OWNER TO ayoung;
 CREATE TABLE bookie_account (
     id integer NOT NULL,
     username character varying(50),
-    email character varying(60),
     bookieid integer,
     accountid integer NOT NULL,
-    commission numeric DEFAULT 0 NOT NULL
+    commission numeric DEFAULT 0 NOT NULL,
+    active boolean DEFAULT true NOT NULL
 );
 
 
@@ -359,6 +360,28 @@ ALTER TABLE bookie_account OWNER TO ayoung;
 
 COMMENT ON TABLE bookie_account IS 'user set bookie accounts';
 
+
+--
+-- Name: bookie_account_overview; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE bookie_account_overview (
+    bookie_account_id integer,
+    accountid integer,
+    bookie_name character varying(60),
+    bookie_color character(7),
+    commission numeric,
+    total_bets bigint,
+    total_wins bigint,
+    winnings numeric,
+    regular_bets bigint,
+    free_bets bigint
+);
+
+ALTER TABLE ONLY bookie_account_overview REPLICA IDENTITY NOTHING;
+
+
+ALTER TABLE bookie_account_overview OWNER TO ayoung;
 
 --
 -- Name: bookie_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
@@ -563,7 +586,8 @@ ALTER TABLE tennis_score OWNER TO ayoung;
 CREATE TABLE users (
     id integer NOT NULL,
     password character varying(60) NOT NULL,
-    email character varying(60) NOT NULL
+    email character varying(60) NOT NULL,
+    admin boolean DEFAULT false NOT NULL
 );
 
 
@@ -1147,6 +1171,40 @@ CREATE UNIQUE INDEX user_id_uindex ON users USING btree (id);
 --
 
 CREATE UNIQUE INDEX usersettings_id_uindex ON user_settings USING btree (id);
+
+
+--
+-- Name: _RETURN; Type: RULE; Schema: public; Owner: ayoung
+--
+
+CREATE RULE "_RETURN" AS
+    ON SELECT TO bookie_account_overview DO INSTEAD  SELECT bookie_account.id AS bookie_account_id,
+    bookie_account.accountid,
+    bookie.name AS bookie_name,
+    bookie.color AS bookie_color,
+    bookie_account.commission,
+    count(abstract_bet.id) AS total_bets,
+    count(
+        CASE
+            WHEN (abstract_bet.profit > (0)::numeric) THEN 1
+            ELSE NULL::integer
+        END) AS total_wins,
+    sum(abstract_bet.profit) AS winnings,
+    count(
+        CASE
+            WHEN ((abstract_bet.bettypeid = 1) OR (abstract_bet.bettypeid = 2)) THEN 1
+            ELSE NULL::integer
+        END) AS regular_bets,
+    count(
+        CASE
+            WHEN ((abstract_bet.bettypeid = 3) OR (abstract_bet.bettypeid = 4)) THEN 1
+            ELSE NULL::integer
+        END) AS free_bets
+   FROM bookie_account,
+    abstract_bet,
+    bookie
+  WHERE ((abstract_bet.bookieaccountid = bookie_account.id) AND (bookie_account.bookieid = bookie.id))
+  GROUP BY bookie_account.id, bookie.name, bookie.color;
 
 
 --

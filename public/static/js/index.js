@@ -11,6 +11,9 @@
         'ui.bootstrap.modal',
         'ngCookies',
         'ngToast',
+        'ngResource',
+        'ngMaterial',
+        'ngMessages',
         "betManager.main",
         "betManager.authentication"])
         .config(config)

@@ -11,12 +11,12 @@ var format = require('string-format');
 var generics = require('./generics');
 
 bookieAccountRouter.route('/bookieaccount')
-    .get(generics.getAllUserSpecific("bookieaccount"))
-    .post(generics.create("bookieaccount"));
+    .get(generics.user.getAll("bookie_account"))
+    .post(generics.user.create("bookie_account"));
 
 bookieAccountRouter.route('/bookieaccount/:id')
-    .get(generics.getOneUserSpecific("bookieaccount"))
-    .put(generics.update("bookieaccount"))
-    .delete(generics.delete("bookieaccount"));
+    .get(generics.user.getOne("bookie_account"))
+    .put(generics.user.update("bookie_account"))
+    .delete(generics.user.delete("bookie_account"));
 
 module.exports = bookieAccountRouter;

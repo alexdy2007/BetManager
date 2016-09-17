@@ -24,6 +24,7 @@
         $scope.openAddBet = openAddBet;
         $scope.openComponentModal;
         $scope.userData = ["abc", "def"];
+        $scope.clearCookies = clearCookies;
 
 
         function getCurrentState(){
@@ -54,6 +55,12 @@
                     }
                 }
             });
+        }
+
+        function clearCookies(){
+            $cookies.remove("connect.sid");
+            $cookies.remove("remember_me");
+
         }
 
     }

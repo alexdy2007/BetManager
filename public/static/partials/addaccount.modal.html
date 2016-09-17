@@ -1,3 +1,84 @@
-<p>This is a modal.</p>
-<button class="btn btn-default" ">Open another modal</button>
-<button class="btn btn-default" ng-click="$dismiss()">Close</button>
+<div class="container" id="addAccount">
+    <form name="accountform">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Add Bookie Account</h2>
+            </div>
+        </div>
+
+        <div class="row addAccountContainer">
+            <div class="col-sm-3">
+                    <md-autocomplete flex required
+                                     md-input-name="bookie"
+                                     id="account"
+                                     ng-disabled="false"
+                                     md-no-cache="false"
+                                     md-selected-item="vm.accountbookie.bookie"
+                                     md-search-text="vm.bookieSearchText"
+                                     md-items="bookie in vm.bookieSearch(vm.bookieSearchText)"
+                                     md-item-text="bookie.name"
+                                     md-min-length="0"
+                                     md-require-match
+                                     placeholder="SelectBookie"
+                                     md-selected-item-change="vm.updateCommission()"
+                                     md-floating-label="Bookie Account">
+                        <md-item-template>
+                            <span md-highlight-text="vm.bookies" md-highlight-flags="^i">{{bookie.name}}</span>
+                        </md-item-template>
+
+                        <md-not-found>
+                            No bookies matching "{{vm.bookieSearchText}}" were found.
+                        </md-not-found>
+
+                        <div ng-messages="accountform.bookie.$error" role="alert" multiple>
+                            <div ng-message="md-require-match" class="my-message">Need to select bookie from list</div>
+                            <div ng-message="require" class="my-message">Need to select bookie</div>
+                        </div>
+
+                    </md-autocomplete>
+            </div>
+            <div class="col-sm-3">
+                <md-input-container md-no-float class="md-block">
+                    <label>Username</label>
+                    <input ng-model="vm.accountbookie.username">
+                </md-input-container>
+            </div>
+            <div class="col-sm-3">
+                <md-input-container class="md-block">
+                    <label>Commission (%)</label>
+                    <input name="commission" required ng-pattern="/^\d{1,2}(\.\d{1,2})?$/" ng-model="vm.accountbookie.commission">
+                    <div ng-messages="accountform.commission.$error" role="alert" multiple>
+                        <div ng-message="pattern" class="my-message">Not a valid percentage</div>
+                        <div ng-message="required" class="my-message">Need to enter a commisson</div>
+                    </div>
+                </md-input-container>
+            </div>
+            <div class="col-sm-3">
+                <md-input-container md-no-float class="md-block">
+                    <label id="statuslabel">Status</label>
+                        <md-switch class="md-primary" ng-model="vm.accountbookie.statusactive" aria-label="bookiestatus">
+                            <div ng-show="vm.accountbookie.statusactive">
+                                ACTIVE
+                            </div>
+                            <div ng-hide="vm.accountbookie.statusactive">
+                                CLOSED
+                            </div>
+                        </md-switch>
+                </md-input-container>
+            </div>
+        </div>
+    </form>
+
+    <div id="modal-button-container" class="row">
+        <div class="col-md-3">
+            <button class="btn btn-primary" ng-click="vm.cancel()">Save & Start New Account</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary" ng-click="vm.saveBookie()">Save and Start New Case</button>
+        </div>
+        <div>
+            <button class="btn btn-primary" ng-click="vm.cancel()">Cancel</button>
+        </div>
+    </div>
+
+</div>

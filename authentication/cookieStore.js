@@ -10,23 +10,26 @@ sessionCookieService.saveToken = function(id, token, fn){
     var sql = format("INSERT INTO sessionstore(userid, cookiehash) values('{}', '{}') RETURNING *", id, token);
     conn.queryDB(sql)
         .then(function(results){
-            return fn(null, results);
+            fn(null, results);
         }).catch(function(reason){
-            console.error(reason);
+            console.log(reason);
             return fn(reason, null)
         });
 };
 
 sessionCookieService.getToken = function(token, fn){
     var sql = format("SELECT * FROM sessionstore WHERE cookiehash='{}'", token);
+    console.log(sql);
     conn.queryDB(sql)
         .then(function(data){
+            console.log(data);
             if(data.results.length != 0) {
                 return fn(null, data.results);
             }else{
-                return fn("No token", null);
+                return fn("No token found", null);
             }
         }).catch(function(reason){
+        console.log("ERROR");
         return fn(reason, null);
     });
 };
@@ -34,6 +37,7 @@ sessionCookieService.getToken = function(token, fn){
 sessionCookieService.removeToken = function(token){
     
     var sql = format("DELETE FROM sessionstore WHERE cookiehash='{}' RETURNING *", token);
+    console.log("delete token");
     conn.queryDB(sql)
         .then(function(results){
             return fn(null, results);

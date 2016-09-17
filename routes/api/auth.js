@@ -9,52 +9,57 @@ const util = require('util');
 var conn = require('./../../db/queryDB');
 var format = require('string-format');
 
-module.exports = function(passport) {
-    
+module.exports = function (passport) {
+
     loginRouter.post('/login',
         passport.authenticate('local-login'),
-        function(req, res, next) {
+        function (req, res, next) {
             var token = cookieStore.generateCookie();
             var cookie = cookieStore.saveToken(req.user.id, token, function (err, response) {
                 if (err) {
                     console.log("unable to save cookie");
                     return res.status(500).json({success: false, data: reason, msg: "unable to save session cookie"});
                 }
-                res.cookie('remember_me', token, {path: '/', id: req.user.id, httpOnly: true, maxAge: 604800000}); // 7 days
-                return res.status(200).send({"success":true, msg:"log on success"});
+                res.cookie('remember_me', token, {path: '/', httpOnly: true, maxAge: 604800000}); // 7 days
+                return res.status(200).send({"success": true, msg: "log on success"});
             });
 
-    });
+        });
 
-    loginRouter.get('/login',  passport.authenticate('local-login'),
-        function(req, res, next) {
+    loginRouter.get('/login', passport.authenticate('local-login'),
+        function (req, res, next) {
             var token = cookieStore.generateCookie();
             var cookie = cookieStore.saveToken(req.user.id, token, function (err, response) {
+                console.log("save begin");
                 if (err) {
                     console.log("unable to save cookie");
                     return res.status(500).json({success: false, data: reason, msg: "unable to save session cookie"});
                 }
-                res.cookie('remember_me', token, {path: '/', id: req.user.id, httpOnly: true, maxAge: 604800000}); // 7 days
+                console.log("HERE to save in browser");
+                res.cookie('remember_me', token, {path: '/', id: req.user.id, httpOnly: true, maxAge: 604800000});
+                console.log("SAVED IN BROWER");
                 return res.status(200).send({"success": true, msg: "log on success"});
             });
 
         });
 
 
-    loginRouter.post('/auth', function(req, res) {
+    loginRouter.post('/auth', function (req, res) {
         var token = req.cookies.remember_me;
-        cookieStore.getToken(token, function(err, response){
-            if(err){
-                return res.status(403).json({ success: false, data: err, msg:"unable to find session cookie"});
+        cookieStore.getToken(token, function (err, response) {
+            if (err) {
+                console.log(err);
+                return res.status(403).json({success: false, data: err, msg: "unable to find session cookie"});
             }
-            if (!req.user){
+            if (!req.user) {
+                console.log(response);
                 var user = {};
                 user.id = response[0].id;
-                req.login(user, function(err){
+                req.login(user, function (err) {
                     return res.status(500).json({success: false, data: err});
                 });
                 return res.status(200).json({"success": true, "msg": "login successful"})
-            }else {
+            } else {
                 return res.status(200).json({"success": true, "msg": "login successful"})
             }
         });
@@ -62,16 +67,16 @@ module.exports = function(passport) {
 
     });
 
-    loginRouter.post('/logout', function(req, res) {
+    loginRouter.post('/logout', function (req, res) {
         var token = req.cookies.remember_me;
-        cookieStore.removeToken(token, function(err, response){
-            if(err){
-                res.status(403).json({ success: false, data: response, msg:"unable to logout"});
+        cookieStore.removeToken(token, function (err, response) {
+            if (err) {
+                res.status(403).json({success: false, data: response, msg: "unable to logout"});
             }
             return done(response)
         });
         res.logout();
-        return res.status(200).json({"success":true , "msg":"logout successful"})
+        return res.status(200).json({"success": true, "msg": "logout successful"})
 
     });
 

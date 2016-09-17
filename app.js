@@ -32,7 +32,7 @@ var sessionOpts = {
     cookie : { maxAge: 2419200000 } // configure when sessions expires
 };
 
-require('./config/passport')(passport);
+require('./authentication/passport')(passport);
 app.use(session(sessionOpts));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -45,6 +45,9 @@ var accountsRouter = require('./routes/api/accounts');
 var loginRouter = require('./routes/api/auth')(passport);
 var betRouter = require('./routes/api/bets');
 var bookieRouter = require('./routes/api/bookie');
+var betCaseRouter = require('./routes/api/betcase');
+var bookieAccountRouter = require('./routes/api/bookieaccount');
+
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -61,7 +64,7 @@ app.use('/homepage', routes);
 app.use('/auth', loginRouter);
 
 //API ROUTES
-app.use('/api', [accountsRouter, betRouter, bookieRouter]);
+app.use('/api', [accountsRouter, betRouter, bookieRouter, betCaseRouter, bookieAccountRouter]);
 
 
 
