@@ -1,11 +1,5 @@
 #!/bin/bash
 
-usage="$(basename "$0") recreateDN.sh dbname [-h]
-
-where:
-    -h  show this help text
-    -dbname name of db to recreate"
-
 #
 #
 db=$1

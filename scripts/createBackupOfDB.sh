@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+usage="$(basename "$0") createBackupOfDB.sh name [-h]
+
+where:
+    -h  show this help text
+    -name name of backupfile"
+
+
 
 name=$1
 
