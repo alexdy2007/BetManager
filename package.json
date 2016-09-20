@@ -16,6 +16,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
+    "jade": "^1.11.0",
     "morgan": "~1.7.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
