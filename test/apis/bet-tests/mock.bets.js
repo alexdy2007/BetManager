@@ -12,13 +12,18 @@ var MOCKBETS = {
             odds: 3.00,
             sportid:1,
             commission:0.05,
+            datetime: "2016-12-01 18:30:00",
             laybet:false,
-            datetime:"2016-12-10 12:30:00",
-            hometeam:'Leeds Utd',
-            awayteam:'Brighton Town',
-            hometeamselected: true,
-            resulttypeid:1,
-            bettypeid:1
+            betstatusid:1,
+            bettypeid:1,
+            bet_specific: {
+                "betmarket":"fb_absolute",
+                "hometeam": 'Leeds Utd',
+                "awayteam": 'Brighton Town',
+                "hometeamselected": true,
+                "result":"WIN"
+            }
+
         },
         bet1Update:{
             betcaseid: 1,
@@ -27,13 +32,21 @@ var MOCKBETS = {
             sportid:1,
             commission:0.02,
             laybet:false,
-            datetime:"2016-12-20 12:30:00",
-            hometeam:'Leeds Utd',
-            awayteam:'Brighton Town',
-            hometeamselected: false,
-            resulttypeid:1,
-            betfulfillment:true,
-            bettypeid:1
+            datetime: "2016-12-17 18:30:00",
+            betstatusid:1,
+            bettypeid:1,
+            bet_specific: {
+                "betmarket":"fb_absolute",
+                "hometeam": 'Leeds Utd',
+                "awayteam": 'Brighton Town',
+                "hometeamselected": false,
+                "result":"LOSE"
+            }
+        },
+        bet1UpdatePart2:{
+            bet_specific: {
+                "hometeam": 'Liverpool'
+            }
         },
         bet2: {
             bookieaccountid: 2,
@@ -47,8 +60,15 @@ var MOCKBETS = {
             hometeam: 'Wolves',
             awayteam: 'Norwich',
             hometeamselected: false,
-            resulttypeid: 3,
-            bettypeid: 3
+            bettypeid: 3,
+            betstatusid: 1,
+            bet_specific: {
+                "betmarket":"fb_absolute",
+                "hometeam": 'Wolves',
+                "awayteam": 'Norwich',
+                "hometeamselected": true,
+                "result":"WIN"
+            }
         }
     }
 }

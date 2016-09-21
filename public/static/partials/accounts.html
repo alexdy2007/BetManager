@@ -1,7 +1,7 @@
 <div id="accounts" class="container-fluid">
     <div class="col-md-1">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-10">
         <div id="AccountBanner" class="row">
             <div class="col-sm-2">
                 <div ng-click="vm.openAddAccount()" class="row  addNewAccountBoxBottom effect8">
@@ -15,55 +15,47 @@
                 </div>
             </div>
             <div class="col-sm-10 accountOverviewBox effect8">
-                <b>Accounts</b>
+                <h2>Accounts</h2>
             </div>
         </div>
         <div class="row activeAccountsBox effect8">
-            <div class="col-sm-3"> Active </div>
-            <div class="col-sm-3"> 3 Active accounts</div>
+            <div class="col-sm-3"> <h2>Active</h2> </div>
+            <div class="col-sm-3"  id="activeAccountNumberContainer"> <div class="col-sm-1"><h4 id="activeAccountNumber">3</h4></div><div class="col-sm-11"><h4>Active accounts</h4></div></div>
             <div class="col-sm-6">
                 <img class="pull-right" src="static/images/info.png"  alt="btn" class="img-rounded">
                 <img class="pull-right" src="static/images/circledown.png"  alt="btn" class="img-rounded">
             </div>
         </div>
-        <div class="row effect8">
-            <table class="minimal-style">
+        <div id="blueTopBorder" class="row effect8">
+            <table id="bookieaccountsummary" st-table="accountOverview" class="table">
                 <thead>
-                    <th class="accountColour"></th>
-                    <th>Account</th>
-                    <th> Commission</th>
-                    <th>Total Bets</th>
-                    <th>Winning Bets</th>
-                    <th>Win Percentage</th>
-                    <th>Winnings</th>
-                    <th>Regular Bets</th>
-                    <th>Free Bets</th>
-                    <th>Regular Bet / Free Bet Ratio</th>
+                    <tr id="bookieAccountTableHeaders">
+                        <th class="tableStatus"></th>
+                        <th>Account</th>
+                        <th>Username</th>
+                        <th>Commission</th>
+                        <th>Total Bets</th>
+                        <th>Winning Bets</th>
+                        <th>Win Percentage</th>
+                        <th>Winnings</th>
+                        <th>Regular Bets</th>
+                        <th>Free Bets</th>
+                        <th>Regular Bet / Free Bet Ratio</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td>bet365</td>
-                        <td>0%</td>
-                        <td>10</td>
-                        <td>4</td>
-                        <td>40%</td>
-                        <td>-£50</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>1/1</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>betFair</td>
-                        <td>2%</td>
-                        <td>19</td>
-                        <td>2</td>
-                        <td>20%</td>
-                        <td>£60</td>
-                        <td>3</td>
-                        <td>6</td>
-                        <td>3/1</td>
+                    <tr ng-repeat="account in vm.bookieAccounts">
+                        <td style="background-color: {{account.bookie_color}}"></td>
+                        <td>{{ account.bookie_name }}</td>
+                        <td>{{account.username}}</td>
+                        <td>{{ account.commission }}</td>
+                        <td>{{ account.total_bets }}</td>
+                        <td>{{ account.total_wins }}</td>
+                        <td ng-class="(account.total_bets/2)>account.total_wins ? 'redText':'greenText'">{{account.total_bets != "0" ? ((account.total_wins / account.total_bets)*100 | number:0): 0 }} %</td>
+                        <td ng-class="(account.winnings < 0) ? 'redText':'greenText'">£{{ account.winnings | number:2}}</td>
+                        <td>{{ account.regular_bets }}</td>
+                        <td>{{ account.free_bets }}</td>
+                        <td>{{ account.regular_bets }}/{{ account.free_bets }}</td>
                     </tr>
                 </tbody>
             </table>

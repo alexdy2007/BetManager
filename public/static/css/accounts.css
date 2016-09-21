@@ -3,7 +3,9 @@
 }
 
 .tableStatus {
-    accountColour: 3px;
+    width: 0.75%!important;
+    max-width: 10px!important;
+
 }
 
 .accountOverviewBox {
@@ -30,6 +32,45 @@ div#AccountBanner{
 }
 
 #accounts img{
-    width:40px;
-    height: 40px;
+    width:35px;
+    height: 35px;
 }
+
+.greenText{
+    color:forestgreen;
+}
+
+
+.redText{
+    color:#ed737a;
+}
+
+table#bookieaccountsummary{
+    border-top-style: none;
+    margin-top: 20px;
+}
+
+
+tr#bookieAccountTableHeaders{
+    border-top-style: none !important;
+    border-left-style: none !important;;
+    border-right-style: none !important;;
+}
+
+table#bookieaccountsummary tr{
+    border-style:solid;
+    border-width:3px;
+}
+
+h4#activeAccountNumber{
+    color:#87d1fe;
+}
+div#activeAccountNumberContainer{
+    padding-top: 20px;
+}
+
+div#blueTopBorder{
+    border-top:#87d1fe;
+    border-top-style:solid;
+}
+

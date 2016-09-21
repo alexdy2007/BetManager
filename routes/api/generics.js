@@ -71,7 +71,7 @@ GENERICS.user.getOne = function (tableName, authorisedCheck) {
         if (!req.isAuthenticated())
             return res.status(403).json({success: false, data: "unauthorised assess"});
         var id = req.params.id;
-        var sql = format("SELECT * FROM {} WHERE id = {} AND accountid={}", tableName, id, req.user.accountid);
+        var sql = format("SELECT * FROM {} WHERE id={} AND accountid={}", tableName, id, req.user.accountid);
         conn.queryDB(sql)
             .then(function (data) {
                 if (data.results.length == 0) {
@@ -177,16 +177,14 @@ GENERICS.admin.create = function (tableName, authorisedCheck) {
 };
 
 function genericUpdate(req, res, tableName){
-    if(req.query.betmarket){
-        tableName = req.query.betmarket;
-    }
-    if (!req.isAuthenticated()) {
-        return res.status(403).json({success: false, data: "Not Authorised"});
-    }
     var data = req.body;
     var setList = [];
     for (var colName in data) {
-        setList.push( colName + "='" + data[colName] + "'")
+        if(typeof(data[colName])!=="object") {
+            setList.push(colName + "='" + data[colName] + "'")
+        }else{
+            setList.push(colName +" = " + colName + " || '" +  JSON.stringify(data[colName]) + "'");
+        }
     }
     var updateSQL = format("UPDATE {} SET {} WHERE id={} RETURNING *", tableName, setList, req.params.id);
     conn.queryDB(updateSQL)

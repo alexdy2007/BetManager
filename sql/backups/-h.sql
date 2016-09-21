@@ -78,10 +78,10 @@ BEGIN
         END IF;
 	
 	--IF STILL NOT FULFILLED (NOT FILLED IN)
-        IF NEW.betstatusid=0 THEN
+        IF NEW.betfulfillment is NULL THEN
             NEW.profit:=0;
 	--IF BET IS FULFILLED (WON)
-        ELSIF NEW.betstatusid=1 THEN
+        ELSIF NEW.betfulfillment THEN
 	    NEW.profit:= ((NEW.stake::numeric * NEW.odds::numeric) * (1-NEW.commission)) + free_stake_returned;
 	--IF BET IS NOT FULFILLED(LOST)
         ELSE
@@ -99,62 +99,15 @@ $$;
 
 ALTER FUNCTION public.fb_absolute_profit_calc() OWNER TO ayoung;
 
---
--- Name: fb_ht_ft_result_profit_calc(); Type: FUNCTION; Schema: public; Owner: ayoung
---
-
-CREATE FUNCTION fb_ht_ft_result_profit_calc() RETURNS trigger
-    LANGUAGE plpgsql
-    AS $$
-
-DECLARE
-	free_bet boolean;
-	free_stake_returned numeric;
-BEGIN
-
-	--IF SNR free_stake_to_return = stake
-	IF NEW.bettypeid = 3 THEN
-	    free_bet := false;
-	    free_stake_returned := 0;
-        ELSIF NEW.bettypeid = 4 THEN
-	    free_bet := true;
-	    free_stake_returned := NEW.stake;
-	ELSE
-	    free_bet := false;
-	    free_stake_returned := 0;
-	END IF;
-    
-	--IF STILL NOT FULFILLED (NOT FILLED IN)
-        IF NEW.betstatusid=0 THEN
-            NEW.profit:=0;
-	--IF BET IS FULFILLED (WON)
-        ELSIF NEW.betstatusid=1 THEN
-	    NEW.profit:= ((NEW.stake::numeric * NEW.odds::numeric) * (1-NEW.commission)) + free_stake_returned;
-	--IF BET IS NOT FULFILLED(LOST)
-        ELSE
-	    -- IF LOST |FREE BET PROFIT 0 ELSE -STAKE
-	    IF free_bet THEN
-                NEW.profit:= 0;
-	    ELSE
-	        NEW.profit:= -NEW.stake::numeric;
-	    END IF;
-	END IF;
-	RETURN NEW;
-END;
-$$;
-
-
-ALTER FUNCTION public.fb_ht_ft_result_profit_calc() OWNER TO ayoung;
-
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: bet; Type: TABLE; Schema: public; Owner: ayoung
+-- Name: abstract_bet; Type: TABLE; Schema: public; Owner: ayoung
 --
 
-CREATE TABLE bet (
+CREATE TABLE abstract_bet (
     stake money DEFAULT 0 NOT NULL,
     odds double precision NOT NULL,
     bookieaccountid integer NOT NULL,
@@ -163,21 +116,20 @@ CREATE TABLE bet (
     datetime timestamp without time zone NOT NULL,
     betcaseid integer NOT NULL,
     id integer NOT NULL,
-    sportid integer NOT NULL,
+    sportid integer,
     bettypeid integer DEFAULT 1 NOT NULL,
-    betstatusid integer DEFAULT 1,
-    profit numeric(12,4),
-    bet_specific jsonb
+    betfulfillment boolean,
+    profit numeric(12,4)
 );
 
 
-ALTER TABLE bet OWNER TO ayoung;
+ALTER TABLE abstract_bet OWNER TO ayoung;
 
 --
--- Name: TABLE bet; Type: COMMENT; Schema: public; Owner: ayoung
+-- Name: TABLE abstract_bet; Type: COMMENT; Schema: public; Owner: ayoung
 --
 
-COMMENT ON TABLE bet IS 'individual bet that links to a event case';
+COMMENT ON TABLE abstract_bet IS 'individual bet that links to a event case';
 
 
 --
@@ -198,8 +150,34 @@ ALTER TABLE abstract_bet_id_seq OWNER TO ayoung;
 -- Name: abstract_bet_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
 --
 
-ALTER SEQUENCE abstract_bet_id_seq OWNED BY bet.id;
+ALTER SEQUENCE abstract_bet_id_seq OWNED BY abstract_bet.id;
 
+
+--
+-- Name: abstract_fb; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE abstract_fb (
+    hometeam character varying(50),
+    awayteam character varying(50)
+)
+INHERITS (abstract_bet);
+
+
+ALTER TABLE abstract_fb OWNER TO ayoung;
+
+--
+-- Name: abstract_tennis; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE abstract_tennis (
+    player1 character varying(20),
+    player2 character varying(20)
+)
+INHERITS (abstract_bet);
+
+
+ALTER TABLE abstract_tennis OWNER TO ayoung;
 
 --
 -- Name: account; Type: TABLE; Schema: public; Owner: ayoung
@@ -267,60 +245,6 @@ ALTER TABLE accounttypes_id_seq OWNER TO ayoung;
 --
 
 ALTER SEQUENCE accounttypes_id_seq OWNED BY accounttypes.id;
-
-
---
--- Name: bet_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
---
-
-CREATE SEQUENCE bet_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE bet_id_seq OWNER TO ayoung;
-
---
--- Name: bet_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
---
-
-ALTER SEQUENCE bet_id_seq OWNED BY bet.id;
-
-
---
--- Name: bet_status; Type: TABLE; Schema: public; Owner: ayoung
---
-
-CREATE TABLE bet_status (
-    id integer NOT NULL,
-    name character varying(20) NOT NULL
-);
-
-
-ALTER TABLE bet_status OWNER TO ayoung;
-
---
--- Name: bet_status_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
---
-
-CREATE SEQUENCE bet_status_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE bet_status_id_seq OWNER TO ayoung;
-
---
--- Name: bet_status_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
---
-
-ALTER SEQUENCE bet_status_id_seq OWNED BY bet_status.id;
 
 
 --
@@ -502,6 +426,72 @@ ALTER SEQUENCE bookieaccount_id_seq OWNED BY bookie_account.id;
 
 
 --
+-- Name: fb_absolute; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE fb_absolute (
+    resulttypeid integer,
+    hometeamselected boolean
+)
+INHERITS (abstract_fb);
+
+
+ALTER TABLE fb_absolute OWNER TO ayoung;
+
+--
+-- Name: fb_ht_ft_result; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE fb_ht_ft_result (
+    ht_result character varying(20),
+    ft_result character varying(20)
+)
+INHERITS (abstract_fb);
+
+
+ALTER TABLE fb_ht_ft_result OWNER TO ayoung;
+
+--
+-- Name: result_type; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE result_type (
+    id integer NOT NULL,
+    resultname character varying(50)
+);
+
+
+ALTER TABLE result_type OWNER TO ayoung;
+
+--
+-- Name: TABLE result_type; Type: COMMENT; Schema: public; Owner: ayoung
+--
+
+COMMENT ON TABLE result_type IS 'types of resultants a bet can have';
+
+
+--
+-- Name: resulttype_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
+--
+
+CREATE SEQUENCE resulttype_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE resulttype_id_seq OWNER TO ayoung;
+
+--
+-- Name: resulttype_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
+--
+
+ALTER SEQUENCE resulttype_id_seq OWNED BY result_type.id;
+
+
+--
 -- Name: sessionstore; Type: TABLE; Schema: public; Owner: ayoung
 --
 
@@ -577,6 +567,19 @@ ALTER SEQUENCE sport_id_seq OWNED BY sport.id;
 
 
 --
+-- Name: tennis_score; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE tennis_score (
+    player1_score integer,
+    player2_score integer
+)
+INHERITS (abstract_tennis);
+
+
+ALTER TABLE tennis_score OWNER TO ayoung;
+
+--
 -- Name: users; Type: TABLE; Schema: public; Owner: ayoung
 --
 
@@ -649,6 +652,69 @@ ALTER SEQUENCE usersettings_id_seq OWNED BY user_settings.id;
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
 --
 
+ALTER TABLE ONLY abstract_bet ALTER COLUMN id SET DEFAULT nextval('abstract_bet_id_seq'::regclass);
+
+
+--
+-- Name: stake; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_fb ALTER COLUMN stake SET DEFAULT 0;
+
+
+--
+-- Name: laybet; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_fb ALTER COLUMN laybet SET DEFAULT false;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_fb ALTER COLUMN id SET DEFAULT nextval('abstract_bet_id_seq'::regclass);
+
+
+--
+-- Name: bettypeid; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_fb ALTER COLUMN bettypeid SET DEFAULT 1;
+
+
+--
+-- Name: stake; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_tennis ALTER COLUMN stake SET DEFAULT 0;
+
+
+--
+-- Name: laybet; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_tennis ALTER COLUMN laybet SET DEFAULT false;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_tennis ALTER COLUMN id SET DEFAULT nextval('abstract_bet_id_seq'::regclass);
+
+
+--
+-- Name: bettypeid; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY abstract_tennis ALTER COLUMN bettypeid SET DEFAULT 1;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
 ALTER TABLE ONLY account ALTER COLUMN id SET DEFAULT nextval('account_id_seq'::regclass);
 
 
@@ -657,20 +723,6 @@ ALTER TABLE ONLY account ALTER COLUMN id SET DEFAULT nextval('account_id_seq'::r
 --
 
 ALTER TABLE ONLY accounttypes ALTER COLUMN id SET DEFAULT nextval('accounttypes_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet ALTER COLUMN id SET DEFAULT nextval('bet_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet_status ALTER COLUMN id SET DEFAULT nextval('bet_status_id_seq'::regclass);
 
 
 --
@@ -702,6 +754,69 @@ ALTER TABLE ONLY bookie_account ALTER COLUMN id SET DEFAULT nextval('bookieaccou
 
 
 --
+-- Name: stake; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute ALTER COLUMN stake SET DEFAULT 0;
+
+
+--
+-- Name: laybet; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute ALTER COLUMN laybet SET DEFAULT false;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute ALTER COLUMN id SET DEFAULT nextval('abstract_bet_id_seq'::regclass);
+
+
+--
+-- Name: bettypeid; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute ALTER COLUMN bettypeid SET DEFAULT 1;
+
+
+--
+-- Name: stake; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result ALTER COLUMN stake SET DEFAULT 0;
+
+
+--
+-- Name: laybet; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result ALTER COLUMN laybet SET DEFAULT false;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result ALTER COLUMN id SET DEFAULT nextval('abstract_bet_id_seq'::regclass);
+
+
+--
+-- Name: bettypeid; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result ALTER COLUMN bettypeid SET DEFAULT 1;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY result_type ALTER COLUMN id SET DEFAULT nextval('resulttype_id_seq'::regclass);
+
+
+--
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
 --
 
@@ -713,6 +828,34 @@ ALTER TABLE ONLY sessionstore ALTER COLUMN id SET DEFAULT nextval('sessionstore_
 --
 
 ALTER TABLE ONLY sport ALTER COLUMN id SET DEFAULT nextval('sport_id_seq'::regclass);
+
+
+--
+-- Name: stake; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score ALTER COLUMN stake SET DEFAULT 0;
+
+
+--
+-- Name: laybet; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score ALTER COLUMN laybet SET DEFAULT false;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score ALTER COLUMN id SET DEFAULT nextval('abstract_bet_id_seq'::regclass);
+
+
+--
+-- Name: bettypeid; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score ALTER COLUMN bettypeid SET DEFAULT 1;
 
 
 --
@@ -743,22 +886,6 @@ ALTER TABLE ONLY account
 
 ALTER TABLE ONLY accounttypes
     ADD CONSTRAINT accounttypes_pkey PRIMARY KEY (id);
-
-
---
--- Name: bet_id_pk; Type: CONSTRAINT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet
-    ADD CONSTRAINT bet_id_pk PRIMARY KEY (id);
-
-
---
--- Name: bet_status_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet_status
-    ADD CONSTRAINT bet_status_pkey PRIMARY KEY (id);
 
 
 --
@@ -794,6 +921,30 @@ ALTER TABLE ONLY bookie_account
 
 
 --
+-- Name: fb_absolute_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute
+    ADD CONSTRAINT fb_absolute_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: fb_ht_ft_result_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result
+    ADD CONSTRAINT fb_ht_ft_result_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: resulttype_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY result_type
+    ADD CONSTRAINT resulttype_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: sessionstore_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
 --
 
@@ -807,6 +958,14 @@ ALTER TABLE ONLY sessionstore
 
 ALTER TABLE ONLY sport
     ADD CONSTRAINT sport_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: tennis_score_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score
+    ADD CONSTRAINT tennis_score_pkey PRIMARY KEY (id);
 
 
 --
@@ -844,20 +1003,6 @@ CREATE UNIQUE INDEX "accountTypes_id_uindex" ON accounttypes USING btree (id);
 --
 
 CREATE UNIQUE INDEX "accountTypes_name_uindex" ON accounttypes USING btree (name);
-
-
---
--- Name: bet_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
---
-
-CREATE UNIQUE INDEX bet_id_uindex ON bet USING btree (id);
-
-
---
--- Name: bet_status_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
---
-
-CREATE UNIQUE INDEX bet_status_id_uindex ON bet_status USING btree (id);
 
 
 --
@@ -903,34 +1048,6 @@ CREATE INDEX fki_account__accounttype_fk_id ON account USING btree (accounttypei
 
 
 --
--- Name: fki_bet_betcase_id_fk; Type: INDEX; Schema: public; Owner: ayoung
---
-
-CREATE INDEX fki_bet_betcase_id_fk ON bet USING btree (betcaseid);
-
-
---
--- Name: fki_bet_betstatus_id_fk; Type: INDEX; Schema: public; Owner: ayoung
---
-
-CREATE INDEX fki_bet_betstatus_id_fk ON bet USING btree (betstatusid);
-
-
---
--- Name: fki_bet_bettype_id_fk; Type: INDEX; Schema: public; Owner: ayoung
---
-
-CREATE INDEX fki_bet_bettype_id_fk ON bet USING btree (bettypeid);
-
-
---
--- Name: fki_bet_sport_id_fk; Type: INDEX; Schema: public; Owner: ayoung
---
-
-CREATE INDEX fki_bet_sport_id_fk ON bet USING btree (sportid);
-
-
---
 -- Name: fki_betcase_account_id_fk; Type: INDEX; Schema: public; Owner: ayoung
 --
 
@@ -942,6 +1059,83 @@ CREATE INDEX fki_betcase_account_id_fk ON betcase USING btree (accountid);
 --
 
 CREATE INDEX fki_betcase_sport_id_fk ON betcase USING btree (sportid);
+
+
+--
+-- Name: fki_fb_absolute_betcase_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_fb_absolute_betcase_id_fk ON fb_absolute USING btree (betcaseid);
+
+
+--
+-- Name: fki_fb_absolute_bookie_account_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_fb_absolute_bookie_account_id_fk ON fb_absolute USING btree (bookieaccountid);
+
+
+--
+-- Name: fki_fb_absolute_resulttype_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_fb_absolute_resulttype_id_fk ON fb_absolute USING btree (resulttypeid);
+
+
+--
+-- Name: fki_fb_absolute_sport_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_fb_absolute_sport_id_fk ON fb_absolute USING btree (sportid);
+
+
+--
+-- Name: fki_fb_ht_ft_result_betcase_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_fb_ht_ft_result_betcase_id_fk ON fb_ht_ft_result USING btree (betcaseid);
+
+
+--
+-- Name: fki_fb_ht_ft_result_bookie_account_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_fb_ht_ft_result_bookie_account_id_fk ON fb_ht_ft_result USING btree (bookieaccountid);
+
+
+--
+-- Name: fki_fb_ht_ft_result_sport_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_fb_ht_ft_result_sport_id_fk ON fb_ht_ft_result USING btree (sportid);
+
+
+--
+-- Name: fki_tennis_score_betcase_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_tennis_score_betcase_id_fk ON tennis_score USING btree (betcaseid);
+
+
+--
+-- Name: fki_tennis_score_bookie_account_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_tennis_score_bookie_account_id_fk ON tennis_score USING btree (bookieaccountid);
+
+
+--
+-- Name: fki_tennis_score_sport_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE INDEX fki_tennis_score_sport_id_fk ON tennis_score USING btree (sportid);
+
+
+--
+-- Name: resulttype_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE UNIQUE INDEX resulttype_id_uindex ON result_type USING btree (id);
 
 
 --
@@ -989,28 +1183,42 @@ CREATE RULE "_RETURN" AS
     bookie.name AS bookie_name,
     bookie.color AS bookie_color,
     bookie_account.commission,
-    count(bet.id) AS total_bets,
+    count(abstract_bet.id) AS total_bets,
     count(
         CASE
-            WHEN (bet.profit > (0)::numeric) THEN 1
+            WHEN (abstract_bet.profit > (0)::numeric) THEN 1
             ELSE NULL::integer
         END) AS total_wins,
-    sum(bet.profit) AS winnings,
+    sum(abstract_bet.profit) AS winnings,
     count(
         CASE
-            WHEN ((bet.bettypeid = 1) OR (bet.bettypeid = 2)) THEN 1
+            WHEN ((abstract_bet.bettypeid = 1) OR (abstract_bet.bettypeid = 2)) THEN 1
             ELSE NULL::integer
         END) AS regular_bets,
     count(
         CASE
-            WHEN ((bet.bettypeid = 3) OR (bet.bettypeid = 4)) THEN 1
+            WHEN ((abstract_bet.bettypeid = 3) OR (abstract_bet.bettypeid = 4)) THEN 1
             ELSE NULL::integer
         END) AS free_bets
    FROM bookie_account,
-    bet,
+    abstract_bet,
     bookie
-  WHERE ((bet.bookieaccountid = bookie_account.id) AND (bookie_account.bookieid = bookie.id))
+  WHERE ((abstract_bet.bookieaccountid = bookie_account.id) AND (bookie_account.bookieid = bookie.id))
   GROUP BY bookie_account.id, bookie.name, bookie.color;
+
+
+--
+-- Name: fb_absolute_profit_trigger; Type: TRIGGER; Schema: public; Owner: ayoung
+--
+
+CREATE TRIGGER fb_absolute_profit_trigger BEFORE INSERT OR UPDATE ON fb_absolute FOR EACH ROW EXECUTE PROCEDURE fb_absolute_profit_calc();
+
+
+--
+-- Name: TRIGGER fb_absolute_profit_trigger ON fb_absolute; Type: COMMENT; Schema: public; Owner: ayoung
+--
+
+COMMENT ON TRIGGER fb_absolute_profit_trigger ON fb_absolute IS 'Triggers on update or create to calc profit';
 
 
 --
@@ -1027,38 +1235,6 @@ ALTER TABLE ONLY account
 
 ALTER TABLE ONLY account
     ADD CONSTRAINT account_user_id_fk FOREIGN KEY (userid) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: bet_betcase_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet
-    ADD CONSTRAINT bet_betcase_id_fk FOREIGN KEY (betcaseid) REFERENCES betcase(id) ON UPDATE CASCADE ON DELETE CASCADE;
-
-
---
--- Name: bet_betstatus_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet
-    ADD CONSTRAINT bet_betstatus_id_fk FOREIGN KEY (betstatusid) REFERENCES bet_status(id) ON UPDATE CASCADE ON DELETE CASCADE;
-
-
---
--- Name: bet_bettype_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet
-    ADD CONSTRAINT bet_bettype_id_fk FOREIGN KEY (bettypeid) REFERENCES bet_type(id) ON UPDATE CASCADE ON DELETE CASCADE;
-
-
---
--- Name: bet_sport_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
---
-
-ALTER TABLE ONLY bet
-    ADD CONSTRAINT bet_sport_id_fk FOREIGN KEY (sportid) REFERENCES sport(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --
@@ -1091,6 +1267,86 @@ ALTER TABLE ONLY bookie_account
 
 ALTER TABLE ONLY bookie_account
     ADD CONSTRAINT bookieaccount_user_id_fk FOREIGN KEY (accountid) REFERENCES account(id);
+
+
+--
+-- Name: fb_absolute_betcase_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute
+    ADD CONSTRAINT fb_absolute_betcase_id_fk FOREIGN KEY (betcaseid) REFERENCES betcase(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: fb_absolute_bookie_account_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute
+    ADD CONSTRAINT fb_absolute_bookie_account_id_fk FOREIGN KEY (bookieaccountid) REFERENCES bookie_account(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: fb_absolute_resulttype_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute
+    ADD CONSTRAINT fb_absolute_resulttype_id_fk FOREIGN KEY (resulttypeid) REFERENCES result_type(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: fb_absolute_sport_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_absolute
+    ADD CONSTRAINT fb_absolute_sport_id_fk FOREIGN KEY (sportid) REFERENCES sport(id);
+
+
+--
+-- Name: fb_ht_ft_result_betcase_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result
+    ADD CONSTRAINT fb_ht_ft_result_betcase_id_fk FOREIGN KEY (betcaseid) REFERENCES betcase(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: fb_ht_ft_result_bookie_account_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result
+    ADD CONSTRAINT fb_ht_ft_result_bookie_account_id_fk FOREIGN KEY (bookieaccountid) REFERENCES bookie_account(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: fb_ht_ft_result_sport_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY fb_ht_ft_result
+    ADD CONSTRAINT fb_ht_ft_result_sport_id_fk FOREIGN KEY (sportid) REFERENCES sport(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: tennis_score_betcase_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score
+    ADD CONSTRAINT tennis_score_betcase_id_fk FOREIGN KEY (betcaseid) REFERENCES betcase(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: tennis_score_bookie_account_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score
+    ADD CONSTRAINT tennis_score_bookie_account_id_fk FOREIGN KEY (bookieaccountid) REFERENCES bookie_account(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: tennis_score_sport_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY tennis_score
+    ADD CONSTRAINT tennis_score_sport_id_fk FOREIGN KEY (sportid) REFERENCES sport(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --

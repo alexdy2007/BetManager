@@ -11,14 +11,13 @@ var bet_sql = require('./../../db/sqlForBets');
 
 betRouter.route('/bet')
     .get(function (req, res) {
-        var betmarket = req.query.betmarket;
-        if (checkValidBetMarket(betmarket)) {
-            return res.status(422).json({
-                success: false,
-                data: format("bet type {} does not exist or in accepted bet type criteria", bettype)
-            });
+        var betmarket;
+        if(req.query.betmarket){
+             betmarket = req.query.betmarket;
+        }else{
+             betmarket = null;
         }
-        var sql = bet_sql[betmarket].getAll(req.user);
+        var sql = bet_sql["bet"].getAll(req.user, betmarket);
         conn.queryDB(sql)
             .then(function (data) {
                 return res.json({
@@ -36,9 +35,6 @@ betRouter.route('/bet')
         var betData = req.body;
         //Check bet market is
         var betmarket = req.query.betmarket;
-        if (checkValidBetMarket(betmarket)) {
-            return res.status(422).json({success: false, data: "invalid bet market selected in query param"});
-        }
         //If bet case if falsey create new one for user else check it is assosiated to account
         if (!betData.betcaseid) {
             return createNewBetWithNewBetCase(betData);
@@ -59,7 +55,7 @@ betRouter.route('/bet')
                             data: "Invalid bet case selected for user account"
                         });
                     } else {
-                        var add_bet_sql = bet_sql[betmarket].add(betCaseData);
+                        var add_bet_sql = bet_sql["bet"].add(betCaseData);
                         conn.queryDB(add_bet_sql)
                             .then(function (data) {
                                 return res.json({
@@ -91,26 +87,25 @@ betRouter.route('/bet')
     });
 
 betRouter.route('/bet/:id')
-    .get(generics.unprotected.getOne("abstract_bet")) //THIS NEEDS TO CHANGE TO SPECIFIC BET ONE
-    .put(generics.user.update("abstract_bet"))
+    .get(generics.unprotected.getOne("bet"))  //NEEDS CHANGING TO BE SPECIFIC TO CHECK BET BELONGS TO ACCOUNT
+    .put(generics.user.update("bet"))
     .delete(function (req, res) {
         var betid = req.params.id;
-        var betmarket = req.query.betmarket;
         //CHECK BET BELONGS TO ACCOUNT
-        var check_bet_owner_sql = format("SELECT betcase.accountid as accountid, fb_absolute.id From fb_absolute, betcase WHERE fb_absolute.id={} AND betcaseid=betcase.id", betid);
+        var check_bet_owner_sql = format("SELECT betcase.accountid as accountid, bet.id FROM bet, betcase WHERE bet.id={} AND bet.betcaseid=betcase.id", betid);
         conn.queryDB(check_bet_owner_sql)
             .then(function (data) {
                 if (data.results[0].accountid != req.user.accountid) {
                     return res.status(422).json({success: false, data: "Bet does not belong to user logged in"});
                 }
                 //DELETE BET
-                var delete_bet_sql = format("DELETE FROM {} WHERE id={} RETURNING *",betmarket, betid);
+                var delete_bet_sql = format("DELETE FROM bet WHERE id={} RETURNING *", betid);
                 conn.queryDB(delete_bet_sql)
                     .then(function (data) {
                         return res.status(200).json({
                             data: data.results,
                             success: true,
-                            message: format("delete bet from {} successful", betmarket)
+                            message: format("delete betwith id: {} successful", betid)
                         });
                     }).catch(function (reason) {
                     return res.status(500).json({success: false, data: reason});
@@ -121,29 +116,5 @@ betRouter.route('/bet/:id')
         });
     });
 
-
-betRouter.route('/bet/schema/:table_name')
-    .get(function (req, res) {
-        var table_name = req.params.table_name;
-        var sql = format("SELECT array_to_json(string_to_array(string_agg(column_name, ', '),',')) as column_names\
-        FROM INFORMATION_SCHEMA.COLUMNS\
-        WHERE TABLE_NAME = N'{}'", table_name);
-        conn.queryDB(sql)
-            .then(function (data) {
-                return res.json({
-                    data: data.results,
-                    success: true,
-                    message: format("get bet data for {} successful", table_name)
-                });
-            }).catch(function (reason) {
-            return res.status(500).json({success: false, data: reason});
-        });
-    });
-
-
-function checkValidBetMarket(betMarket) {
-    return !(['fb_absolute', 'fb_ht_ft_score', 'tennis_score'].indexOf(betMarket) > -1)
-
-}
 
 module.exports = betRouter;

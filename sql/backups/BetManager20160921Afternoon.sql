@@ -47,6 +47,67 @@ END$$;
 ALTER FUNCTION public.add_name_to_bet() OWNER TO ayoung;
 
 --
+-- Name: betprofitcalc(); Type: FUNCTION; Schema: public; Owner: ayoung
+--
+
+CREATE FUNCTION betprofitcalc() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+
+DECLARE
+	free_bet boolean;
+	free_stake_returned numeric;
+BEGIN
+
+	--IF SNR free_stake_to_return = stake
+	IF NEW.bettypeid = 3 THEN
+	    free_bet := true;
+	    free_stake_returned := 0;
+        ELSIF NEW.bettypeid = 4 THEN
+	    free_bet := true;
+	    free_stake_returned := NEW.stake;
+	ELSE
+	    free_bet := false;
+	    free_stake_returned := 0;
+	END IF;
+    
+        --IF SUSPENDED
+        IF NEW.betstatusid = 4 THEN
+            NEW.profit:=0;
+            RETURN NEW;
+        END IF;
+
+	IF NEW.bet_specific->>'betmarket' = 'fb_absolute' THEN
+		--IF BET STATUS IS PENDING
+		IF NEW.betstatusid=1 THEN
+		    NEW.profit:=0;
+		--IF BETSTATUS IS WON
+		ELSIF NEW.betstatusid=2 THEN
+		    NEW.profit:= ((NEW.stake::numeric * NEW.odds::numeric) * (1-NEW.commission)) + free_stake_returned;
+		--IF BETSTATUS IS NOT LOST
+		ELSIF NEW.betstatusid=3 THEN
+		    -- IF LOST |FREE BET PROFIT 0 ELSE -STAKE
+		    IF free_bet THEN
+			NEW.profit:= 0;
+		    ELSE
+			NEW.profit:= -NEW.stake::numeric;
+		    END IF;
+		--IF BETSTATUS IS BETRETURNED (Match Cancelled)
+		ELSE
+			NEW.profit:= NEW.stake::numeric;
+		END IF;
+		RETURN NEW;
+        ELSE 
+		NEW.profit:= 0;
+		RETURN NEW;
+	END IF;
+END;
+$$;
+
+
+ALTER FUNCTION public.betprofitcalc() OWNER TO ayoung;
+
+--
 -- Name: fb_absolute_profit_calc(); Type: FUNCTION; Schema: public; Owner: ayoung
 --
 
@@ -444,11 +505,11 @@ COMMENT ON TABLE bookie_account IS 'user set bookie accounts';
 CREATE TABLE bookie_account_overview (
     bookie_account_id integer,
     accountid integer,
+    username character varying(50),
     bookie_name character varying(60),
     bookie_color character(7),
     commission numeric,
     total_bets bigint,
-    total_wins bigint,
     winnings numeric,
     regular_bets bigint,
     free_bets bigint
@@ -984,33 +1045,61 @@ CREATE UNIQUE INDEX usersettings_id_uindex ON user_settings USING btree (id);
 --
 
 CREATE RULE "_RETURN" AS
-    ON SELECT TO bookie_account_overview DO INSTEAD  SELECT bookie_account.id AS bookie_account_id,
+    ON SELECT TO bookie_account_overview DO INSTEAD  WITH betcounting AS (
+         SELECT bookie_account_1.id AS bookie_account_id,
+            count(bet_1.id) AS total_bets,
+            count(
+                CASE
+                    WHEN (bet_1.profit > (0)::numeric) THEN 1
+                    ELSE NULL::integer
+                END) AS total_wins,
+            sum(bet_1.profit) AS winnings,
+            count(
+                CASE
+                    WHEN ((bet_1.bettypeid = 1) OR (bet_1.bettypeid = 2)) THEN 1
+                    ELSE NULL::integer
+                END) AS regular_bets,
+            count(
+                CASE
+                    WHEN ((bet_1.bettypeid = 3) OR (bet_1.bettypeid = 4)) THEN 1
+                    ELSE NULL::integer
+                END) AS free_bets
+           FROM bookie_account bookie_account_1,
+            bet bet_1,
+            bookie bookie_1
+          WHERE ((bet_1.bookieaccountid = bookie_account_1.id) AND (bookie_account_1.bookieid = bookie_1.id))
+          GROUP BY bookie_account_1.id, bookie_1.name, bookie_1.color
+        )
+ SELECT bookie_account.id AS bookie_account_id,
     bookie_account.accountid,
+    bookie_account.username,
     bookie.name AS bookie_name,
     bookie.color AS bookie_color,
     bookie_account.commission,
-    count(bet.id) AS total_bets,
-    count(
-        CASE
-            WHEN (bet.profit > (0)::numeric) THEN 1
-            ELSE NULL::integer
-        END) AS total_wins,
-    sum(bet.profit) AS winnings,
-    count(
-        CASE
-            WHEN ((bet.bettypeid = 1) OR (bet.bettypeid = 2)) THEN 1
-            ELSE NULL::integer
-        END) AS regular_bets,
-    count(
-        CASE
-            WHEN ((bet.bettypeid = 3) OR (bet.bettypeid = 4)) THEN 1
-            ELSE NULL::integer
-        END) AS free_bets
-   FROM bookie_account,
-    bet,
-    bookie
-  WHERE ((bet.bookieaccountid = bookie_account.id) AND (bookie_account.bookieid = bookie.id))
-  GROUP BY bookie_account.id, bookie.name, bookie.color;
+    COALESCE(betcounting.total_bets, (0)::bigint) AS total_bets,
+    COALESCE(betcounting.winnings, (0)::numeric) AS winnings,
+    COALESCE(betcounting.regular_bets, (0)::bigint) AS regular_bets,
+    COALESCE(betcounting.free_bets, (0)::bigint) AS free_bets
+   FROM bet,
+    bookie,
+    (bookie_account
+     LEFT JOIN betcounting ON ((bookie_account.id = betcounting.bookie_account_id)))
+  WHERE (bookie_account.bookieid = bookie.id)
+  GROUP BY bookie_account.id, bookie_account.username, bookie_account.accountid, bookie.name, bookie.color, betcounting.total_bets, betcounting.winnings, betcounting.regular_bets, betcounting.free_bets;
+
+
+--
+-- Name: bet_profit_trigger; Type: TRIGGER; Schema: public; Owner: ayoung
+--
+
+CREATE TRIGGER bet_profit_trigger BEFORE INSERT OR UPDATE ON bet FOR EACH ROW EXECUTE PROCEDURE betprofitcalc();
+
+
+--
+-- Name: TRIGGER bet_profit_trigger ON bet; Type: COMMENT; Schema: public; Owner: ayoung
+--
+
+COMMENT ON TRIGGER bet_profit_trigger ON bet IS 'calcs profit on bet ';
 
 
 --

@@ -81,7 +81,9 @@
 
 .tableStatus
 {
-    width: 3px;
+    padding-left: 0px;
+    width: 17px;
+    padding-right: 0px;
 }
 
 .toWin{

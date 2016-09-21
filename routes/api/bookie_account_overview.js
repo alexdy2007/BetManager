@@ -10,7 +10,7 @@ var bookieAccountOverviewRouter = express.Router();
 var generics = require('./generics');
 
 bookieAccountOverviewRouter.route('/bookieaccountoverview')
-    .get(generics.user.getAll("bookie_account_view"));
+    .get(generics.user.getAll("bookie_account_overview"));
 
 
 module.exports = bookieAccountOverviewRouter;

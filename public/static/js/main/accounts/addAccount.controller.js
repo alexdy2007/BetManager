@@ -29,7 +29,7 @@
         };
 
         function cancel() {
-            $uibModalInstance.dismiss('cancel');
+            $uibModalInstance.close('cancel');
         };
 
         function bookieSearch(query) {
@@ -76,7 +76,9 @@
         }
 
         function updateCommission() {
-            vm.accountbookie.commission = vm.accountbookie.bookie.defaultcommission * 100;
+            if(vm.accountbookie.bookie.defaultcommission) {
+                vm.accountbookie.commission = vm.accountbookie.bookie.defaultcommission * 100;
+            }
         }
     };
 

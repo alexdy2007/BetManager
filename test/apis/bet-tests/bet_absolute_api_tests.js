@@ -10,7 +10,7 @@ var agent44 = require('./../../helpers/auth_agent');
 var mockbets = require('./mock.bets');
 
 
-describe('fb_absolute api check', function () {
+describe('bet absolute api check', function () {
 
     var server;
     var app;
@@ -31,9 +31,12 @@ describe('fb_absolute api check', function () {
     });
 
 
-    describe('Check get all bets in fb_absolute type for user 1', function () {
-        it('has 2 bets in total', function () {
+    describe('Check get all bets user 1', function () {
+
+        var tempAgent;
+        it('has 6 bets in total under fb_absolute', function () {
             return agent44.authenticate(app, users.user1).then(function (agent) {
+                tempAgent = agent;
                 return agent
                     .get('/api/bet?betmarket=fb_absolute')
                     .expect(200)
@@ -47,13 +50,25 @@ describe('fb_absolute api check', function () {
                 throw err
             });
         });
+
+        it('has 8 under all bets in total', function () {
+            return tempAgent
+                .get('/api/bet')
+                .expect(200)
+                .then(function (res) {
+                    commonAssertions(res);
+                    assert.lengthOf(res.body.data, 8, "there are 8 bets returned");
+                }).catch(function (err) {
+                    throw err;
+                });
+        });
     });
 
-    describe('Check get all bets in fb_absolute type for user 2', function () {
-        it('has 1 bets in total', function () {
+    describe('Check get all bets for user 2', function () {
+        it('has 4 bets in total', function () {
             return agent44.authenticate(app, users.user2).then(function (agent) {
                 return agent
-                    .get('/api/bet?betmarket=fb_absolute')
+                    .get('/api/bet?betmarket')
                     .expect(200)
                     .then(function (res) {
                         commonAssertions(res);
@@ -91,19 +106,23 @@ describe('fb_absolute api check', function () {
     });
 
     describe('Update bet1 in fb_absolute', function () {
+        var tempagent;
         it('Update bet and returns new modifed bet', function () {
             return agent44.authenticate(app, users.user1).then(function (agent) {
+                tempagent = agent;
                 return agent
-                    .put('/api/bet/' + fixtures.betadded1.id +  '?betmarket=fb_absolute')
+                    .put('/api/bet/' + fixtures.betadded1.id)
                     .send(mockbets.fb_absolute.bet1Update)
                     .expect(200)
                     .then(function (res) {
                         commonAssertions(res);
+                        console.log(res.body.data[0].bet_specific);
+                        console.log(res.body.data[0].bet_specific.hometeamselected);
                         assert.lengthOf(res.body.data, 1, "one bet is added");
                         assert.equal(res.body.data[0].commission, mockbets.fb_absolute.bet1Update.commission, "check commission matches one added");
                         assert.equal(res.body.data[0].betcaseid, mockbets.fb_absolute.bet1Update.betcaseid, "check betcaseid matches one added");
                         assert.equal(res.body.data[0].sportid, mockbets.fb_absolute.bet1Update.sportid, "check sportid matches one added");
-                        assert.equal(res.body.data[0].hometeamselected, mockbets.fb_absolute.bet1Update.hometeamselected, "check hometeamselected matches one added");
+                        assert.equal(res.body.data[0].bet_specific.hometeamselected, mockbets.fb_absolute.bet1Update.bet_specific.hometeamselected, "check hometeamselected matches one added");
                     }).catch(function (err) {
                         throw err;
                     });
@@ -111,7 +130,27 @@ describe('fb_absolute api check', function () {
                 throw err
             });
         });
+
+        it('Updates bet1 changing only hometeam in bet_specific', function () {
+            return tempagent
+                .put('/api/bet/' + fixtures.betadded1.id)
+                .send(mockbets.fb_absolute.bet1UpdatePart2)
+                .expect(200)
+                .then(function (res) {
+                    commonAssertions(res);
+                    assert.lengthOf(res.body.data, 1, "one bet is added");
+                    assert.equal(res.body.data[0].bet_specific.hometeam, mockbets.fb_absolute.bet1UpdatePart2.bet_specific.hometeam, "check hometeam matches one updated");
+                    assert.equal(res.body.data[0].bet_specific.awayteam, mockbets.fb_absolute.bet1Update.bet_specific.awayteam, "check away matches stays the same");
+                    assert.equal(res.body.data[0].bet_specific.hometeamselected, mockbets.fb_absolute.bet1Update.bet_specific.hometeamselected, "check home team stays the same");
+                    assert.equal(res.body.data[0].commission, mockbets.fb_absolute.bet1Update.commission, "check commission stays the same");
+                }).catch(function (err) {
+                    throw err;
+                });
+        });
     });
+
+
+
 
     describe('Can insert new bet in fb_absolute without existing bet case', function () {
 
