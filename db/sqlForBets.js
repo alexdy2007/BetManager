@@ -10,8 +10,8 @@ BETSQL = {
         add: function (bet_fb_absolute) {
             var bet_specific_data = {data:JSON.stringify(bet_fb_absolute.bet_specific)};
             var sql = format("INSERT INTO bet \
-            (bookieaccountid, betcaseid, stake, odds, sportid, commission, laybet, datetime, betstatusid, bettypeid, bet_specific)\
-            VALUES ({0.bookieaccountid}, {0.betcaseid}, {0.stake}, {0.odds}, {0.sportid}, {0.commission}, {0.laybet}, '{0.datetime}','{0.betstatusid}', {0.bettypeid}, '{1.data}')\
+            (bookieaccountid, betcaseid, stake, odds, betmarketid, commission, laybet, datetime, betstatusid, bettypeid, bet_specific)\
+            VALUES ({0.bookieaccountid}, {0.betcaseid}, {0.stake}, {0.odds}, {0.betmarketid}, {0.commission}, {0.laybet}, '{0.datetime}','{0.betstatusid}', {0.bettypeid}, '{1.data}')\
             RETURNING *"
                 , bet_fb_absolute, bet_specific_data);
             return sql;

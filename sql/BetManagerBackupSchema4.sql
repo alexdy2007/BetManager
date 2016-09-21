@@ -224,11 +224,11 @@ CREATE TABLE bet (
     datetime timestamp without time zone NOT NULL,
     betcaseid integer NOT NULL,
     id integer NOT NULL,
-    sportid integer NOT NULL,
     bettypeid integer DEFAULT 1 NOT NULL,
     betstatusid integer DEFAULT 1,
     profit numeric(12,4),
-    bet_specific jsonb
+    bet_specific jsonb,
+    betmarketid integer
 );
 
 
@@ -349,6 +349,47 @@ ALTER TABLE bet_id_seq OWNER TO ayoung;
 --
 
 ALTER SEQUENCE bet_id_seq OWNED BY bet.id;
+
+
+--
+-- Name: bet_market; Type: TABLE; Schema: public; Owner: ayoung
+--
+
+CREATE TABLE bet_market (
+    id integer NOT NULL,
+    name character varying(40) NOT NULL,
+    sportid integer NOT NULL
+);
+
+
+ALTER TABLE bet_market OWNER TO ayoung;
+
+--
+-- Name: TABLE bet_market; Type: COMMENT; Schema: public; Owner: ayoung
+--
+
+COMMENT ON TABLE bet_market IS 'type of bets that can be bet on';
+
+
+--
+-- Name: bet_markets_id_seq; Type: SEQUENCE; Schema: public; Owner: ayoung
+--
+
+CREATE SEQUENCE bet_markets_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE bet_markets_id_seq OWNER TO ayoung;
+
+--
+-- Name: bet_markets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ayoung
+--
+
+ALTER SEQUENCE bet_markets_id_seq OWNED BY bet_market.id;
 
 
 --
@@ -505,11 +546,11 @@ COMMENT ON TABLE bookie_account IS 'user set bookie accounts';
 CREATE TABLE bookie_account_overview (
     bookie_account_id integer,
     accountid integer,
+    username character varying(50),
     bookie_name character varying(60),
     bookie_color character(7),
     commission numeric,
     total_bets bigint,
-    total_wins bigint,
     winnings numeric,
     regular_bets bigint,
     free_bets bigint
@@ -731,6 +772,13 @@ ALTER TABLE ONLY bet ALTER COLUMN id SET DEFAULT nextval('bet_id_seq'::regclass)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
 --
 
+ALTER TABLE ONLY bet_market ALTER COLUMN id SET DEFAULT nextval('bet_markets_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ayoung
+--
+
 ALTER TABLE ONLY bet_status ALTER COLUMN id SET DEFAULT nextval('bet_status_id_seq'::regclass);
 
 
@@ -812,6 +860,14 @@ ALTER TABLE ONLY accounttypes
 
 ALTER TABLE ONLY bet
     ADD CONSTRAINT bet_id_pk PRIMARY KEY (id);
+
+
+--
+-- Name: bet_markets_pkey; Type: CONSTRAINT; Schema: public; Owner: ayoung
+--
+
+ALTER TABLE ONLY bet_market
+    ADD CONSTRAINT bet_markets_pkey PRIMARY KEY (id);
 
 
 --
@@ -915,6 +971,13 @@ CREATE UNIQUE INDEX bet_id_uindex ON bet USING btree (id);
 
 
 --
+-- Name: bet_markets_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
+--
+
+CREATE UNIQUE INDEX bet_markets_id_uindex ON bet_market USING btree (id);
+
+
+--
 -- Name: bet_status_id_uindex; Type: INDEX; Schema: public; Owner: ayoung
 --
 
@@ -985,10 +1048,10 @@ CREATE INDEX fki_bet_bettype_id_fk ON bet USING btree (bettypeid);
 
 
 --
--- Name: fki_bet_sport_id_fk; Type: INDEX; Schema: public; Owner: ayoung
+-- Name: fki_bet_market_sport_id_fk; Type: INDEX; Schema: public; Owner: ayoung
 --
 
-CREATE INDEX fki_bet_sport_id_fk ON bet USING btree (sportid);
+CREATE INDEX fki_bet_market_sport_id_fk ON bet_market USING btree (sportid);
 
 
 --
@@ -1045,33 +1108,47 @@ CREATE UNIQUE INDEX usersettings_id_uindex ON user_settings USING btree (id);
 --
 
 CREATE RULE "_RETURN" AS
-    ON SELECT TO bookie_account_overview DO INSTEAD  SELECT bookie_account.id AS bookie_account_id,
+    ON SELECT TO bookie_account_overview DO INSTEAD  WITH betcounting AS (
+         SELECT bookie_account_1.id AS bookie_account_id,
+            count(bet_1.id) AS total_bets,
+            count(
+                CASE
+                    WHEN (bet_1.profit > (0)::numeric) THEN 1
+                    ELSE NULL::integer
+                END) AS total_wins,
+            sum(bet_1.profit) AS winnings,
+            count(
+                CASE
+                    WHEN ((bet_1.bettypeid = 1) OR (bet_1.bettypeid = 2)) THEN 1
+                    ELSE NULL::integer
+                END) AS regular_bets,
+            count(
+                CASE
+                    WHEN ((bet_1.bettypeid = 3) OR (bet_1.bettypeid = 4)) THEN 1
+                    ELSE NULL::integer
+                END) AS free_bets
+           FROM bookie_account bookie_account_1,
+            bet bet_1,
+            bookie bookie_1
+          WHERE ((bet_1.bookieaccountid = bookie_account_1.id) AND (bookie_account_1.bookieid = bookie_1.id))
+          GROUP BY bookie_account_1.id, bookie_1.name, bookie_1.color
+        )
+ SELECT bookie_account.id AS bookie_account_id,
     bookie_account.accountid,
+    bookie_account.username,
     bookie.name AS bookie_name,
     bookie.color AS bookie_color,
     bookie_account.commission,
-    count(bet.id) AS total_bets,
-    count(
-        CASE
-            WHEN (bet.profit > (0)::numeric) THEN 1
-            ELSE NULL::integer
-        END) AS total_wins,
-    sum(bet.profit) AS winnings,
-    count(
-        CASE
-            WHEN ((bet.bettypeid = 1) OR (bet.bettypeid = 2)) THEN 1
-            ELSE NULL::integer
-        END) AS regular_bets,
-    count(
-        CASE
-            WHEN ((bet.bettypeid = 3) OR (bet.bettypeid = 4)) THEN 1
-            ELSE NULL::integer
-        END) AS free_bets
-   FROM bookie_account,
-    bet,
-    bookie
-  WHERE ((bet.bookieaccountid = bookie_account.id) AND (bookie_account.bookieid = bookie.id))
-  GROUP BY bookie_account.id, bookie.name, bookie.color;
+    COALESCE(betcounting.total_bets, (0)::bigint) AS total_bets,
+    COALESCE(betcounting.winnings, (0)::numeric) AS winnings,
+    COALESCE(betcounting.regular_bets, (0)::bigint) AS regular_bets,
+    COALESCE(betcounting.free_bets, (0)::bigint) AS free_bets
+   FROM bet,
+    bookie,
+    (bookie_account
+     LEFT JOIN betcounting ON ((bookie_account.id = betcounting.bookie_account_id)))
+  WHERE (bookie_account.bookieid = bookie.id)
+  GROUP BY bookie_account.id, bookie_account.username, bookie_account.accountid, bookie.name, bookie.color, betcounting.total_bets, betcounting.winnings, betcounting.regular_bets, betcounting.free_bets;
 
 
 --
@@ -1129,11 +1206,11 @@ ALTER TABLE ONLY bet
 
 
 --
--- Name: bet_sport_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
+-- Name: bet_market_sport_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: ayoung
 --
 
-ALTER TABLE ONLY bet
-    ADD CONSTRAINT bet_sport_id_fk FOREIGN KEY (sportid) REFERENCES sport(id) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE ONLY bet_market
+    ADD CONSTRAINT bet_market_sport_id_fk FOREIGN KEY (sportid) REFERENCES sport(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --

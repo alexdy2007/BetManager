@@ -10,6 +10,7 @@ gulp.task('concatSeeds',['deleteSeeds'] ,function() {
                 'accounttypes.sql',
                 'sport.sql',
                 'account.sql',
+                'betmarket.sql',
                 'betstatus.sql',
                 'bettype.sql',
                 'resulttype.sql',

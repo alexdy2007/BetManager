@@ -94,7 +94,7 @@ describe('bet absolute api check', function () {
                         assert.lengthOf(res.body.data, 1, "one bet is added");
                         assert.equal(res.body.data[0].commission, mockbets.fb_absolute.bet1.commission, "check commission matches one added");
                         assert.equal(res.body.data[0].betcaseid, mockbets.fb_absolute.bet1.betcaseid, "check betcaseid matches one added");
-                        assert.equal(res.body.data[0].sportid, mockbets.fb_absolute.bet1.sportid, "check sportid matches one added");
+                        assert.equal(res.body.data[0].betmarketid, mockbets.fb_absolute.bet1.betmarketid, "check betmarketid matches one added");
                         fixtures.betadded1 = res.body.data[0]
                     }).catch(function (err) {
                         throw err;
@@ -121,7 +121,7 @@ describe('bet absolute api check', function () {
                         assert.lengthOf(res.body.data, 1, "one bet is added");
                         assert.equal(res.body.data[0].commission, mockbets.fb_absolute.bet1Update.commission, "check commission matches one added");
                         assert.equal(res.body.data[0].betcaseid, mockbets.fb_absolute.bet1Update.betcaseid, "check betcaseid matches one added");
-                        assert.equal(res.body.data[0].sportid, mockbets.fb_absolute.bet1Update.sportid, "check sportid matches one added");
+                        assert.equal(res.body.data[0].betmarketid, mockbets.fb_absolute.bet1Update.betmarketid, "check betmarketid matches one added");
                         assert.equal(res.body.data[0].bet_specific.hometeamselected, mockbets.fb_absolute.bet1Update.bet_specific.hometeamselected, "check hometeamselected matches one added");
                     }).catch(function (err) {
                         throw err;
@@ -166,7 +166,7 @@ describe('bet absolute api check', function () {
                         assert.lengthOf(res.body.data, 1, "one bet is added");
                         assert.equal(res.body.data[0].commission, mockbets.fb_absolute.bet2.commission, "check commission matches one added");
                         assert.equal(res.body.data[0].bookieaccountid, mockbets.fb_absolute.bet2.bookieaccountid, "check bookieaccountid  matches one added");
-                        assert.equal(res.body.data[0].sportid, mockbets.fb_absolute.bet2.sportid, "check sportid matches one added");
+                        assert.equal(res.body.data[0].betmarketid, mockbets.fb_absolute.bet2.betmarketid, "check betmarketid matches one added");
                         fixtures.betAdded2 = res.body.data[0]
                     }).catch(function (err) {
                         throw err;
@@ -181,9 +181,10 @@ describe('bet absolute api check', function () {
                 .get('/api/betcase/' + fixtures.betAdded2.betcaseid)
                 .expect(200)
                 .then(function (res) {
+                    console.log(res.body.data[0]);
                     assert.equal(res.body.data[0].id, fixtures.betAdded2.betcaseid, "check betcaseid matches one added");
                     assert.equal(res.body.data[0].accountid, 2, "check accountid matches user2 account id");
-                    assert.equal(res.body.data[0].sportid, fixtures.betAdded2.sportid, "check sportid matches one added");
+                    assert.equal(res.body.data[0].sportid, 1, "check sportid matches one of betmarket added to betcase");
                 }).catch(function (err) {
                     throw err;
                 });

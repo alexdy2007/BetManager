@@ -75,14 +75,28 @@ betRouter.route('/bet')
         }
 
         function createNewBetWithNewBetCase(betData) {
-            var betcaseSql = format("INSERT INTO betcase (accountid, sportid) VALUES({}, {}) RETURNING *", req.user.accountid, betData.sportid);
-            conn.queryDB(betcaseSql)
-                .then(function (betCaseData) {
-                    return createNewBetUnderBetCase(betData, betCaseData.results[0].id);
+
+            //GET SPORTID OFF BET_MARKET;
+            var bet_market_sql = format("SELECT sportid FROM betcase WHERE id={}", betData.betmarketid);
+            conn.queryDB(bet_market_sql)
+                .then(function (betMarketData) {
+                    var sportid = betMarketData.results[0].sportid;
+                    createNewBetCase(sportid);
                 }).catch(function (reason) {
                 console.log("Failed to create bet case");
                 return res.status(500).json({success: false, data: reason});
             });
+
+            function createNewBetCase(sportid) {
+                var betcaseSql = format("INSERT INTO betcase (accountid, sportid) VALUES({}, {}) RETURNING *", req.user.accountid, sportid);
+                conn.queryDB(betcaseSql)
+                    .then(function (betCaseData) {
+                        return createNewBetUnderBetCase(betData, betCaseData.results[0].id);
+                    }).catch(function (reason) {
+                    console.log("Failed to create bet case");
+                    return res.status(500).json({success: false, data: reason});
+                });
+            }
         }
     });
 

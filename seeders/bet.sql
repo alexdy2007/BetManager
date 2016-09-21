@@ -1,4 +1,4 @@
-INSERT INTO bet (bookieaccountid, betcaseid, stake, odds, sportid, commission, laybet, datetime, betstatusid, bettypeid, bet_specific) VALUES
+INSERT INTO bet (bookieaccountid, betcaseid, stake, odds, betmarketid, commission, laybet, datetime, betstatusid, bettypeid, bet_specific) VALUES
 --BET FB_ABSOLUTE DATA--
     (3, 1, 11.50, 2, 1, 0.02, false, '2016-09-09 12:30:00', 2, 1,'{"betmarket":"fb_absolute",
                                                         "hometeam":"Man Utd",
@@ -69,7 +69,7 @@ INSERT INTO bet (bookieaccountid, betcaseid, stake, odds, sportid, commission, l
                                                         "result":"LOSE"
                                                         }'),
 --  FB_FT_HT_SCORE
-    (1, 1, 30, 2.5, 1, 0.02, false, '2016-11-12 18:30:00', 2, 4, '{
+    (1, 1, 30, 2.5, 2, 0.02, false, '2016-11-12 18:30:00', 2, 4, '{
                                                         "betmarket":"fb_ht_ft_score",
                                                         "hometeam":"Man Utd",
                                                         "awayteam":"West Ham",
@@ -78,7 +78,7 @@ INSERT INTO bet (bookieaccountid, betcaseid, stake, odds, sportid, commission, l
                                                         "homeftscore":2,
                                                         "awayhtscore":2
                                                         }'),
-    (2, 1, 30, 2.5, 1, 0.02, true, '2016-11-12 18:30:00', 2, 1, '{
+    (2, 1, 30, 2.5, 2, 0.02, true, '2016-11-12 18:30:00', 2, 1, '{
                                                         "betmarket":"fb_ht_ft_score",
                                                         "hometeam":"Man Utd",
                                                         "awayteam":"West Ham",
