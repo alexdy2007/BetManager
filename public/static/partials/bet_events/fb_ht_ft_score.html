@@ -1,0 +1,6 @@
+<div>
+    <div class="inline" ng-if="bet.laybet">Not </div> HT ({{bet.bet_specific.homehtscore}} - {{bet.bet_specific.awayhtscore}}) FT ({{bet.bet_specific.homeftscore}} - {{bet.bet_specific.awayftscore}})
+</div>
+<div>
+    {{bet.tmp_sport_name | capitalize}}/{{bet.bet_specific.hometeam | capitalize}} vs {{bet.bet_specific.awayteam | capitalize}} / <div class="inline" ng-class="{ 'blueText' : bet.betstatusid==1, 'greenText' : bet.betstatusid==2, 'redText':bet.betstatusid==3, 'yellowText':bet.betstatusid==4}">{{bet.tmp_bet_status_name | capitalize}}</div>
+</div>

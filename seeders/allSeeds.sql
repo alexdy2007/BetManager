@@ -23,7 +23,7 @@ INSERT INTO bet_market (name, sportid) VALUES
     ('WIN, LOSE, DRAW',2);
 INSERT INTO bet_status (name) VALUES
     ('PENDING'),
-    ('WIN'),
+    ('WON'),
     ('LOST'),
     ('SUSPENDED'),
     ('STAKE RETURNED');
@@ -173,21 +173,21 @@ INSERT INTO bet (bookieaccountid, betcaseid, stake, odds, betmarketid, commissio
                                                         "result":"LOSE"
                                                         }'),
 --  FB_FT_HT_SCORE
-    (1, 1, 30, 2.5, 2, 0.02, false, '2016-11-12 18:30:00', 2, 4, '{
+    (1, 1, 30, 2.5, 2, 0.02, false, '2016-11-12 18:30:00', 1, 4, '{
                                                         "betmarket":"fb_ht_ft_score",
                                                         "hometeam":"Man Utd",
                                                         "awayteam":"West Ham",
                                                         "homehtscore":2,
                                                         "awayhtscore":1,
                                                         "homeftscore":2,
-                                                        "awayhtscore":2
+                                                        "awayftscore":2
                                                         }'),
-    (2, 1, 30, 2.5, 2, 0.02, true, '2016-11-12 18:30:00', 2, 1, '{
+    (3, 1, 30, 2.5, 2, 0.02, true, '2016-11-12 18:30:00', 1, 1, '{
                                                         "betmarket":"fb_ht_ft_score",
                                                         "hometeam":"Man Utd",
                                                         "awayteam":"West Ham",
                                                         "homehtscore":2,
                                                         "awayhtscore":1,
                                                         "homeftscore":2,
-                                                        "awayhtscore":2
+                                                        "awayftscore":2
                                                         }');

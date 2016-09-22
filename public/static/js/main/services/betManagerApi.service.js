@@ -17,7 +17,9 @@
         var resources = {
             bookie: $resource("/api/bookie/:id", {id:'@id'}),
             bookieacccount: $resource("/api/bookieaccount/:id", {id:'@id'}),
-            bookieaccountoverview: $resource("/api/bookieaccountoverview/")
+            bookieaccountoverview: $resource("/api/bookieaccountoverview/"),
+            bet: $resource("/api/bet/:id", {id:'@id'}),
+            logbookoverview: $resource("/api/logbookoverview/:id", {id:'@id'}),
         };
 
         return resources;

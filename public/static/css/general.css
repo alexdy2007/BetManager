@@ -1,0 +1,51 @@
+.greenText{
+    color:forestgreen;
+}
+
+
+.redText{
+    color:#ed737a;
+}
+
+.blueText{
+    color:cornflowerblue;
+}
+
+.yellowText{
+    color:#fef3db;
+}
+
+.whiteText{
+    color:#FFFFFF;
+}
+
+.betSmithColorText{
+    color:#87d1fe;
+}
+
+.backgroundGreen{
+    background-color: #5bb355;
+}
+
+.backgroundRed{
+    background-color: #e7404a;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.slide-toggle {
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.topMargin20{
+    margin-top: 20px;
+}
+
+.paddingBottomAndTop075{
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+}
+

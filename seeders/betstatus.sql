@@ -1,6 +1,6 @@
 INSERT INTO bet_status (name) VALUES
     ('PENDING'),
-    ('WIN'),
+    ('WON'),
     ('LOST'),
     ('SUSPENDED'),
     ('STAKE RETURNED');

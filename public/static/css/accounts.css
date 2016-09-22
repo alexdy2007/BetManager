@@ -36,15 +36,6 @@ div#AccountBanner{
     height: 35px;
 }
 
-.greenText{
-    color:forestgreen;
-}
-
-
-.redText{
-    color:#ed737a;
-}
-
 table#bookieaccountsummary{
     border-top-style: none;
     margin-top: 20px;

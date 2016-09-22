@@ -30,7 +30,6 @@ describe('bet absolute api check', function () {
         server.close();
     });
 
-
     describe('Check get all bets user 1', function () {
 
         var tempAgent;
@@ -236,8 +235,6 @@ describe('bet absolute api check', function () {
             });
         });
     });
-
-
 
 
     function commonAssertions(res) {

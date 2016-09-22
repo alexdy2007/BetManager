@@ -48,6 +48,7 @@ var bookieRouter = require('./routes/api/bookie');
 var betCaseRouter = require('./routes/api/betcase');
 var bookieAccountOverviewRouter = require('./routes/api/bookie_account_overview');
 var bookieAccountRouter = require('./routes/api/bookieaccount');
+var logBookOverview = require('./routes/api/logbook_overview');
 
 
 
@@ -65,7 +66,8 @@ app.use('/homepage', routes);
 app.use('/auth', loginRouter);
 
 //API ROUTES
-app.use('/api', [accountsRouter, betRouter, bookieRouter, betCaseRouter, bookieAccountRouter, bookieAccountOverviewRouter]);
+app.use('/api', [accountsRouter, betRouter, bookieRouter, betCaseRouter, bookieAccountRouter,
+    bookieAccountOverviewRouter, logBookOverview]);
 
 
 

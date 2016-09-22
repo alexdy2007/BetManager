@@ -10,6 +10,7 @@
         "ui.bootstrap",
         'ui.bootstrap.modal',
         'ngCookies',
+        'ngAnimate',
         'ngToast',
         'ngResource',
         'ngMaterial',
