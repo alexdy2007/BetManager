@@ -1,0 +1,184 @@
+<form id="addBetModal" name="addBetForm">
+<div class="row">
+
+        <div>
+            <h4 id="addBetBetCaseId">Betcaseid : xxxxx</h4>
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class=>
+                <h4>Event</h4>
+            </div>
+            <div class="topRow">
+                <md-autocomplete flex
+                                 required
+                                 md-input-name="betmarket"
+                                 id="betmarket"
+                                 ng-disabled="false"
+                                 md-no-cache="false"
+                                 md-selected-item="vm.betmarketSelected"
+                                 md-search-text="vm.betMarketSearchText"
+                                 md-items="betmarket in vm.betMarketSearch(vm.betMarketSearchText)"
+                                 md-item-text="betmarket.name"
+                                 md-min-length="0"
+                                 md-require-match
+                                 placeholder="Select betMarket"
+                                 md-selected-item-change="vm.refreshAdditionalData()"
+                                 md-floating-label="Bet Market">
+                    <md-item-template>
+                        <span md-highlight-text="vm.betMarketSearchText"
+                              md-highlight-flags="^i">{{betmarket.name}}</span>
+                    </md-item-template>
+
+                    <md-not-found>
+                        No betMarket matching "{{vm.betMarketSearchText}}" were found.
+                    </md-not-found>
+
+                    <div ng-messages="addBetForm.betmarket.$error" role="alert" multiple>
+                        <div ng-message="md-require-match" class="my-message">Need to select bet market from list</div>
+                        <div ng-message="require" class="my-message">Need to select bet market</div>
+                    </div>
+                </md-autocomplete>
+
+                <md-input-container class="md-block">
+                    <div moment-picker="vm.addBet.datetime"
+                         format="YYYY-MM-DD HH:mm"
+                         keyboard="true"
+                         min-view="year"
+                         max-view="hour">
+                        <input id="addBetDatePicker" class="inline form-control"
+                               placeholder="Select a date"
+                               ng-model="vm.addBet.datetime"
+                               ng-model-options="{ updateOn: 'blur' }"
+                               autocomplete="off"
+                               required>
+                    </div>
+                </md-input-container>
+            </div>
+            <football-bet-event></football-bet-event>
+        </div>
+
+        <div class="col-sm-3">
+            <div class=>
+                <h4>Account</h4>
+            </div>
+            <div class="topRow">
+                <md-autocomplete flex required
+                                 md-input-name="bookieaccount"
+                                 id="bookieaccount"
+                                 ng-disabled="false"
+                                 md-no-cache="false"
+                                 md-selected-item="vm.bookieAccountSelected"
+                                 md-search-text="vm.bookieAccountSearchText"
+                                 md-items="bookieAccount in vm.bookieAccountSearch(vm.bookieAccountSearchText)"
+                                 md-item-text="bookieAccount.name"
+                                 md-min-length="0"
+                                 md-require-match
+                                 placeholder="User Bookie"
+                                 md-selected-item-change="vm.updateCommission()"
+                                 md-floating-label="Bookie User Account">
+                    <md-item-template>
+                        <span md-highlight-text="vm.bookieAccountSearchText" md-highlight-flags="^i">{{bookieAccount.name}}</span>
+                    </md-item-template>
+
+                    <md-not-found>
+                        No bookies matching "{{vm.bookieAccountSearchText}}" were found.
+                    </md-not-found>
+
+                    <div ng-messages="accountform.bookieaccount.$error" role="alert" multiple>
+                        <div ng-message="md-require-match" class="my-message">Need to select bookie from list</div>
+                        <div ng-message="require" class="my-message">Need to select bookie</div>
+                    </div>
+                </md-autocomplete>
+            </div>
+
+            <div class=>
+                <md-input-container class="md-block">
+                    <label>Commission (%)</label>
+                    <input name="commission" required ng-pattern="/^\d{1,2}(\.\d{1,2})?$/"
+                           ng-model="vm.addBet.commission">
+                    <div ng-messages="addBetForm.commission.$error" role="alert" multiple>
+                        <div ng-message="pattern" class="my-message">Not a valid percentage</div>
+                        <div ng-message="required" class="my-message">Need to enter a commisson</div>
+                    </div>
+                </md-input-container>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class=>
+                <h4>Bet</h4>
+            </div>
+            <div ng-show="vm.betmarketSelected.name=='Winner'">
+                <winner-bet-fields></winner-bet-fields>
+            </div>
+            <div ng-show="vm.betmarketSelected.name=='Correct Score'">
+                <fb-correct-score></fb-correct-score>
+            </div>
+            <div>
+                <md-input-container class="md-block">
+                    <label>Stake (£)</label>
+                    <input name="stake" required ng-pattern="/\d{1,9}/"
+                           ng-model="vm.addBet.stake">
+                    <div ng-messages="addBetForm.stake.$error" role="alert" multiple>
+                        <div ng-message="pattern" class="my-message">Not a number</div>
+                        <div ng-message="required" class="my-message">Required too enter stake amount</div>
+                    </div>
+                </md-input-container>
+            </div>
+
+            <div class=>
+                <md-input-container class="md-block">
+                    <label>Odds</label>
+                    <input name="odds" required ng-pattern="/\d{1,9}(.)?(\d{1,9})?/"
+                           ng-model="vm.addBet.odds">
+                    <div ng-messages="addBetForm.odds.$error" role="alert" multiple>
+                        <div ng-message="pattern" class="my-message">Not in decimal format i.e 2.3 or 0.43</div>
+                        <div ng-message="required" class="my-message">Required to enter odds</div>
+                    </div>
+                </md-input-container>
+            </div>
+
+            <div class=>
+                <md-input-container class="md-block">
+                    <label>bet type</label>
+                    <md-select name="bettype" placeholder="Bet Type" ng-model="vm.addBet.bettypeid" required>
+                        <md-option ng-value="bettype.id" ng-repeat="bettype in vm.betTypes">{{bettype.name}}</md-option>
+                    </md-select>
+                    <div ng-messages="addBetForm.bettype.$error" role="alert" multiple>
+                        <div ng-message="pattern" class="my-message">Not a number</div>
+                        <div ng-message="required" class="my-message">Required too enter stake amount</div>
+                    </div>
+                </md-input-container>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class=>
+                <h4>Result(Optional)</h4>
+            </div>
+            <div class=topRowInput>
+                <md-input-container class="md-block">
+                    <label>Outcome</label>
+                    <md-select name="outcome" placeholder="Outcome" ng-model="vm.addBet.betstatusid">
+                        <md-option ng-value="betstatus.id" ng-repeat="betstatus in vm.betStatuses">{{betstatus.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-button-container" class="row">
+        <div class="col-sm-3">
+            <md-button class="md-raised md-primary width90">Save & Close</md-button>
+        </div>
+        <div class="col-sm-3">
+            <md-button class="md-raised md-primary width90">Save & Start New Bet</md-button>
+        </div>
+        <div class="col-sm-3">
+            <md-button class="md-raised md-primary width90" ng-click="vm.saveBet()">Save & Start New Case</md-button>
+        </div>
+        <div class="col-sm-3">
+            <md-button class="md-raised md-primary width90">Save & Mirror</md-button>
+        </div>
+    </div>
+</form>

@@ -14,8 +14,10 @@
         'ngToast',
         'ngResource',
         'ngMaterial',
+        'material.components.expansionPanels',
         'ngMessages',
         'smart-table',
+        'moment-picker',
         "betManager.main",
         "betManager.authentication"])
         .config(config)
@@ -30,7 +32,7 @@ function config ($stateProvider, $urlRouterProvider, $locationProvider, ngToastP
     ngToastProvider.configure({
         timeout: 4000,
         animation: 'slide',
-        maxNumber: 3,
+        maxNumber: 3
     });
 
     $locationProvider.hashPrefix('!');
@@ -77,18 +79,27 @@ function config ($stateProvider, $urlRouterProvider, $locationProvider, ngToastP
     
 }
 
-    run.$inject = ['$http', '$state', '$rootScope', '$q', 'authService'];
-    function run($http, $state, $rootScope, $q, authService) {
+    run.$inject = ['$http', '$state', '$rootScope', '$q', 'authService', 'globalDataRefreshService'];
+    function run($http, $state, $rootScope, $q, authService, globalDataRefreshService) {
 
         var deferred = $q.defer();
 
         function waitForAuth(event, next) {
+
+            function createRootData(){
+                $rootScope.data = {};
+                    globalDataRefreshService.updateRootBetTypes();
+                    globalDataRefreshService.updateRootBookieAccounts();
+                };
 
             function successfulAuth(data) {
                 console.log(next.name);
                 if (next.name === 'login') {
                     event.preventDefault();
                     $state.go('homepage');
+                }
+                if(!$rootScope.data){
+                    createRootData();
                 }
                 deferred.resolve();
             }

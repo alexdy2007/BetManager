@@ -7,8 +7,8 @@
     angular.module('betManager.main.controllers')
         .controller('addAccountCtrl', addAccountCtrl);
 
-    addAccountCtrl.$inject = ['$uibModalInstance', '$q', '$filter', '$scope', 'userData', 'betManagerApi'];
-    function addAccountCtrl($uibModalInstance, $q, $filter, $scope,  userData, betManagerApi) {
+    addAccountCtrl.$inject = ['$uibModalInstance', '$q', '$filter', '$scope', 'userData', 'betManagerApi', 'globalDataRefreshService'];
+    function addAccountCtrl($uibModalInstance, $q, $filter, $scope,  userData, betManagerApi, globalDataRefreshService) {
         var vm = this;
 
         vm.userData = userData;
@@ -66,7 +66,7 @@
             bookieSend.active = vm.accountbookie.statusactive;
             var BookieAccount = betManagerApi.bookieacccount;
             BookieAccount.save(bookieSend).$promise.then(function(response){
-                console.log(response);
+                globalDataRefreshService.updateRootBookieAccounts();
                 vm.accountbookie = {statusactive:true};
                 $scope.accountform.$setUntouched();
                 $scope.accountform.$setPristine();
@@ -76,7 +76,7 @@
         }
 
         function updateCommission() {
-            if(vm.accountbookie.bookie.defaultcommission) {
+            if(vm.accountbookie.bookie) {
                 vm.accountbookie.commission = vm.accountbookie.bookie.defaultcommission * 100;
             }
         }

@@ -6,7 +6,7 @@
 }
 
 .modal .modal-dialog {
-    width: 80%;
+    width: 60%;
 }
 
 div#modal-button-container{
@@ -24,4 +24,17 @@ div#add-bet-headers{
 
 #addBetCase div.input-group{
     width:80%;
+}
+
+#addBetModal .topRow{
+    margin-top:20px;
+}
+
+#addBetModal .topRowInput{
+    margin-top: 37px;
+    margin-bottom:35px;
+}
+
+#addBetBetCaseId{
+    margin-left: 1.4%
 }

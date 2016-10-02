@@ -550,6 +550,7 @@ CREATE TABLE bookie_account_overview (
     bookie_name character varying(60),
     bookie_color character(7),
     commission numeric,
+    winning_bets bigint,
     total_bets bigint,
     winnings numeric,
     regular_bets bigint,
@@ -1168,7 +1169,12 @@ CREATE RULE "_RETURN" AS
                 CASE
                     WHEN ((bet_1.bettypeid = 3) OR (bet_1.bettypeid = 4)) THEN 1
                     ELSE NULL::integer
-                END) AS free_bets
+                END) AS free_bets,
+            count(
+                CASE
+                    WHEN (bet_1.betstatusid = 2) THEN 1
+                    ELSE NULL::integer
+                END) AS winning_bets
            FROM bookie_account bookie_account_1,
             bet bet_1,
             bookie bookie_1
@@ -1181,6 +1187,7 @@ CREATE RULE "_RETURN" AS
     bookie.name AS bookie_name,
     bookie.color AS bookie_color,
     bookie_account.commission,
+    COALESCE(betcounting.winning_bets, (0)::bigint) AS winning_bets,
     COALESCE(betcounting.total_bets, (0)::bigint) AS total_bets,
     COALESCE(betcounting.winnings, (0)::numeric) AS winnings,
     COALESCE(betcounting.regular_bets, (0)::bigint) AS regular_bets,
@@ -1190,7 +1197,7 @@ CREATE RULE "_RETURN" AS
     (bookie_account
      LEFT JOIN betcounting ON ((bookie_account.id = betcounting.bookie_account_id)))
   WHERE (bookie_account.bookieid = bookie.id)
-  GROUP BY bookie_account.id, bookie_account.username, bookie_account.accountid, bookie.name, bookie.color, betcounting.total_bets, betcounting.winnings, betcounting.regular_bets, betcounting.free_bets;
+  GROUP BY bookie_account.id, bookie_account.username, bookie_account.accountid, bookie.name, bookie.color, betcounting.winning_bets, betcounting.total_bets, betcounting.winnings, betcounting.regular_bets, betcounting.free_bets;
 
 
 --

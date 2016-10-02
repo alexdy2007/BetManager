@@ -23,7 +23,7 @@
                                      md-selected-item-change="vm.updateCommission()"
                                      md-floating-label="Bookie Account">
                         <md-item-template>
-                            <span md-highlight-text="vm.bookies" md-highlight-flags="^i">{{bookie.name}}</span>
+                            <span md-highlight-text="vm.bookieSearchText" md-highlight-flags="^i">{{bookie.name}}</span>
                         </md-item-template>
 
                         <md-not-found>
@@ -53,6 +53,7 @@
                     </div>
                 </md-input-container>
             </div>
+
             <div class="col-sm-3">
                 <md-input-container md-no-float class="md-block">
                     <label id="statuslabel">Status</label>

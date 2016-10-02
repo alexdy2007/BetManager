@@ -1,0 +1,25 @@
+
+<div class="topRowInput">
+    <md-input-container class="md-block">
+        <label>HomeTeamScore</label>
+        <input name="HomeTeamScore" required ng-pattern="/\d{1,9}/"
+               ng-model="vm.addBet.bet_specific.hometeamscore">
+        <div ng-messages="addBetForm.HomeTeamScore.$error" role="alert" multiple>
+            <div ng-message="pattern" class="my-message">Not a number</div>
+            <div ng-message="required" class="my-message">Required too enter home team score</div>
+        </div>
+    </md-input-container>
+</div>
+
+
+<div class="topRowInput">
+    <md-input-container class="md-block">
+        <label>AwayTeamScore</label>
+        <input name="AwayTeamScore" required ng-pattern="/\d{1,9}/"
+               ng-model="vm.addBet.bet_specific.awayteamscore">
+        <div ng-messages="addBetForm.AwayTeamScore.$error" role="alert" multiple>
+            <div ng-message="pattern" class="my-message">Not a number</div>
+            <div ng-message="required" class="my-message">Required too enter away team score</div>
+        </div>
+    </md-input-container>
+</div>

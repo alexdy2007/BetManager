@@ -10,7 +10,7 @@ var agent44 = require('./../../helpers/auth_agent');
 var mockbets = require('./mock.bets');
 
 
-describe('bet absolute api check', function () {
+describe('bet winner api check', function () {
 
     var server;
     var app;
@@ -37,7 +37,7 @@ describe('bet absolute api check', function () {
             return agent44.authenticate(app, users.user1).then(function (agent) {
                 tempAgent = agent;
                 return agent
-                    .get('/api/bet?betmarket=fb_absolute')
+                    .get('/api/bet?betmarket=winner')
                     .expect(200)
                     .then(function (res) {
                         commonAssertions(res);
@@ -67,7 +67,7 @@ describe('bet absolute api check', function () {
         it('has 4 bets in total', function () {
             return agent44.authenticate(app, users.user2).then(function (agent) {
                 return agent
-                    .get('/api/bet?betmarket')
+                    .get('/api/bet')
                     .expect(200)
                     .then(function (res) {
                         commonAssertions(res);
@@ -85,7 +85,7 @@ describe('bet absolute api check', function () {
         it('Inserts bet1 then returns added bet', function () {
             return agent44.authenticate(app, users.user1).then(function (agent) {
                 return agent
-                    .post('/api/bet?betmarket=fb_absolute')
+                    .post('/api/bet?betmarket=winner')
                     .send(mockbets.fb_absolute.bet1)
                     .expect(200)
                     .then(function (res) {
@@ -151,14 +151,14 @@ describe('bet absolute api check', function () {
 
 
 
-    describe('Can insert new bet in fb_absolute without existing bet case', function () {
+    describe('Can insert new bet in winner without existing bet case', function () {
 
         var tempAgent;
         it('Creates new event and inserts new bet. returns bet added', function () {
             return agent44.authenticate(app, users.user2).then(function (agent) {
                 tempAgent = agent;
                 return agent
-                    .post('/api/bet?betmarket=fb_absolute')
+                    .post('/api/bet?betmarket=winner')
                     .send(mockbets.fb_absolute.bet2)
                     .expect(200)
                     .then(function (res) {
@@ -190,14 +190,14 @@ describe('bet absolute api check', function () {
         });
     });
 
-    describe('Delete bet from fb_absolute', function () {
+    describe('Delete bet from winner', function () {
 
         var tempAgent;
-        it('Removes bet1 from fb_absolute table', function () {
+        it('Removes bet1 from winner table', function () {
             return agent44.authenticate(app, users.user1).then(function (agent) {
                 tempAgent = agent;
                 return agent
-                    .delete('/api/bet/' + fixtures.betadded1.id + "?betmarket=fb_absolute")
+                    .delete('/api/bet/' + fixtures.betadded1.id + "?betmarket=winner")
                     .expect(200)
                     .then(function (res) {
                         assert.equal(res.body.data[0].id, fixtures.betadded1.id, "check bet id matches one deleted");
@@ -220,10 +220,10 @@ describe('bet absolute api check', function () {
                 });
         });
 
-        it('Removes bet2 from fb_absolute table', function () {
+        it('Removes bet2 from winner table', function () {
             return agent44.authenticate(app, users.user2).then(function (agent) {
                 return agent
-                    .delete('/api/bet/' + fixtures.betAdded2.id + "?betmarket=fb_absolute")
+                    .delete('/api/bet/' + fixtures.betAdded2.id + "?betmarket=winner")
                     .expect(200)
                     .then(function (res) {
                         assert.equal(res.body.data[0].id, fixtures.betAdded2.id, "check bet id matches one deleted");

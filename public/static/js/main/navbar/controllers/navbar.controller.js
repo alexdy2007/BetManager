@@ -23,9 +23,9 @@
         $scope.logout = logout;
         $scope.openAddBet = openAddBet;
         $scope.openComponentModal;
-        $scope.userData = ["abc", "def"];
+        $scope.changed = false;
         $scope.clearCookies = clearCookies;
-
+        
 
         function getCurrentState(){
             return $state.current.name;
@@ -50,11 +50,12 @@
                 controller: 'addBetCtrl',
                 controllerAs: 'vm',
                 resolve: {
-                    userData: function () {
-                        return $scope.userData;
+                    changed: function () {
+                        return $scope.changed;
                     }
                 }
             });
+
         }
 
         function clearCookies(){

@@ -56,6 +56,7 @@ betRouter.route('/bet')
                         });
                     } else {
                         var add_bet_sql = bet_sql["bet"].add(betCaseData);
+                        console.log(add_bet_sql);
                         conn.queryDB(add_bet_sql)
                             .then(function (data) {
                                 return res.json({

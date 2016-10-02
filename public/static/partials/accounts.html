@@ -50,8 +50,8 @@
                         <td>{{account.username}}</td>
                         <td>{{ account.commission }}</td>
                         <td>{{ account.total_bets }}</td>
-                        <td>{{ account.total_wins }}</td>
-                        <td ng-class="(account.total_bets/2)>account.total_wins ? 'redText':'greenText'">{{account.total_bets != "0" ? ((account.total_wins / account.total_bets)*100 | number:0): 0 }} %</td>
+                        <td>{{ account.winning_bets }}</td>
+                        <td ng-class="(account.total_bets/2)>account.winning_bets ? 'redText':'greenText'">{{account.total_bets != "0" ? ((account.winning_bets / account.total_bets)*100 | number:0): 0 }} %</td>
                         <td ng-class="(account.winnings < 0) ? 'redText':'greenText'">£{{ account.winnings | number:2}}</td>
                         <td>{{ account.regular_bets }}</td>
                         <td>{{ account.free_bets }}</td>

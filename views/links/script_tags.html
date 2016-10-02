@@ -7,11 +7,18 @@
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js" type="application/javascript"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js" type="application/javascript"></script>
 <script src="bower_components/angular-material/angular-material.js" type="application/javascript"></script>
+<script src="bower_components/angular-material-expansion-panel/dist/md-expansion-panel.js" type="application/javascript"></script>
 <script src="bower_components/angular-messages/angular-messages.js" type="application/javascript"></script>
 <script src="bower_components/angular-resource/angular-resource.js" type="application/javascript"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js" type="application/javascript"></script>
 <script src="bower_components/angular-touch/angular-touch.js" type="application/javascript"></script>
 <script src="bower_components/angular-smart-table/dist/smart-table.js" type="application/javascript"></script>
+
+
+<!--Moment Picker-->
+<script src="bower_components/angular-moment-picker/dist/angular-moment-picker.js" type="application/javascript"></script>
+<script src="bower_components/moment/moment.js" type="application/javascript"></script>
+
 
 <!--SmartTable-->
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js" type="application/javascript"></script>
@@ -28,6 +35,9 @@
 
  <!-- Bootstrap -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/material.js" type="application/javascript"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/material.min.js" type="application/javascript"></script>
+
 
 
 
@@ -41,6 +51,7 @@
 <!--Services-->
 <script src="static/js/main/services/helper.service.js" type="application/javascript"></script>
 <script src="static/js/main/services/betManagerApi.service.js" type="application/javascript"></script>
+<script src="static/js/main/services/dataGlobalUpdate.service.js" type="application/javascript"></script>
 
 <!--Accounts-->
 <script src="static/js/main/accounts/account.controller.js" type="application/javascript"></script>
@@ -55,16 +66,20 @@
 <script src="static/js/main/homepage/main.homepage.thisWeek.controller.js" type="application/javascript"></script>
 <script src="static/js/main/homepage/main.homepage.totalWinnings.controller.js" type="application/javascript"></script>
 
-<!--Misc-->
-<script src="static/js/main/misc_controllers/navbar.controller.js" type="application/javascript"></script>
-<script src="static/js/main/misc_controllers/addBet.controller.js" type="application/javascript"></script>
+<!--Navbar-->
+<script src="static/js/main/navbar/controllers/navbar.controller.js" type="application/javascript"></script>
 
 <!--LogBook-->
-<script src="static/js/main/logbook/logbook.controller.js" type="application/javascript"></script>
+<script src="static/js/main/logbook/controllers/logbook.controller.js" type="application/javascript"></script>
+<script src="static/js/main/logbook/directives/bet_event_fb_absolute.directive.js" type="application/javascript"></script>
+<script src="static/js/main/logbook/directives/bet_event_fb_ht_ft_score.directive.js" type="application/javascript"></script>
 
-<!--Directives-->
-<script src="static/js/main/directives/bet_event_fb_absolute.directive.js" type="application/javascript"></script>
-<script src="static/js/main/directives/bet_event_fb_ht_ft_score.directive.js" type="application/javascript"></script>
+<!--Bets-->
+<script src="static/js/main/bets/addBet.controller.js" type="application/javascript"></script>
+<script src="static/js/main/bets/directives/commonBetFields.directive.js" type="application/javascript"></script>
+<script src="static/js/main/bets/directives/winnerBetFields.directive.js" type="application/javascript"></script>
+<script src="static/js/main/bets/directives/footballBetEvent.directive.js" type="application/javascript"></script>
+<script src="static/js/main/bets/directives/fbCorrectScore.directive.js" type="application/javascript"></script>
 
 <!--Filters-->
 <script src="static/js/main/filters/capitalize.filter.js" type="application/javascript"></script>

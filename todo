@@ -1,13 +1,5 @@
-Create Login System and auth
+Sort out bug with calc profit when adding new bet
+Switch to material panels https://material.angularjs.org/1.1.1/demo/panel
+Edit bet send to server to save
+Add bet to existing case
 
-Populate DB if data
-Create reliable test framework
-ADD bet screen
-Stats screen
-log book screen
-
-
-
-api's
-get horserace data - given time and place
-get football info - given date

@@ -13,14 +13,14 @@
         .module('betManager.main.controllers')
         .controller('accountCtrl', accountCtrl);
 
-    accountCtrl.$inject = ['$scope', '$uibModal', 'betManagerApi'];
+    accountCtrl.$inject = ['$rootScope', '$uibModal', 'betManagerApi'];
 
 
 
     /**
      * @namespace accountsCtrl
      */
-    function accountCtrl($scope, $uibModal, betManagerApi) {
+    function accountCtrl($rootScope, $uibModal, betManagerApi) {
         var vm = this;
         vm.name = "Accounts";
         vm.userData = ["abc", "def"];
@@ -32,9 +32,7 @@
 
         
         function getAccountData(){
-            vm.bookieAccountOverview.get().$promise.then(function(response){
-                vm.bookieAccounts = response.data;
-            })
+            vm.bookieAccounts = $rootScope.data.bookieAccounts;
         }
         
         
@@ -55,7 +53,9 @@
 
             modalInstance.result.then(function () {
                 getAccountData();
-            });
+            },function () {
+                getAccountData();
+            })
         };
     }
 })();

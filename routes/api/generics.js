@@ -11,7 +11,8 @@ var GENERICS = {admin:{}, user:{}, unprotected:{}};
 
 GENERICS.unprotected.getAll = function (tableName, authorisedCheck) {
     return function (req, res) {
-        var sql = format("SELECT * FROM {}", tableName);
+        var whereStatement = buildGetAllQueryParams(req.query, false);
+        var sql = format("SELECT * FROM {} {}", tableName, whereStatement);
         conn.queryDB(sql)
             .then(function (data) {
                 return res.json({
@@ -51,7 +52,8 @@ GENERICS.user.getAll = function (tableName, authorisedCheck) {
     return function (req, res) {
         if (!req.isAuthenticated())
             return res.status(403).json({success: false, data: reason});
-        var sql = format("SELECT * FROM {} WHERE accountid={}", tableName, req.user.accountid);
+        var whereStatement = buildGetAllQueryParams(req.query, true);
+        var sql = format("SELECT * FROM {} WHERE accountid={} {}", tableName, req.user.accountid, whereStatement);
         conn.queryDB(sql)
             .then(function (data) {
                 return res.json({
@@ -216,6 +218,24 @@ GENERICS.admin.update = function(tableName, authorisedCheck) {
         }
         return genericUpdate(req, res, tableName);
     };
+};
+
+function buildGetAllQueryParams(query_params, isUser){
+    var whereStatement = "";
+    for(var i=0; i<Object.keys(query_params).length; i++){
+        var col = Object.keys(query_params)[i];
+        var value = query_params[col];
+        if(i==0) {
+            if(isUser) {
+                whereStatement = "AND " + col + "=" + value
+            }else{
+                whereStatement = "WHERE " + col + "=" + value
+            }
+        }else{
+            whereStatement = whereStatement + "AND " + col + "=" + value
+        }
+    }
+    return whereStatement
 }
 
 

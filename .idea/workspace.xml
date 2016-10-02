@@ -7,32 +7,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a95eb7e-b95c-496d-8d08-fe8df2647878" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/general.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/animations/slide.animation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_absolute.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_ht_ft_score.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/filters/capitalize.filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/bet_events/fb_absolute.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/bet_events/fb_ht_ft_score.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SoccerOddsApi/MainApi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/bets/directives/commonBetFields.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/bets/directives/fbCorrectScore.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/bets/directives/footballBetEvent.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/bets/directives/winnerBetFields.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/main/services/dataGlobalUpdate.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/add_bet/commonbet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/add_bet/fbcorrectscore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/add_bet/footballevent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/partials/add_bet/winnerbet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/addbet/bet_markets_from_sportid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/addbet/bookie_and_bookieaccount.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/betmarket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/betstatus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/bettypes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/apis/bet_status_api_tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/apis/betmarket_api_tests.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_absolute.directive.js" afterPath="$PROJECT_DIR$/public/static/js/main/logbook/directives/bet_event_fb_absolute.directive.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_ht_ft_score.directive.js" afterPath="$PROJECT_DIR$/public/static/js/main/logbook/directives/bet_event_fb_ht_ft_score.directive.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js" afterPath="$PROJECT_DIR$/public/static/js/main/logbook/controllers/logbook.controller.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/static/js/main/misc_controllers/addBet.controller.js" afterPath="$PROJECT_DIR$/public/static/js/main/bets/addBet.controller.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/static/js/main/misc_controllers/navbar.controller.js" afterPath="$PROJECT_DIR$/public/static/js/main/navbar/controllers/navbar.controller.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/apis/bet-tests/bet_absolute_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/bet-tests/bet_winner_api_tests.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.tar" afterPath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.tar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/backups/BetManagerTest.tar" afterPath="$PROJECT_DIR$/sql/backups/BetManagerTest.tar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/css/accounts.css" afterPath="$PROJECT_DIR$/public/static/css/accounts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/queryDB.js" afterPath="$PROJECT_DIR$/db/queryDB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/css/addbetmodal.css" afterPath="$PROJECT_DIR$/public/static/css/addbetmodal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/css/general.css" afterPath="$PROJECT_DIR$/public/static/css/general.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/css/logbook.css" afterPath="$PROJECT_DIR$/public/static/css/logbook.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/index.js" afterPath="$PROJECT_DIR$/public/static/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js" afterPath="$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/main/main.js" afterPath="$PROJECT_DIR$/public/static/js/main/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js" afterPath="$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js" afterPath="$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/main/services/betManagerApi.service.js" afterPath="$PROJECT_DIR$/public/static/js/main/services/betManagerApi.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/partials/accounts.html" afterPath="$PROJECT_DIR$/public/static/partials/accounts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/partials/addaccount.modal.html" afterPath="$PROJECT_DIR$/public/static/partials/addaccount.modal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/partials/addbet.modal.html" afterPath="$PROJECT_DIR$/public/static/partials/addbet.modal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/partials/bet_events/fb_absolute.html" afterPath="$PROJECT_DIR$/public/static/partials/bet_events/fb_absolute.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/partials/bet_events/fb_ht_ft_score.html" afterPath="$PROJECT_DIR$/public/static/partials/bet_events/fb_ht_ft_score.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/partials/logbook.html" afterPath="$PROJECT_DIR$/public/static/partials/logbook.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/logbook_overview.js" afterPath="$PROJECT_DIR$/routes/api/logbook_overview.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/bets.js" afterPath="$PROJECT_DIR$/routes/api/bets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/generics.js" afterPath="$PROJECT_DIR$/routes/api/generics.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/allSeeds.sql" afterPath="$PROJECT_DIR$/seeders/allSeeds.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/bet.sql" afterPath="$PROJECT_DIR$/seeders/bet.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/betstatus.sql" afterPath="$PROJECT_DIR$/seeders/betstatus.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.sql" afterPath="$PROJECT_DIR$/sql/BetManagerBackupSchema4.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/apis/bet-tests/bet_absolute_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/bet-tests/bet_absolute_api_tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeders/betmarket.sql" afterPath="$PROJECT_DIR$/seeders/betmarket.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/backups/BetManagerTest.sql" afterPath="$PROJECT_DIR$/sql/backups/BetManagerTest.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/apis/bookie_api_tests.js" afterPath="$PROJECT_DIR$/test/apis/bookie_api_tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo" afterPath="$PROJECT_DIR$/todo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/links/css_links.html" afterPath="$PROJECT_DIR$/views/links/css_links.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/links/script_tags.html" afterPath="$PROJECT_DIR$/views/links/script_tags.html" />
     </list>
@@ -117,6 +141,10 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="bet_market" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -135,59 +163,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="accounts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/partials/accounts.html">
+      <file leaf-file-name="todo" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todo">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accounts.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/css/accounts.css">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/bower_components/angular-material-expansion-panel/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logbook.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/static/partials/logbook.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logbook.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BetManager.public.bet" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-              <column-attributes>
-                <column name="bet_specific" languageId="JSON" />
-              </column-attributes>
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -195,14 +183,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetManager.public.bet_status" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet_status">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="script_tags.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/links/script_tags.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
-          <provider editor-type-id="text-editor">
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -210,33 +203,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slide.animation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/js/main/animations/slide.animation.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-420">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="general.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/css/general.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logbook.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/css/logbook.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -246,8 +217,50 @@
         <entry file="file://$PROJECT_DIR$/public/static/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="css_links.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/links/css_links.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logbook.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/static/partials/logbook.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ripples.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/bower_components/bootstrap-material-design/dist/js/ripples.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-360">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -275,56 +288,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/static/partials/addaccount.modal.html" />
-        <option value="$PROJECT_DIR$/test/apis/bet-tests/fb_absolute_api_tests.js" />
-        <option value="$PROJECT_DIR$/seeders/betcase.sql" />
-        <option value="$PROJECT_DIR$/test/apis/betcase_api_tests.js" />
-        <option value="$PROJECT_DIR$/scripts/buildscript.sh" />
-        <option value="$PROJECT_DIR$/scripts/installpostgres.sh" />
-        <option value="$PROJECT_DIR$/test/apis/bookie_api_tests.js" />
-        <option value="$PROJECT_DIR$/test/apis/bookie_account_overview_tests.js" />
-        <option value="$PROJECT_DIR$/seeders/bookie.sql" />
-        <option value="$PROJECT_DIR$/seeders/allSeeds.sql" />
-        <option value="$PROJECT_DIR$/scripts/createBackupOfDB.sh" />
-        <option value="$PROJECT_DIR$/scripts/recreateDB.sh" />
-        <option value="$PROJECT_DIR$/authentication/cookieStore.js" />
-        <option value="$PROJECT_DIR$/seeders/fb_ht_ft_result.sql" />
-        <option value="$PROJECT_DIR$/seeders/fb_absolute.sql" />
-        <option value="$PROJECT_DIR$/seeders/resulttype.sql" />
-        <option value="$PROJECT_DIR$/routes/api/generics.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0f50ffa9-d730-4cd7-aab2-ba92feb1de3f/console.sql" />
-        <option value="$PROJECT_DIR$/public/static/partials/accounts.html" />
-        <option value="$PROJECT_DIR$/seeders/betmarket.sql" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/test/apis/bet-tests/mock.bets.js" />
-        <option value="$PROJECT_DIR$/db/sqlForBets.js" />
-        <option value="$PROJECT_DIR$/routes/api/bets.js" />
-        <option value="$PROJECT_DIR$/test/apis/bet-tests/bet_absolute_api_tests.js" />
-        <option value="$PROJECT_DIR$/views/links/css_links.html" />
-        <option value="$PROJECT_DIR$/public/static/css/accounts.css" />
-        <option value="$PROJECT_DIR$/public/static/js/main/directives/bet_event_directive.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/directives/add_bet/common_bet_fields.js" />
         <option value="$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_absolute.directive.js" />
-        <option value="$PROJECT_DIR$/seeders/betstatus.sql" />
+        <option value="$PROJECT_DIR$/public/static/js/main/directives/add_bet/common_bet_fields.directive.js" />
+        <option value="$PROJECT_DIR$/public/static/partials/add_bet/common_bet.html" />
+        <option value="$PROJECT_DIR$/routes/api/addbet/betMarketsFromSportId.js" />
+        <option value="$PROJECT_DIR$/routes/api/betmarket.js" />
+        <option value="$PROJECT_DIR$/test/apis/bookie_api_tests.js" />
+        <option value="$PROJECT_DIR$/routes/api/generics.js" />
+        <option value="$PROJECT_DIR$/db/queryDB.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/bets/directives/commonBetFields.directive.js" />
+        <option value="$PROJECT_DIR$/seeders/betmarket.sql" />
+        <option value="$PROJECT_DIR$/sql/BetManagerBackupSchema4.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b7ae5209-f415-4a0a-b369-09c32c6f3c58/console.sql" />
-        <option value="$PROJECT_DIR$/routes/api/bookie_account_overview.js" />
-        <option value="$PROJECT_DIR$/routes/api/logbook_overview.js" />
+        <option value="$PROJECT_DIR$/routes/api/bookie_and_bookieaccount.js" />
+        <option value="$PROJECT_DIR$/public/static/partials/addaccount.modal.html" />
+        <option value="$PROJECT_DIR$/public/static/css/addaccount.css" />
+        <option value="$PROJECT_DIR$/routes/api/bettypes.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/services/betManagerApi.service.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/filters/capitalize.filter.js" />
-        <option value="$PROJECT_DIR$/public/static/partials/bet_events/fb_absolute.html" />
-        <option value="$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_ht_ft_score.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_ht_ft_score.directive.js" />
-        <option value="$PROJECT_DIR$/public/static/partials/bet_events/fb_ht_ft_score.html" />
+        <option value="$PROJECT_DIR$/routes/api/betstatus.js" />
+        <option value="$PROJECT_DIR$/test/apis/betmarket_api_tests.js" />
+        <option value="$PROJECT_DIR$/test/apis/bet_status_api_tests.js" />
+        <option value="$PROJECT_DIR$/test/apis/bet-tests/bet_winner_api_tests.js" />
         <option value="$PROJECT_DIR$/seeders/bet.sql" />
-        <option value="$PROJECT_DIR$/views/links/script_tags.html" />
-        <option value="$PROJECT_DIR$/public/static/js/main/main.js" />
-        <option value="$PROJECT_DIR$/public/static/js/index.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/animations/slide.animation.js" />
-        <option value="$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js" />
-        <option value="$PROJECT_DIR$/public/static/css/logbook.css" />
+        <option value="$PROJECT_DIR$/public/static/partials/addbet.modal.html" />
+        <option value="$PROJECT_DIR$/public/static/css/addbetmodal.css" />
+        <option value="$PROJECT_DIR$/public/static/partials/add_bet/winnerbetfields.html" />
+        <option value="$PROJECT_DIR$/SoccerOddsApi/MainApi.js" />
+        <option value="$PROJECT_DIR$/public/static/partials/add_bet/footballevent.html" />
+        <option value="$PROJECT_DIR$/public/static/js/main/bets/directives/winnerBetFields.directive.js" />
+        <option value="$PROJECT_DIR$/public/static/partials/add_bet/winnerbet.html" />
+        <option value="$PROJECT_DIR$/public/static/js/main/bets/directives/footballBetEvent.directive.js" />
+        <option value="$PROJECT_DIR$/routes/api/bets.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/navbar/controllers/navbar.controller.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/services/betManagerApi.service.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/bets/addBet.controller.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/services/dataGlobalUpdate.service.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js" />
+        <option value="$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js" />
+        <option value="$PROJECT_DIR$/public/static/partials/accounts.html" />
+        <option value="$PROJECT_DIR$/public/static/js/main/logbook/controllers/logbook.controller.js" />
         <option value="$PROJECT_DIR$/public/static/css/general.css" />
+        <option value="$PROJECT_DIR$/public/static/partials/add_bet/correctscore.html" />
+        <option value="$PROJECT_DIR$/public/static/partials/add_bet/fb_correctscore.html" />
+        <option value="$PROJECT_DIR$/public/static/js/main/bets/directives/fbCorrectScore.directive.js" />
+        <option value="$PROJECT_DIR$/public/static/partials/add_bet/commonbet.html" />
+        <option value="$PROJECT_DIR$/todo" />
+        <option value="$PROJECT_DIR$/public/static/js/index.js" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/views/links/script_tags.html" />
+        <option value="$PROJECT_DIR$/views/links/css_links.html" />
         <option value="$PROJECT_DIR$/public/static/partials/logbook.html" />
       </list>
     </option>
@@ -451,6 +464,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -460,12 +476,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -527,7 +537,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="seeders" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -541,25 +551,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="apis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -603,32 +599,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bet_events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -650,12 +620,22 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="BetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetManager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -673,19 +653,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logbook" />
+              <option name="myItemId" value="bootstrap-material-design" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -703,51 +675,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="bootstrap-material-design" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="animations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -763,55 +705,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="bootstrap-material-design" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -832,6 +734,14 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-material-expansion-panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -843,11 +753,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="authentication" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-material-expansion-panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -875,11 +800,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/apis" />
-      <recent name="$PROJECT_DIR$/authentication" />
-      <recent name="$PROJECT_DIR$/test" />
-      <recent name="$PROJECT_DIR$/test/api_tests" />
-      <recent name="$PROJECT_DIR$/public/static/partials" />
+      <recent name="$PROJECT_DIR$/routes/api/addbet" />
+      <recent name="$PROJECT_DIR$/public/static/js/main/bets/directives" />
+      <recent name="$PROJECT_DIR$/public/static/js/main/navbar/controllers" />
+      <recent name="$PROJECT_DIR$/public/static/js/main/logbook/controllers" />
+      <recent name="$PROJECT_DIR$/public/static/js/main/logbook/directives" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/static/images" />
@@ -927,7 +852,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.bin/www">
+  <component name="RunManager" selected="Node.js.MainApi.js">
     <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
@@ -935,6 +860,9 @@
       <method />
     </configuration>
     <configuration default="false" name="user.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/test/apis/account_api_tests.js" working-dir="$PROJECT_DIR$/test">
+      <method />
+    </configuration>
+    <configuration default="false" name="MainApi.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="MainApi.js" working-dir="$PROJECT_DIR$/SoccerOddsApi">
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1371,18 +1299,20 @@
     <configuration default="false" name="bin/www JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000/">
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.bin/www JavaScript" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.bin/www" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.index.js" />
       <item index="4" class="java.lang.String" itemvalue="Node.js.user.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.MainApi.js" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.user.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.index.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.MainApi.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.user.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.index.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.app.js" />
       </list>
     </recent_temporary>
   </component>
@@ -1464,11 +1394,17 @@
       <workItem from="1474298726405" duration="3034000" />
       <workItem from="1474377321407" duration="132000" />
       <workItem from="1474377471187" duration="66101000" />
+      <workItem from="1474554895368" duration="12015000" />
+      <workItem from="1474626890550" duration="662000" />
+      <workItem from="1474627595299" duration="58000" />
+      <workItem from="1474627714923" duration="25606000" />
+      <workItem from="1475320474549" duration="38692000" />
+      <workItem from="1475428658542" duration="897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505838000" />
+    <option name="totallyTimeSpent" value="583768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
@@ -1480,30 +1416,30 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.4916442" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3407935" sideWeight="0.21886793" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960325" sideWeight="0.5795148" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.4722372" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3407935" sideWeight="0.7811321" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26630726" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2657682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17088948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.42210242" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3936928" sideWeight="0.4684636" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="V8 CPU Profiling" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46795523" sideWeight="0.45714286" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3936928" sideWeight="0.4555256" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30722278" sideWeight="0.49811321" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.46792454" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3407935" sideWeight="0.7746631" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.42048517" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1541,7 +1477,7 @@
           <option name="timeStamp" value="252" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="262" />
+      <option name="time" value="267" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1550,159 +1486,88 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/3b5c6749/0f50ffa9-d730-4cd7-aab2-ba92feb1de3f/BetManagerTest.public.bookie_account">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>b7ae5209-f415-4a0a-b369-09c32c6f3c58.SCHEMA:BetManager.public</OriginalElement>
-          <nodes>
-            <node x="520.5" y="191.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account</node>
-            <node x="298.5" y="179.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie</node>
-            <node x="631.5" y="24.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes</node>
-            <node x="343.9999999999999" y="382.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie_account</node>
-            <node x="0.0" y="999.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sessionstore</node>
-            <node x="161.99999999999994" y="418.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet_type</node>
-            <node x="429.49999999999994" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users</node>
-            <node x="291.7499999999999" y="609.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet</node>
-            <node x="0.0" y="430.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet_status</node>
-            <node x="227.0" y="999.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.user_settings</node>
-            <node x="909.5" y="0.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.VIEW:BetManager.public.bookie_account_overview</node>
-            <node x="722.5" y="215.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport</node>
-            <node x="611.5" y="406.0">b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.accounttypes">
-              <point x="45.5" y="-64.5" />
-              <point x="657.0" y="154.0" />
-              <point x="702.5" y="154.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
-              <point x="135.75000000000006" y="-172.5" />
-              <point x="608.5" y="589.0" />
-              <point x="829.0" y="589.0" />
-              <point x="35.5" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase">
-              <point x="45.25000000000006" y="-172.5" />
-              <point x="518.0" y="579.0" />
-              <point x="702.5" y="579.0" />
-              <point x="0.0" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie_account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
-              <point x="55.50000000000006" y="-88.5" />
-              <point x="510.5" y="357.0" />
-              <point x="566.0" y="357.0" />
-              <point x="-45.5" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.sport">
-              <point x="45.5" y="-64.5" />
-              <point x="748.0" y="357.0" />
-              <point x="758.0" y="357.0" />
-              <point x="-35.5" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet_type">
-              <point x="-45.24999999999994" y="-172.5" />
-              <point x="427.49999999999994" y="579.0" />
-              <point x="242.99999999999994" y="579.0" />
-              <point x="0.0" y="52.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.users">
-              <point x="-45.5" y="-64.5" />
-              <point x="566.0" y="154.0" />
-              <point x="520.5" y="154.0" />
-              <point x="0.0" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.account">
-              <point x="-45.5" y="-64.5" />
-              <point x="45.5" y="64.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bet_status">
-              <point x="-135.74999999999994" y="-172.5" />
-              <point x="336.99999999999994" y="589.0" />
-              <point x="71.0" y="589.0" />
-              <point x="0.0" y="40.5" />
-            </edge>
-            <edge source="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie_account" target="b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.bookie">
-              <point x="-55.49999999999994" y="-88.5" />
-              <point x="0.0" y="76.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5235191637630662" x="31.435940099833658" y="408.43594009983366" />
-          <SelectedNodes>
-            <node>b7ae5209-f415-4a0a-b369-09c32c6f3c58.TABLE:BetManager.public.betcase</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/test/apis/bet-tests/mock.bets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/betmarket.sql">
+    <entry file="file://$PROJECT_DIR$/routes/api/bets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/betcase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/sqlForBets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/apis/bet-tests/bet_absolute_api_tests.js">
+    <entry file="file://$PROJECT_DIR$/public/bower_components/MDBootstrap/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bower_components/MDBootstrap/css/mdb.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/authentication/authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/authentication/controllers/login.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/authentication/services/auth.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie_account">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/apis/bookie_api_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1710,141 +1575,270 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/apis/bet-tests/mock.bets.js">
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/services/betManagerApi.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/links/css_links.html">
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
-          <folding />
+        <state relative-caret-position="450">
+          <caret line="78" column="39" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/addaccount.css">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet_status">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/betcase.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/betstatus.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.sport">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbview:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie_account_overview">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet_type">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b7ae5209-f415-4a0a-b369-09c32c6f3c58/console.sql">
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/services/dataGlobalUpdate.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="375">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/bets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1093">
-          <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/generics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/bookieaccount.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/bookie_account_overview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/bookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/logbook_overview.js">
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/bets/addBet.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="32" />
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/navbar/controllers/navbar.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="53" column="159" selection-start-line="53" selection-start-column="159" selection-end-line="53" selection-end-column="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/images/editbet.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/images/pencilEdit.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/logbook/controllers/logbook.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="84" column="11" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/addaccount.modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="36" selection-start-line="46" selection-start-column="0" selection-end-line="53" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/addbet.modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbview:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.logbook_overview">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="bet_specific" languageId="JSON" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="bet_specific" languageId="JSON" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/bet_events/fb_ht_ft_score.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/bet_events/fb_absolute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/bets/directives/winnerBetFields.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/bets/directives/footballBetEvent.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="32" />
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#43#84#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/bets/directives/commonBetFields.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/main/bets/directives/fbCorrectScore.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet_market">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/add_bet/footballevent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/add_bet/winnerbet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/add_bet/commonbet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/partials/add_bet/fbcorrectscore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bower_components/angular-material-expansion-panel/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1856,247 +1850,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/services/betManagerApi.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/misc_controllers/addBet.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/filters/capitalize.filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie_account">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbview:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bookie_account_overview">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_ht_ft_score.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbview:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.logbook_overview">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="bet_specific" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeders/bet.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/bet_events/fb_ht_ft_score.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/bet_events/fb_absolute.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/directives/bet_event_fb_absolute.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/accounts/account.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/accounts/addAccount.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/links/script_tags.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/static/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/animations/slide.animation.js">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="bet_specific" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/3b5c6749/b7ae5209-f415-4a0a-b369-09c32c6f3c58/BetManager.public.bet_status">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/main/logbook/logbook.controller.js">
+    <entry file="file://$PROJECT_DIR$/public/bower_components/bootstrap-material-design/dist/js/ripples.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+        <state relative-caret-position="-360">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/partials/accounts.html">
+    <entry file="file://$PROJECT_DIR$/views/links/script_tags.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/accounts.css">
+    <entry file="file://$PROJECT_DIR$/views/links/css_links.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/logbook.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/partials/logbook.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
+        <state relative-caret-position="140">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
           <folding />
         </state>
       </provider>

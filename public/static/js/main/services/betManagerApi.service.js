@@ -20,6 +20,10 @@
             bookieaccountoverview: $resource("/api/bookieaccountoverview/"),
             bet: $resource("/api/bet/:id", {id:'@id'}),
             logbookoverview: $resource("/api/logbookoverview/:id", {id:'@id'}),
+            betmarket: $resource("/api/betmarket/:id", {id:'@id'}),
+            bookieandbet: $resource("/api/bookieandaccount/"),
+            bettype: $resource("/api/bettype//:id", {id:'@id'}),
+            betstatus: $resource("/api/betstatus/:id", {id:'@id'}),
         };
 
         return resources;

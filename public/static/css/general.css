@@ -8,7 +8,7 @@
 }
 
 .blueText{
-    color:cornflowerblue;
+    color:#87d1fe;
 }
 
 .yellowText{
@@ -17,6 +17,10 @@
 
 .whiteText{
     color:#FFFFFF;
+}
+
+.blackText{
+    color:black;
 }
 
 .betSmithColorText{
@@ -29,6 +33,19 @@
 
 .backgroundRed{
     background-color: #e7404a;
+}
+
+.backgroundYellow{
+    background-color: #f8c14d;
+}
+
+
+.backgroundBlack{
+    background-color: black;
+}
+
+.backgroundWhite{
+    background-color: white;
 }
 
 .inline {
@@ -44,8 +61,34 @@
     margin-top: 20px;
 }
 
+.topMargin10{
+    margin-top: 10px;
+}
+
+.noMargin{
+    margin:0px
+}
+
 .paddingBottomAndTop075{
     padding-top: 0.75%;
     padding-bottom: 0.75%;
 }
 
+.colWidth2{
+    width:2%
+}
+
+.colWidth5{
+    width:5%
+}
+
+.colWidth10{
+    width:10%
+}
+.md-select-menu-container{
+    z-index: 99999!important;
+}
+
+.width90{
+    width:90%;
+}

@@ -18,9 +18,24 @@ INSERT INTO account (expiryDate, userid, accounttypeid) VALUES
     ('30/09/2016', 2, 3),
     ('1/07/2016', 3, 4);
 INSERT INTO bet_market (name, sportid) VALUES
-    ('WIN, LOSE, DRAW',1),
-    ('half time full time score', 1),
-    ('WIN, LOSE, DRAW',2);
+    ('Winner',1),
+    ('Half-Time / Full-Time Score', 1),
+    ('Half-Time / Full-Time Result', 1),
+    ('Half Time Result',1),
+    ('Half Time Score',1),
+    ('Correct Score',1),
+    ('Both Teams Score',1),
+    ('Away Score Both Halves',1),
+    ('Home Team Score Both Halves',1),
+    ('Draw No Bet',1),
+    ('Clean Sheet',1),
+    ('Over / Under 1.5 Goals',1),
+    ('Over / Under 2.5 Goals',1),
+    ('Over / Under 3.5 Goals',1),
+    ('Over / Under 4.5 Goals',1),
+    ('Over / Under 5.5 Goals',1),
+    ('Over / Under 6.5 Goals',1);
+
 INSERT INTO bet_status (name) VALUES
     ('PENDING'),
     ('WON'),
@@ -104,54 +119,54 @@ INSERT INTO betcase (accountid, sportid, statusactive) VALUES
 
 INSERT INTO bet (bookieaccountid, betcaseid, stake, odds, betmarketid, commission, laybet, datetime, betstatusid, bettypeid, bet_specific) VALUES
 --BET FB_ABSOLUTE DATA--
-    (3, 1, 11.50, 2, 1, 0.02, false, '2016-09-09 12:30:00', 2, 1,'{"betmarket":"fb_absolute",
+    (3, 1, 11.50, 2, 1, 0.02, false, '2016-09-09 12:30:00', 2, 1,'{"betmarket":"winner",
                                                         "hometeam":"Man Utd",
                                                         "awayteam":"West Ham",
                                                         "homeTeamSelected":true,
                                                         "result":"WIN"
                                                         }'),
-    (1, 1, 50, 0.5, 1, 0.02, true, '2016-09-09 12:30:00', 3,3, '{"betmarket":"fb_absolute",
+    (1, 1, 50, 0.5, 1, 0.02, true, '2016-09-09 12:30:00', 3,3, '{"betmarket":"winner",
                                                         "hometeam":"Man Utd",
                                                         "awayteam":"West Ham",
                                                         "homeTeamSelected":true,
                                                         "result":"WIN"
                                                         }'),
-    (3, 6, 400, 0.25, 1, 0.02, false, '2016-10-15 16:30:00',2,3, '{"betmarket":"fb_absolute",
+    (3, 6, 400, 0.25, 1, 0.02, false, '2016-10-15 16:30:00',2,3, '{"betmarket":"winner",
                                                         "hometeam":"Liverpool",
                                                         "awayteam":"Burnley",
                                                         "homeTeamSelected":false,
                                                         "result":"WIN"
                                                         }'),
     (4, 6, 28.57, 3.5, 1, 0.02, true, '2016-10-15 16:30:00', 3,1,'{
-                                                        "betmarket":"fb_absolute",
+                                                        "betmarket":"winner",
                                                         "hometeam":"Liverpool",
                                                         "awayteam":"Burnley",
                                                         "homeTeamSelected":false,
                                                         "result":"WIN"
                                                         }'),
     (1, 7, 10, 1.5, 1, 0.02, false, '2016-11-10 17:00:00', 2,3, '{
-                                                        "betmarket":"fb_absolute",
+                                                        "betmarket":"winner",
                                                         "hometeam":"Chelsea",
                                                         "awayteam":"Man City",
                                                         "homeTeamSelected":true,
                                                         "result":"WIN"
                                                         }'),
     (5, 7, 18.75, 0.8, 1, 0.02, false, '2016-11-10 17:00:00', 3, 2, '{
-                                                        "betmarket":"fb_absolute",
+                                                        "betmarket":"winner",
                                                         "hometeam":"Chelsea",
                                                         "awayteam":"Man City",
                                                         "homeTeamSelected":false,
                                                         "result":"LOSE"
                                                         }'),
     (2, 3, 100, 2, 1, 0.02, true, '2016-10-12 16:30:00', 3, 3, '{
-                                                        "betmarket":"fb_absolute",
+                                                        "betmarket":"winner",
                                                         "hometeam":"Leicester",
                                                         "awayteam":"West Brom",
                                                         "homeTeamSelected":true,
                                                         "result":"WIN"
                                                         }'),
     (6, 3, 100, 1, 1, 0.02, false, '2016-10-12 16:30:00', 2,1, '{
-                                                        "betmarket":"fb_absolute",
+                                                        "betmarket":"winner",
                                                         "hometeam":"Leicester",
                                                         "awayteam":"West Brom",
                                                         "homeTeamSelected":true,
@@ -159,14 +174,14 @@ INSERT INTO bet (bookieaccountid, betcaseid, stake, odds, betmarketid, commissio
                                                         }'),
 
     (7, 8, 200, 1, 1, 0.02, false, '2016-10-19 20:30:00', 1, 1, '{
-                                                        "betmarket":"fb_absolute",
+                                                        "betmarket":"winner",
                                                         "hometeam":"Chelsea",
                                                         "awayteam":"Wolves",
                                                         "homeTeamSelected":false,
                                                         "result":"LOSE"
                                                         }'),
     (8, 8, 100, 2, 1, 0.02, true, '2016-10-19 20:30:00', 1 ,2, '{
-                                                        "betmarket":"fb_absolute",
+                                                        "betmarket":"winner",
                                                         "hometeam":"Chelsea",
                                                         "awayteam":"Wolves",
                                                         "homeTeamSelected":false,

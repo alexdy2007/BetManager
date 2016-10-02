@@ -1,4 +1,18 @@
 INSERT INTO bet_market (name, sportid) VALUES
-    ('WIN, LOSE, DRAW',1),
-    ('half time full time score', 1),
-    ('WIN, LOSE, DRAW',2);
+    ('Winner',1),
+    ('Half-Time / Full-Time Score', 1),
+    ('Half-Time / Full-Time Result', 1),
+    ('Half Time Result',1),
+    ('Half Time Score',1),
+    ('Correct Score',1),
+    ('Both Teams Score',1),
+    ('Away Score Both Halves',1),
+    ('Home Team Score Both Halves',1),
+    ('Draw No Bet',1),
+    ('Clean Sheet',1),
+    ('Over / Under 1.5 Goals',1),
+    ('Over / Under 2.5 Goals',1),
+    ('Over / Under 3.5 Goals',1),
+    ('Over / Under 4.5 Goals',1),
+    ('Over / Under 5.5 Goals',1),
+    ('Over / Under 6.5 Goals',1);

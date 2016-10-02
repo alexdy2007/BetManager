@@ -24,7 +24,6 @@ function connectionToDB(sql){
 
     return new Promise(function(resolve, reject){
         var results = [];
-        try {
             pool.connect(function (err, client, done) {
                 query = client.query(sql);
                 // Stream results back one row at a time
@@ -40,12 +39,13 @@ function connectionToDB(sql){
                     toReturn.results = results;
                     resolve(toReturn);
                 });
+                query.on('error', function(err) {
+                    console.log("SQL ERROR" + err);
+                    done();
+                    reject({'data':null,'error':err, 'sql':sql})
+                });
             })
-        } catch (err) {
-            console.log("SQL ERROR" + err);
-            done();
-            reject({'data':null,'error':err})
-        }
+
     });
 
 }
