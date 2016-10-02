@@ -32,7 +32,9 @@
 
         
         function getAccountData(){
-            vm.bookieAccounts = $rootScope.data.bookieAccounts;
+            vm.bookieAccountOverview.get().$promise.then(function(result){
+                vm.bookieAccounts = result.data;
+            });
         }
         
         

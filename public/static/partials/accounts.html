@@ -48,7 +48,7 @@
                         <td style="background-color: {{account.bookie_color}}"></td>
                         <td>{{ account.bookie_name }}</td>
                         <td>{{account.username}}</td>
-                        <td>{{ account.commission }}</td>
+                        <td>{{ account.commission | number:2}}</td>
                         <td>{{ account.total_bets }}</td>
                         <td>{{ account.winning_bets }}</td>
                         <td ng-class="(account.total_bets/2)>account.winning_bets ? 'redText':'greenText'">{{account.total_bets != "0" ? ((account.winning_bets / account.total_bets)*100 | number:0): 0 }} %</td>
