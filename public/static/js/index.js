@@ -69,6 +69,18 @@ function config ($stateProvider, $urlRouterProvider, $locationProvider, ngToastP
             controller: 'logBookCtrl',
             controllerAs: 'vm'
         })
+        .state('logbook.sports', {
+            url: '/sports',
+            templateUrl: '/static/partials/logbooksports.html',
+            controller: 'logbookSportCtrl',
+            controllerAs: 'vm'
+        })
+        .state('logbook.acca', {
+            url: '/acca',
+            templateUrl: '/static/partials/logbookacca.html',
+            controller: 'logbookAccaCtrl',
+            controllerAs: 'vm'
+        })
         .state('account', {
             url: '/account',
             templateUrl: '/static/partials/accounts.html',

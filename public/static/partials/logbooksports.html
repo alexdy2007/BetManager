@@ -1,0 +1,143 @@
+<div id="logBook" class="container-fluid">
+    <div class="col-md-1">
+
+    </div>
+
+    <div class="col-md-10">
+
+        <div id="Open" class="row effect8 paddingBottomAndTop075">
+            <div class="col-xs-4">
+                <h2 class="inline">OPEN</h2>
+                <h2 class="inline betSmithColorText"><b>(3)</b></h2>
+            </div>
+            <div class="col-xs-2">
+                <h3>
+                    <div class="inline betSmithColorText"><b>1</b></div>
+                    Ready to review
+                </h3>
+            </div>
+            <div class="col-xs-6">
+                <img class="pull-right" src="static/images/info.png" alt="btn" class="img-rounded">
+                <img ng-show="!vm.editMode" ng-click="vm.editMode = !vm.editMode" class="pull-right" src="static/images/pencilEdit.png" alt="btn" class="img-rounded">
+                <img ng-show="vm.editMode" ng-click="vm.saveEditedBets()" class="pull-right" src="static/images/save.png" alt="btn" class="img-rounded">
+                <img ng-click="vm.showOpenBets = !vm.showOpenBets" class="pull-right" src="static/images/circledown.png"
+                     alt="btn" class="img-rounded">
+            </div>
+        </div>
+        <div class="slide-toggle row effect8" ng-show="vm.showOpenBets" class="row currentBetsBox effect8">
+            <table st-safe-src="vm.safe_case_bets" st-table="vm.case_bets" id="logbookOpen" class="table">
+                <thead>
+                <tr>
+                    <th st-sort="bet.betcaseid" span="1" class="colWidth2">Case ID</th>
+                    <th class="tableStatus"></th>
+                    <th>Event</th>
+                    <th>Time</th>
+                    <th class="colWidth10">Stake</th>
+                    <th class="colWidth10">Odds</th>
+                    <th class="colWidth10">Account</th>
+                    <th class="colWidth10">Bet Type</th>
+                    <th>Winnings</th>
+                    <th>Case Profit</th>
+                </tr>
+                </thead>
+                <tbody id="logbookEventCase" ng-repeat="(case_key, betcase) in vm.safe_case_bets[0]">
+                <tr ng-hide="vm.editMode" ng-repeat="(bet_key, bet) in betcase">
+                    <td ng-if="$first" rowspan="{{betcase.length}}">{{bet.betcaseid}}.</td>
+                    <td ng-class="{ 'backgroundPurple' : bet.betstatusid==1, 'backgroundGreen' : bet.betstatusid==2, 'backgroundred':bet.betstatusid==3, 'backgroundYellow':bet.betstatusid==4}"></td>
+                    <td>
+                        <fb-absolute ng-if="bet.betmarketid=='1'"></fb-absolute>
+                        <fb-ht-ft ng-if="bet.betmarketid=='2'"></fb-ht-ft>
+                        <div ng-if="bet.betmarketid>'2'">TODO</div>
+                    </td>
+                    <td> {{bet.datetime | date:'dd/MM/yy - hh:mm a'}}</td>
+                    <td> {{bet.stake}}</td>
+                    <td> {{bet.odds}}</td>
+                    <td> {{bet.tmp_bookie_name | capitalize}}</td>
+                    <td> {{bet.tmp_bet_type_name | capitalize}}</td>
+                    <td ng-class="(bet.profit < 0) ? 'redText':'greenText'"> £{{bet.profit | number:2}}</td>
+                    <td class="colWidth5" id="logbookProfitTd" class="whiteText"
+                        ng-class="(vm.calcBetProfit(betcase)  < 0) ? 'backgroundRed':'backgroundGreen'" ng-if="$first"
+                        rowspan="{{betcase.length}}">
+                        <div id="logbookProfit"><b>£{{vm.calcBetProfit(betcase) | number:2}}</b></div>
+                    </td>
+                </tr>
+                <tr ng-hide="!vm.editMode" ng-repeat="bet in betcase">
+                    <td ng-if="$first" rowspan="{{betcase.length}}">{{bet.betcaseid}}.</td>
+                    <td ng-class="{ 'backgroundBlack' : bet.betstatusid==1, 'backgroundGreen' : bet.betstatusid==2, 'backgroundred':bet.betstatusid==3, 'backgroundYellow':bet.betstatusid==4}"></td>
+                    <td>
+                        <fb-absolute ng-if="bet.betmarketid=='1'"></fb-absolute>
+                        <fb-ht-ft ng-if="bet.betmarketid=='2'"></fb-ht-ft>
+                        <div ng-if="bet.betmarketid>'2'">TODO</div>
+                    </td>
+                    <td> {{bet.datetime | date:'dd/MM/yy - hh:mm a'}}</td>
+                    <td>
+                        <md-input-container class="noMargin heightOneEm" md-no-float class="md-block">
+                            <input name="stake" placeholder="{{bet.stake}}" ng-model="bet.edit.stake">
+                        </md-input-container>
+                    </td>
+                    <td>
+                        <md-input-container class="noMargin heightOneEm" md-no-float class="md-block">
+                            <input name="odds" placeholder="{{bet.odds}}" ng-model="bet.edit.odds">
+                        </md-input-container>
+                    </td>
+                    <td>
+                        <md-autocomplete flex required
+                                         md-input-name="bookieaccount"
+                                         ng-disabled="false"
+                                         md-no-cache="false"
+                                         md-selected-item="bet.edit.bookieaccount"
+                                         md-search-text="bet.search.bookieSearchText"
+                                         md-items="bookieAccount in vm.bookieAccountSearch(bet.search.bookieSearchText)"
+                                         md-item-text="bookieAccount.name"
+                                         md-min-length="0"
+                                         ng-init="bet.search.bookieSearchText=bet.tmp_bookie_name"
+                                         md-require-match>
+                            <md-item-template>
+                                <span md-highlight-text="vm.bookieAccountSearchText" md-highlight-flags="^i">{{bookieAccount.name}}</span>
+                            </md-item-template>
+
+                            <md-not-found>
+                                No bookies matching "{{vm.bookieAccountSearchText}}" were found.
+                            </md-not-found>
+
+                            <div ng-messages="accountform.bookieaccount.$error" role="alert" multiple>
+                                <div ng-message="md-require-match" class="my-message">Need to select bookie from list</div>
+                                <div ng-message="require" class="my-message">Need to select bookie</div>
+                            </div>
+                        </md-autocomplete>
+                    </td>
+                    <td> {{bet.tmp_bet_type_name | capitalize}}</td>
+                    <td ng-class="(bet.profit < 0) ? 'redText':'greenText'"> £{{bet.profit | number:2}}</td>
+                    <td class="colWidth5" id="logbookProfitTdEdit" class="whiteText"
+                        ng-class="(vm.calcBetProfit(betcase)  < 0) ? 'backgroundRed':'backgroundGreen'" ng-if="$first"
+                        rowspan="{{betcase.length}}">
+                        <div id="logbookProfitEdit"><b>£{{vm.calcBetProfit(betcase) | number:2}}</b></div>
+                    </td>
+                </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+
+
+        <div id="Close" class="row effect8 paddingBottomAndTop075">
+            <div class="col-xs-4">
+                <h2 class="inline">CLOSED</h2>
+                <h2 class="inline betSmithColorText"><b>(3)</b></h2>
+            </div>
+            <div class="col-xs-8">
+                <img class="pull-right" src="static/images/info.png" alt="btn" class="img-rounded">
+                <img class="pull-right" src="static/images/circledown.png" alt="btn" class="img-rounded">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="col-md-1">
+
+
+</div>
+</div>

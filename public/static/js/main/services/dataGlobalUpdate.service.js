@@ -29,7 +29,7 @@
         }
 
         function updateRootBookieAccounts(){
-            betManagerApi.bookieaccountoverview.get().$promise.then(function(response) {
+            betManagerApi.bookieandbet.get().$promise.then(function(response) {
                 $rootScope.data.bookieAccounts = response.data
             })
         }

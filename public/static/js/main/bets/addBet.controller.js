@@ -132,9 +132,7 @@
 
 
         function getBookieAndBookieAccount(){
-            bookieBookieAccountsApi.get().$promise.then(function(response){
-                vm.bookieAccount = response.data;
-            })
+            vm.bookieAccount = $rootScope.data.bookieAccounts
         }
 
         function getBetMarkets(sportid){

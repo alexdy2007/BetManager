@@ -23,6 +23,10 @@
     color:black;
 }
 
+.purpleText{
+    color: #8e24aa;
+}
+
 .betSmithColorText{
     color:#87d1fe;
 }
@@ -46,6 +50,10 @@
 
 .backgroundWhite{
     background-color: white;
+}
+
+.backgroundPurple{
+    background-color: #8e24aa;
 }
 
 .inline {
@@ -91,4 +99,8 @@
 
 .width90{
     width:90%;
+}
+
+.heightOneEm{
+    height: 1rem;
 }
